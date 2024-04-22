@@ -1,13 +1,14 @@
-import image from "../../data/rena.png";
+import React from "react";
+import image from "../../data/grad-rena-2.png";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="hero--section--box">
       <div className="hero--section--content">
-        <p className="section--title">Réna Sophia Hajjar</p>
+        {/* <p className="section--title">Réna Sophia Hajjar</p> */}
         <div className="hero--section--image">
-          <Image src={image} alt="Picture of me."></Image>
+          <Image src={image} alt="Picture of me." width={250}></Image>
         </div>
         <p>
           Hi. Bye. This is a section about me. It's also a sectiona about what
