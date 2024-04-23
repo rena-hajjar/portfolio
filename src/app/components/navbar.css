@@ -1,0 +1,28 @@
+.navbar-container {
+  display: flex;
+  /* background-color: #011627; */
+  border-bottom: #011627 solid 1px;
+  background-color: ivory;
+  margin-right: auto;
+  align-items: center;
+  height: 60px;
+  font-family: Optima, sans-serif;
+  font-weight: 600;
+}
+
+.navbar-return{
+    font-size: x-large;
+    margin-right: auto;
+    margin-left:5px;
+}
+
+.navbar-pages-container {
+    display: flex;
+    margin-right: 20px;
+
+}
+
+.navbar-option {
+    margin-left:auto;
+    margin-right:30px;
+}

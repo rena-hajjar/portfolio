@@ -1,0 +1,17 @@
+.resume-button {
+    width: 200px;
+    height: 80px;
+    background-color: #011627;
+    border-radius: 15%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px #373839;
+}
+
+.resume-text {
+    font-family: Optima, sans-serif;
+    color: ivory;
+    font-size: larger;
+    font-weight: bold;
+}
