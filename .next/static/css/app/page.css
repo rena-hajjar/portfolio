@@ -2,38 +2,227 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 
-:root {
-  background-image: url("/_next/static/media/mesh-354 (1).69914175.png");
+body {
+  margin: 0;
+  padding: 0;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/hero.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.hero--section--box {
+    height: 400px;
+    margin:50px;
+    margin-top:100px;
+    margin-bottom:100px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: ivory;
+    border-radius: 10px;
+    box-shadow: 2px 2px #011627;
+    object-fit: contain;
+    max-width: 100%;
 }
 
-:body {
-  margin: unset;
+/* .section-title {
+    font-family: 'Times New Roman', Times, serif;
+} */
+.hero--section--content{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    font-family: Optima, sans-serif;
+    font-weight: 200;
+}
+
+/* 
+.image-box {
+    width: 400px;
+    height:400px;
+    margin-top:20px;
+} */
+/* 
+.image-box {
+    background-image: url(./../../data/svg\ \(2\).png);
+    width:auto;
+    margin-top: 20px;
+} */
+
+.hero--section--image{
+    margin-left:1px;
+    height: 380px;
+    width:380px;
+    border-radius: 5px;
+    position: relative;
+    left: -1px;
+    bottom: -12px;
+}
+
+.about-me {
+    display: flex;
+    width: auto;
+    max-height: 400px;
+    margin-left: 25px;
+    max-width:550px;
+    margin-right:25px;
+    overflow: scroll;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/about.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+.intro-about {
+  background-image: url(/_next/static/media/mesh-475.4dae7e5b.png);
+  margin-top: 0;
+}
+
+.title {
+  font-family: Optima, sans-serif;
+  font-size: xx-large;
+  margin: 30px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  border-bottom: #fffff0 solid 1px;
+  width: 100%;
+  color: ivory;
+  padding-top: 30px;
+}
+
+.main {
+  background-image: url(/_next/static/media/mesh-324.334878be.png);
+  /* background-color: #68859E; */
+  width: 100%;
+  height: fit-content;
+}
+
+.about-item {
+  margin: 50px;
+  margin-top: 25px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  font-family: Optima, sans-serif;
+}
+
+.about-image-box {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.about-item-description {
+  font-family: Optima, sans-serif;
+  color: ivory;
+}
+
+.about-item-description-title {
+  font-size: x-large;
+}
+
+.about-item-description-about {
+  font-size: medium;
+}
+
+.intro-title {
+  margin-top: 50px;
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-paragraph {
+  font-family: Optima, sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.intro-name {
+  margin-left: 20px;
+  font-size: xx-large;
+  font-family: Optima, sans-serif;
+  font-weight: bolder;
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ResumeButton.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.resume-button {
+    width: 200px;
+    height: 80px;
+    background-color: #011627;
+    border-radius: 15%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px #373839;
+}
+
+.resume-text {
+    font-family: Optima, sans-serif;
+    color: ivory;
+    font-size: larger;
+    font-weight: bold;
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/navbar.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/navbar.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************/
 .navbar-container {
   display: flex;
-  background-color: #fef9ef;
-  opacity: 0.35;
+  /* background-color: #011627; */
+  border-bottom: #011627 solid 1px;
+  background-color: ivory;
   margin-right: auto;
   align-items: center;
-  margin:unset;
-  height: 50px;
-  border-radius: 5px;
+  height: 60px;
+  font-family: Optima, sans-serif;
+  font-weight: 600;
 }
 
 .navbar-return{
+    font-size: x-large;
     margin-right: auto;
     margin-left:5px;
 }
 
 .navbar-pages-container {
     display: flex;
-    margin-right: 5px;
+    margin-right: 20px;
+
 }
 
 .navbar-option {
     margin-left:auto;
     margin-right:30px;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/footer.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.footer-main-body {
+    background-color: #011627;
+    border-radius: 1px;
+    height: 100px;
+    color: ivory;
+    font-family: Optima, sans-serif;
+    font-size: medium;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/contact.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.contact-title {
+    font-family: Optima, sans-serif;
+    border-bottom: 1px solid black;
+    font-size: xx-large;
+    margin: 30px;
+    margin-left:0px;
+    width:100%;
+    margin-bottom: 50px; 
+    text-align: center;
+    align-items: center;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Studies.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.studies-body {
+    background-image: url(/_next/static/media/mesh-597.9ee3d73b.png);
 }

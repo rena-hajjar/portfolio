@@ -1,8 +1,5 @@
 
-:root {
-  background-image: url('./data/mesh-354 (1).png');
-}
-
-:body {
-  margin: unset;
+body {
+  margin: 0;
+  padding: 0;
 }

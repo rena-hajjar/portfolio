@@ -4,8 +4,8 @@ import './globals.css'
 
 export default function Main() {
   return (
-    <>
+    <div className='main-page'>
       <Home/>
-    </>
+    </div>
   );
 }
