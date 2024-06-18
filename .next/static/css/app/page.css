@@ -6,78 +6,17 @@ body {
   margin: 0;
   padding: 0;
 }
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/hero.css ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
-.hero--section--box {
-    height: 400px;
-    margin:50px;
-    margin-top:100px;
-    margin-bottom:100px;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: ivory;
-    border-radius: 10px;
-    box-shadow: 2px 2px #011627;
-    object-fit: contain;
-    max-width: 100%;
-}
-
-/* .section-title {
-    font-family: 'Times New Roman', Times, serif;
-} */
-.hero--section--content{
-    width: max-content;
-    display: flex;
-    align-items: center;
-    font-family: Optima, sans-serif;
-    font-weight: 200;
-}
-
-/* 
-.image-box {
-    width: 400px;
-    height:400px;
-    margin-top:20px;
-} */
-/* 
-.image-box {
-    background-image: url(./../../data/svg\ \(2\).png);
-    width:auto;
-    margin-top: 20px;
-} */
-
-.hero--section--image{
-    margin-left:1px;
-    height: 380px;
-    width:380px;
-    border-radius: 5px;
-    position: relative;
-    left: -1px;
-    bottom: -12px;
-}
-
-.about-me {
-    display: flex;
-    width: auto;
-    max-height: 400px;
-    margin-left: 25px;
-    max-width:550px;
-    margin-right:25px;
-    overflow: scroll;
-}
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/about.css ***!
   \**************************************************************************************************************************************************************************************************************************************************************************/
 .intro-about {
-  background-image: url(/_next/static/media/mesh-475.4dae7e5b.png);
-  margin-top: 0;
+  background-image: url(/_next/static/media/background-real.edf95fac.png);
+  background-size:contain;
 }
 
 .title {
   font-family: Optima, sans-serif;
   font-size: xx-large;
-  margin: 30px;
   margin-top: 0;
   margin-bottom: 4px;
   border-bottom: #fffff0 solid 1px;
@@ -87,8 +26,6 @@ body {
 }
 
 .main {
-  background-image: url(/_next/static/media/mesh-324.334878be.png);
-  /* background-color: #68859E; */
   width: 100%;
   height: fit-content;
 }
@@ -124,7 +61,6 @@ body {
 }
 
 .intro-title {
-  margin-top: 50px;
   height: 75px;
   width: 100%;
   display: flex;
@@ -148,46 +84,48 @@ body {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ResumeButton.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
 .resume-button {
-    width: 200px;
-    height: 80px;
-    background-color: #011627;
-    border-radius: 15%;
+    width: 133px;
+    height: 48px;
+    background-color: #7840E5;
+    border-radius: 10px;
     display:flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 3px 3px #373839;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
 .resume-text {
-    font-family: Optima, sans-serif;
+    font-family: 'Rubik One';
     color: ivory;
-    font-size: larger;
+    font-size: 20px;
     font-weight: bold;
+    margin-right: 10px;
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.25);
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/navbar.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************/
 .navbar-container {
   display: flex;
-  /* background-color: #011627; */
-  border-bottom: #011627 solid 1px;
-  background-color: ivory;
+  border-bottom:solid 1px rgba(0, 0, 0, 0.3);
+  background-color: #ECCEE5;
   margin-right: auto;
   align-items: center;
   height: 60px;
-  font-family: Optima, sans-serif;
-  font-weight: 600;
+  font-family: 'Rubik One';
+  font-size: 60;
 }
 
 .navbar-return{
-    font-size: x-large;
+    font-family: 'Rubik Mono One';
+    font-size: 40px;
     margin-right: auto;
-    margin-left:5px;
+    margin-left:10px;
 }
 
 .navbar-pages-container {
     display: flex;
-    margin-right: 20px;
+    margin-right: 10px;
 
 }
 
@@ -219,10 +157,4 @@ body {
     margin-bottom: 50px; 
     text-align: center;
     align-items: center;
-}
-/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Studies.css ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************/
-.studies-body {
-    background-image: url(/_next/static/media/mesh-597.9ee3d73b.png);
 }

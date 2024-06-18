@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './navbar.css';
 
+
 function NavBar() {
     //set items active with use state (handle click: 24:03)
     return (
@@ -13,7 +14,7 @@ function NavBar() {
               to="/"
               className="navbar-return"
             >
-              Réna Sophia Hajjar
+              RH
             </Link>
             <div className="navbar-pages-container">
               <div>
@@ -22,7 +23,7 @@ function NavBar() {
                   to="/work"
                   className="navbar-option"
                 >
-                  Work Experience
+                  Experience
                 </Link>
               </div>
               <div>
@@ -35,6 +36,15 @@ function NavBar() {
                 </Link>
               </div>
               <div>
+                <Link
+                  style={{ textDecoration: "none", color: "#011627" }}
+                  to="../../contact"
+                  className="navbar-option"
+                >
+                  Contact
+                </Link>
+              </div>
+              {/* <div>
                 <Link
                   style={{ textDecoration: "none", color: "#011627" }}
                   to="/coursework"
@@ -50,7 +60,7 @@ function NavBar() {
                 >
                   Arts
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </nav>

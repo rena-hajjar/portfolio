@@ -1,12 +1,11 @@
 .intro-about {
-  background-image: url("./../../data/mesh-475.png");
-  margin-top: 0;
+  background-image: url("./../../data/background-real.png");
+  background-size:contain;
 }
 
 .title {
   font-family: Optima, sans-serif;
   font-size: xx-large;
-  margin: 30px;
   margin-top: 0;
   margin-bottom: 4px;
   border-bottom: #fffff0 solid 1px;
@@ -16,8 +15,6 @@
 }
 
 .main {
-  background-image: url("./../../data/mesh-324.png");
-  /* background-color: #68859E; */
   width: 100%;
   height: fit-content;
 }
@@ -53,7 +50,6 @@
 }
 
 .intro-title {
-  margin-top: 50px;
   height: 75px;
   width: 100%;
   display: flex;

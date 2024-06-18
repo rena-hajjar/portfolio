@@ -1,11 +1,11 @@
 import React from "react";
-import Hero from "../../components/hero";
 import './about.css'
 import Image from "next/image";
 import crest from './../../data/crest.png';
 import perk from './../../data/perk.png';
 import readwise from './../../data/readwise.png';
 import ontario from './../../data/ontario.jpeg';
+import computer from './../../data/c.png'
 import { Link } from "react-router-dom";
 import ResumeButton from "@/app/components/ResumeButton";
 
@@ -14,10 +14,17 @@ export default function About() {
       <>
         <div className="intro-about">
           <div className="intro-title">
-            <p className="intro-paragraph">Hi, my name is</p>
-            <p className="intro-name">Réna Sophia Hajjar</p>
+            <p className="intro-paragraph">Hello, I'm</p>
+            <p className="intro-name">Réna Hajjar</p>
+            <p className='intro-me'>I'm a third year Computing student at Queen's, and a Full Stack Software Engineer</p>
           </div>
-          <Hero></Hero>
+          <div className="computer-image">
+            <Image 
+              src={computer} 
+              alt='computer'
+              width={445}
+              style={{ transform: 'scaleX(-1)', marginLeft: '50px', marginTop: '120px' }}></Image>
+          </div>
           <div
             style={{
               display: "flex",
