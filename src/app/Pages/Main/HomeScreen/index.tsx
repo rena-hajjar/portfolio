@@ -7,15 +7,18 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <NavBar />
-      <Router>
-        <Routes>
-          <Route path='/' element={<Main />}></Route>
-          <Route path="/projects"></Route>
-          <Route path="/coursework"></Route>
-          <Route path="/my-arts"></Route>
-        </Routes>
-      </Router>
+    <Router>
+        <NavBar />
+        <Main></Main>
+    </Router>
+        {/* <Router>
+          <Routes>
+            <Route path="/" element={<Main />}></Route>
+            <Route path="/projects"></Route>
+            <Route path="/coursework"></Route>
+            <Route path="/my-arts"></Route>
+          </Routes>
+        </Router> */}
     </>
     //Main(hero), about (the website)
     //link to resume (and to see more (portfolio link)), linkedin, email

@@ -15,6 +15,8 @@
     background: #ECCEE5;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    z-index: 1000;
 }
 
 .navbar-logo {
@@ -30,7 +32,7 @@
 .navbar-option-container {
     display: inline-flex;
     right: 10px;
-    position: absolute;
+    position: fixed;
 
 }
 
@@ -61,9 +63,9 @@ body {
 }
 
 .intro-text-container {
-    position: absolute;
+    position:relative;
     top: 200px;
-    right: 200px;
+    left: 685px;
     width: 544px;
     height:188px;
 }
@@ -111,23 +113,77 @@ body {
     background: url(/_next/static/media/c.950e6ebb.png);
     background-size:contain;
     background-repeat: no-repeat;
-    position: absolute;
+    position: relative;
     width: 680px;
     height: 598px;
-    top: 185px;
-    left:10px;
     transform: scaleX(-1);
 }
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/HeroTimeline.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
-
-.hero-container {
+.main {
     background: #E4E0F7;
     width: 100vw;
     height: 3067px;
+}
+
+.hero-container {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.wave {
+    width: 76px;
+    height: 76px;
+    margin-right: 10px;
+}
+
+.hero-image{
+    background-image: url(/_next/static/media/mereal.6fae8550.png);
+    height: 540px;
+    width:540px;
+    margin-top: 103px;
+    margin-right: 141px;
+    margin-left: 68px;
+    z-index: 2;
+    overflow: visible;
+}
+
+.hero-blurb {
+    margin-left: 148px;
+    width: 535px;
+    height: 117px;
+    color: #000;
+    font-family: Rubik;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hero-welcome {
+    margin-top: 140px;
+    display: inline-flex;
+    width: 539px;
+    align-items: center;
+}
+
+.welcome-title {
+    color: #000;
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.timeline-container {
+    width: 764px;
+    height: 1216px;
     position: absolute;
-    top: 100vh;
+    right: 39px;
+    top: 1150px;
+    background: #ECCEE5;
 }
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ResumeButton.css ***!
