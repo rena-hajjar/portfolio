@@ -1,22 +1,18 @@
 "use client";
 import React from "react";
-import About from "../about";
-import NavBar from "../../../components/navbar";
-import Footer from "../../../components/footer";
+import NavBar from "@/app/components/NavBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
+      <NavBar />
       <Router>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<About />}></Route>
           <Route path="/projects"></Route>
           <Route path="/coursework"></Route>
           <Route path="/my-arts"></Route>
         </Routes>
-        <Footer />
       </Router>
     </>
     //Main(hero), about (the website)

@@ -1,71 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import './navbar.css';
+import { Link } from 'react-router-dom';
+import './NavBar.css'
 
 
-function NavBar() {
-    //set items active with use state (handle click: 24:03)
+//TODO: add scroll into views
+export default function NavBar() {
+
     return (
       <>
-        <nav className="navbar">
-          <div className="navbar-container">
-            <Link
-              style={{ textDecoration: "none", color: "#011627" }}
-              to="/"
-              className="navbar-return"
-            >
-              RH
-            </Link>
-            <div className="navbar-pages-container">
-              <div>
-                <Link
-                  style={{ textDecoration: "none", color: "#011627" }}
-                  to="/work"
-                  className="navbar-option"
-                >
-                  Experience
-                </Link>
-              </div>
-              <div>
-                <Link
-                  style={{ textDecoration: "none", color: "#011627" }}
-                  to="/projects"
-                  className="navbar-option"
-                >
-                  Projects
-                </Link>
-              </div>
-              <div>
-                <Link
-                  style={{ textDecoration: "none", color: "#011627" }}
-                  to="../../contact"
-                  className="navbar-option"
-                >
-                  Contact
-                </Link>
-              </div>
-              {/* <div>
-                <Link
-                  style={{ textDecoration: "none", color: "#011627" }}
-                  to="/coursework"
-                  className="navbar-option"
-                >
-                  Studies
-                </Link>
-              </div>
-              <div>
-                <Link
-                  style={{ textDecoration: "none", color: "#011627" }}
-                  to="/my-arts"
-                >
-                  Arts
-                </Link>
-              </div> */}
+        <div className="navbar-container">
+          <div className="navbar-logo">RH</div>
+          <div className="navbar-option-container">
+            <div className="navbar-option">
+              Experience
             </div>
+            <div className="navbar-option">Projects</div>
+            <div className="navbar-option">Contact</div>
           </div>
-        </nav>
+        </div>
       </>
     );
 }
-
-export default NavBar

@@ -1,28 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 .navbar-container {
-  display: flex;
-  border-bottom:solid 1px rgba(0, 0, 0, 0.3);
-  background-color: #ECCEE5;
-  margin-right: auto;
-  align-items: center;
-  height: 60px;
-  font-family: 'Rubik One';
-  font-size: 60;
-}
-
-.navbar-return{
-    font-family: 'Rubik Mono One';
-    font-size: 40px;
-    margin-right: auto;
-    margin-left:10px;
-}
-
-.navbar-pages-container {
+    height: 67px;
+    width: 100vw;
+    position: sticky;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    background: #ECCEE5;
     display: flex;
-    margin-right: 10px;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin-left: 10px;
+    color: #000;
+    font-family: "Rubik Mono One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.navbar-option-container {
+    display: inline-flex;
+    right: 10px;
+    position: absolute;
 
 }
 
 .navbar-option {
-    margin-left:auto;
-    margin-right:30px;
+    color: #000;
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 32px;
 }
