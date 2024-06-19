@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 .navbar-container {
     height: 67px;
     width: 100vw;
-    position: sticky;
+    position: fixed;
+    top: 0px;
     border: 1px solid rgba(0, 0, 0, 0.33);
     background: #ECCEE5;
     display: flex;
