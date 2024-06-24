@@ -8,7 +8,7 @@ export default function Projects() {
     return (
       <>
         <div className="projects-container">
-          <div className="projects-title">Projects</div>
+          <span className="projects-title">Projects</span>
           <div className="project-cards-container">
             <div className="project-card-row">
               <ProjectCard

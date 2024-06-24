@@ -132,10 +132,11 @@ body {
     flex-direction: row;
 }
 
-.wave {
+.hero-wave {
     width: 50px;
     height: 58px;
-    margin-right: 10px;
+    margin-right: 40px;
+    margin-bottom: 30px;
 }
 
 .hero-image{
@@ -225,7 +226,8 @@ body {
 
 .project-card-display {
     width: 337px;
-    height: 336px;
+    height: 337px;
+    margin: 30px;
     background-image: url(/_next/static/media/perk-demo.bd8845fc.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -259,6 +261,12 @@ body {
 .projects-title {
     font: 'Rubik Mono One';
     color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    display:flex;
+    width: -webkit-fill-content;
 }
 
 .project-card-row {

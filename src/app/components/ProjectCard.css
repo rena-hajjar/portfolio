@@ -20,7 +20,8 @@
 
 .project-card-display {
     width: 337px;
-    height: 336px;
+    height: 337px;
+    margin: 30px;
     background-image: url('./../data/perk-demo.jpeg');
     background-size: cover;
     background-repeat: no-repeat;

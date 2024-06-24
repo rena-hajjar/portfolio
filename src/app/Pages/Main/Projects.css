@@ -6,6 +6,12 @@
 .projects-title {
     font: 'Rubik Mono One';
     color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    display:flex;
+    width: -webkit-fill-content;
 }
 
 .project-card-row {

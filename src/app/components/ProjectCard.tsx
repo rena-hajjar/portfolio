@@ -27,15 +27,6 @@ const ProjectCard:React.FC<Props> = ({projectName, aboutProject, githubLink, pro
             </div>
           </motion.div>
         </div>
-        {/* 
-        <div className="project-card-container">
-          <div className="project-card-display"></div>
-          <div className="project-info">
-            <div className="project-name">{projectName}</div>
-            <div className="project-about">{aboutProject}</div>
-            <div className="github-link">{githubLink}</div>
-          </div>
-        </div> */}
       </>
     );
 }

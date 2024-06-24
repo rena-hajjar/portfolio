@@ -11,9 +11,11 @@ export default function HeroTimeline() {
           <div className="hero-container">
             <div className="hero-blurb">
               <div className="hero-welcome">
-                  <motion.div animate={{ rotate: [0, -25, 65, 0]}}>
+                <div className="hero-wave">
+                  <motion.div whileInView={{ rotate: [0, -25, 65, 0] }}>
                     <Wave></Wave>
                   </motion.div>
+                </div>
                 <div className="welcome-title">Welcome!</div>
               </div>
               This website as close as we can connect by static media. I’ll try

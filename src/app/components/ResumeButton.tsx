@@ -11,8 +11,7 @@ export default function ResumeButton() {
           <motion.a
             whileHover={{ scale: 1.1 }}
             href="RénaHajjar_CV_2024.pdf"
-            target="_blank"
-            c>
+            target="_blank">
             <div className="resume-text">Resume</div>
             <Download />
           </motion.a>
