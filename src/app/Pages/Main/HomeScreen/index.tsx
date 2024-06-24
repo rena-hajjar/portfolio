@@ -9,7 +9,7 @@ export default function Home() {
     <>
     <Router>
         <NavBar />
-        <Main></Main>
+        <Main />
     </Router>
         {/* <Router>
           <Routes>

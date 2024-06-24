@@ -1,5 +1,7 @@
 import './HeroTimeline.css'
+import Timeline from '@/app/components/Timeline';
 import Wave from '@/app/components/Wave';
+import { motion } from 'framer-motion';
 
 export default function HeroTimeline() {
 
@@ -9,9 +11,9 @@ export default function HeroTimeline() {
           <div className="hero-container">
             <div className="hero-blurb">
               <div className="hero-welcome">
-                <div className="wave">
-                  <Wave></Wave>
-                </div>
+                  <motion.div animate={{ rotate: [0, -25, 65, 0]}}>
+                    <Wave></Wave>
+                  </motion.div>
                 <div className="welcome-title">Welcome!</div>
               </div>
               This website as close as we can connect by static media. I’ll try
@@ -19,7 +21,9 @@ export default function HeroTimeline() {
             </div>
             <div className="hero-image"></div>
           </div>
-          <div className="timeline-container"></div>
+          <div className="timeline-container">
+            <Timeline></Timeline>
+          </div>
         </div>
       </>
     );

@@ -1,5 +1,6 @@
 import './ResumeButton.css'
 import Download from './Download';
+import { motion } from 'framer-motion';
 
 export default function ResumeButton() {
     //todo: acc download on click
@@ -7,8 +8,14 @@ export default function ResumeButton() {
     return (
       <>
         <div className="resume-button">
-          <div className="resume-text">Resume</div>
-          <Download/>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            href="RénaHajjar_CV_2024.pdf"
+            target="_blank"
+            c>
+            <div className="resume-text">Resume</div>
+            <Download />
+          </motion.a>
         </div>
       </>
     );

@@ -1,6 +1,6 @@
 import './Main.css'
 import HeroTimeline from './HeroTimeline';
-import computer from '@/app/data/c.png'
+import Projects from './Projects';
 import ResumeButton from '@/app/components/ResumeButton';
 
 export default function Main() {
@@ -24,6 +24,7 @@ export default function Main() {
           </div>
         </div>
         <HeroTimeline/>
+        <Projects />
       </>
     );
 }
