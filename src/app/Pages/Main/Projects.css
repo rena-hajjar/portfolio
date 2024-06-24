@@ -1,0 +1,20 @@
+.projects-container {
+    display: flex;
+    background-color: #8629AE;
+}
+
+.projects-title {
+    font: 'Rubik Mono One';
+    color: antiquewhite;
+}
+
+.project-card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-cards-container {
+    width: -webkit-fill-available;
+}
