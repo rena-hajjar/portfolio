@@ -12,42 +12,42 @@ export default function Projects() {
           <div className="project-cards-container">
             <div className="project-card-row">
               <ProjectCard
-                projectName="Foodsave"
-                aboutProject="Project called foodsave coooool"
-                githubLink="https://yourmother.ca"
-                projectPic='./../data/perk-demo.jpeg'
+                // projectName="Foodsave"
+                // aboutProject="Project called foodsave coooool"
+                // githubLink="https://yourmother.ca"
+                // projectPic='./../data/perk-demo.jpeg'
               ></ProjectCard>
               <ProjectCard
-                projectName="Injection Simulator"
-                aboutProject="Project called injectisim coooool"
-                githubLink="https://yourmother.ca"
-                projectPic=""
+                // projectName="Injection Simulator"
+                // aboutProject="Project called injectisim coooool"
+                // githubLink="https://yourmother.ca"
+                // projectPic=""
               ></ProjectCard>
               <ProjectCard
-                projectName="Monty Pytho"
-                aboutProject="Project that is totally incomplete!!!!!"
-                githubLink="https://yourmother.ca"
-                projectPic=""
+                // projectName="Monty Pytho"
+                // aboutProject="Project that is totally incomplete!!!!!"
+                // githubLink="https://yourmother.ca"
+                // projectPic=""
               ></ProjectCard>
             </div>
             <div className="project-card-row">
               <ProjectCard
-                projectName="ASL Training"
-                aboutProject="Project called foodsave coooool"
-                githubLink="https://yourmother.ca"
-                projectPic=""
+                // projectName="ASL Training"
+                // aboutProject="Project called foodsave coooool"
+                // githubLink="https://yourmother.ca"
+                // projectPic=""
               ></ProjectCard>
               <ProjectCard
-                projectName="Readwise Notebook UI"
-                aboutProject="Project called injectisim coooool"
-                githubLink="https://yourmother.ca"
-                projectPic=""
+                // projectName="Readwise Notebook UI"
+                // aboutProject="Project called injectisim coooool"
+                // githubLink="https://yourmother.ca"
+                // projectPic=""
               ></ProjectCard>
               <ProjectCard
-                projectName="This website (meta)"
-                aboutProject="Project that is totally incomplete!!!!!"
-                githubLink="https://yourmother.ca"
-                projectPic=""
+                // projectName="This website (meta)"
+                // aboutProject="Project that is totally incomplete!!!!!"
+                // githubLink="https://yourmother.ca"
+                // projectPic=""
               ></ProjectCard>
             </div>
           </div>

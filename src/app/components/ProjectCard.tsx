@@ -4,31 +4,30 @@ import { motion } from 'framer-motion';
 
 interface Props {
   projectName: string,
-  aboutProject: string,
-  githubLink: string,
-  projectPic: string
+  projectLink: string,
+  projectInfo: string,
+  image: string
 }
 
-const hoverMask =
-  "linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45)), url('./../data/mereal.png')";
-const regMask = 'url("./../data/mereal.png")';
+function ProjectCard() {
 
-const ProjectCard:React.FC<Props> = ({projectName, aboutProject, githubLink, projectPic}) => {
-
-    return (
-      <>
-        <div className="project-card-container">
-          <motion.div className='project-card-container' whileHover={{ scale: 1.2, background: hoverMask }}>
-            <motion.p whileHover={{ visibility: "visible" }}>
-              {projectName}
-            </motion.p>
-            <div className="project-card-display">
-              <motion.img></motion.img>
-            </div>
+  return (
+    <>
+      <div className="project-card-container">
+        <div className="card-background">
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <p className="project-card-title">FoodSave</p>
+            <span className="project-display"></span>
           </motion.div>
         </div>
-      </>
-    );
+        {/* <div className="card-image">
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <Image src="/../../data/mereal.png" alt="mereal" width={330} height={330}/>
+          </motion.div>
+        </div> */}
+      </div>
+    </>
+  );
 }
 
 export default ProjectCard;
