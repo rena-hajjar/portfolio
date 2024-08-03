@@ -4,12 +4,14 @@ import pic from "./../../data/mereal.png";
 import { motion } from "framer-motion";
 import { url } from "inspector";
 import Image from "next/image";
+import inject from './../../data/injecto.png';
+import fresh from './../../data/freshsave.png';
 
 const projects = [
   {
     id: 1,
-    title: "Foodsave",
-    background: pic,
+    title: "Freshsave",
+    background: fresh,
   },
   {
     id: 2,
@@ -19,13 +21,18 @@ const projects = [
   {
     id: 3,
     title: "Injection Simulator",
-    background: pic,
+    background: inject,
   },
   {
     id: 4,
     title: "This website (meta!)",
     background: pic,
   },
+  {
+    id: 5,
+    title: "ASL Translator",
+    background: pic,
+  }
 ];
 export default function Projects() {
   // change the project cards to a map with a list of objects as each card
@@ -44,7 +51,7 @@ export default function Projects() {
                     backgroundSize: "cover",
                   }}
                 >
-                  <Image src={project.background} alt="project pic"></Image>
+                  <Image src={project.background} alt="project pic" style={{ height:400, width:400 }}></Image>
                   <p className="project-card-title">{project.title}</p>
                   <span className="project-display"></span>
                 </motion.div>

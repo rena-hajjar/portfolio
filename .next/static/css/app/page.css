@@ -300,11 +300,12 @@ body {
     flex-direction: column;
     background-color: #E4E0F7;
     justify-content: center;
-    height: 300px;
+    align-items: center;
+    height: max-content;
 }
 
 .exp-title {
-    margin-top: 30px;
+    margin: 30px;
     font: 'Rubik Mono One';
     color: rgb(43, 43, 40);
     justify-content: center;
@@ -315,6 +316,9 @@ body {
     width: -webkit-fill-content;
 }
 
+.exp-card {
+    
+}
 /*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ExperienceCard.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************/
@@ -323,6 +327,7 @@ body {
   height: 296px;
   border-radius: 5px;
   background: #eccee5;
+  margin: 25px;
 }
 
 .exp-card-title {
@@ -334,6 +339,5 @@ body {
   line-height: normal;
   margin-left: 30px;
   margin-top: 10px;
-
 }
 

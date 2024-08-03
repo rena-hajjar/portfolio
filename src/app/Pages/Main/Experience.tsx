@@ -7,6 +7,7 @@ export default function Experience() {
         <div className="exp-container">
             <div className="exp-title">Experience</div>
             <ExperienceCard title="Readwise SWE" />
+            <ExperienceCard title="Backend Engineer with OPS" />            
         </div>
         </>
     )
