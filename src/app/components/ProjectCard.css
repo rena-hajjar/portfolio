@@ -11,6 +11,12 @@
     margin: 30px;
     position:relative;
     top:0;
+    overflow: hidden;
+}
+
+.card-background div::after {
+    transform: translateY(50%);
+    transition: 0.5s;
 }
 
 .card-background:hover div::after {
@@ -18,6 +24,7 @@
     position:absolute;
     width: 369px;
     height: 369px;
+    transition: 0.5s;
     background-image: linear-gradient(
       to bottom,
       hsla(0, 0%, 0%, 0) 0%,
@@ -56,7 +63,7 @@
     width: 337px;
     height: 337px;
     margin: 30px;
-    background-image: url('./../data/perk-demo.jpeg');
+    /* background-image: url('./../data/perk-demo.jpeg'); */
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 369px;;

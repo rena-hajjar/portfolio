@@ -1,30 +1,18 @@
 import './ProjectCard.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
-interface Props {
-  projectName: string,
-  projectLink: string,
-  projectInfo: string,
-  image: string
-}
-
-function ProjectCard() {
+function ProjectCard(title: string, background: string) {
 
   return (
     <>
       <div className="project-card-container">
-        <div className="card-background">
+        <div className="card-background" style={{ backgroundImage: background }}>
           <motion.div whileHover={{ scale: 1.2 }}>
-            <p className="project-card-title">FoodSave</p>
+            <p className="project-card-title">{title}</p>
             <span className="project-display"></span>
           </motion.div>
         </div>
-        {/* <div className="card-image">
-          <motion.div whileHover={{ scale: 1.2 }}>
-            <Image src="/../../data/mereal.png" alt="mereal" width={330} height={330}/>
-          </motion.div>
-        </div> */}
       </div>
     </>
   );

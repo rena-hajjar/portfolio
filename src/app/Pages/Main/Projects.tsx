@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectCard from "@/app/components/ProjectCard";
 import './Projects.css';
+import ProjectCard from "./../../components/ProjectCard";
 
 export default function Projects() {
 
@@ -11,12 +11,7 @@ export default function Projects() {
           <span className="projects-title">Projects</span>
           <div className="project-cards-container">
             <div className="project-card-row">
-              <ProjectCard
-                // projectName="Foodsave"
-                // aboutProject="Project called foodsave coooool"
-                // githubLink="https://yourmother.ca"
-                // projectPic='./../data/perk-demo.jpeg'
-              ></ProjectCard>
+              <ProjectCard />
               <ProjectCard
                 // projectName="Injection Simulator"
                 // aboutProject="Project called injectisim coooool"
