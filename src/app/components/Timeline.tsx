@@ -19,7 +19,7 @@ export default function Timeline() {
             date="May 2024"
           >
             <div className="vertical-timeline-element-title">
-              Backend Developer Intern
+              Backend Developer Intern - Ontario Public Service, MPBSDP
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -28,7 +28,7 @@ export default function Timeline() {
             date="October 2023"
           >
             <div className="vertical-timeline-element-title">
-              Undergraduate ML Research Student
+              Undergraduate ML Research Student - Queen's Lab for Percutaneous Surgery
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -37,7 +37,7 @@ export default function Timeline() {
             date="May 2023"
           >
             <div className="vertical-timeline-element-title">
-              Software Engineer Intern
+              Software Engineer Intern - Readwise
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -46,7 +46,7 @@ export default function Timeline() {
             date="September 2022"
           >
             <div className="vertical-timeline-element-title">
-              Bachelor of Computing with Honours
+              Bachelor of Computing with Honours - Queen's University
             </div>
           </VerticalTimelineElement>
         </VerticalTimeline>

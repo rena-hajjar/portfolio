@@ -205,36 +205,6 @@ body {
     position: relative;
     padding: 2em 0
 }
-/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Projects.css ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************/
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #8629AE;
-}
-
-.projects-title {
-    font: 'Rubik Mono One';
-    color: antiquewhite;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 400;
-    display:flex;
-    width: -webkit-fill-content;
-}
-
-.project-card-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-cards-container {
-    width: -webkit-fill-available;
-}
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ProjectCard.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************************/
@@ -308,6 +278,36 @@ body {
     background-repeat: no-repeat;
     max-width: 369px;;
 }
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Projects.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #8629AE;
+}
+
+.projects-title {
+    font: 'Rubik Mono One';
+    color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    display:flex;
+    width: -webkit-fill-content;
+}
+
+.project-card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-cards-container {
+    width: -webkit-fill-available;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ResumeButton.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
@@ -338,3 +338,25 @@ body {
     font-weight: 400;
     line-height: normal;
 }
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Experience.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #E4E0F7;
+    height: 300px;
+}
+
+.exp-title {
+    margin-top: 30px;
+    font: 'Rubik Mono One';
+    color: rgb(43, 43, 40);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    display:flex;
+    width: -webkit-fill-content;
+}
+
