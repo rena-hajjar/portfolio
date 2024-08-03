@@ -16,7 +16,7 @@ export default function Main() {
             </div>
             <div className="about-text">
               I'm a third-year Computing student at Queen’s University and a
-              Fullstack SWE
+              Fullstack Software Engineer
             </div>
           </div>
           <div className="computer-container"/>

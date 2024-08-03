@@ -1,0 +1,18 @@
+.exp-card-container {
+  width: 925px;
+  height: 296px;
+  border-radius: 5px;
+  background: #eccee5;
+}
+
+.exp-card-title {
+  color: #000;
+  font-family: Rubik;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 30px;
+  margin-top: 10px;
+
+}

@@ -1,7 +1,7 @@
 .main {
-    background: linear-gradient(#E4E0F7 80%, #8629AE 20%);
+    background: linear-gradient(#E4E0F7 70%, #8629AE 30%);
     width: 100vw;
-    height: 1500px;
+    height: 1700px;
 }
 
 .hero-container {

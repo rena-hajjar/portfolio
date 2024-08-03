@@ -1,7 +1,7 @@
 .card-background div{
     width: 369px;
     height: 369px;
-    background: url('./../data/perk-demo.jpeg');
+    /* background: url('./../data/perk-demo.jpeg'); */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;

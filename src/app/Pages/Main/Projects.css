@@ -1,27 +1,44 @@
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #8629AE;
+  display: flex;
+  flex-direction: column;
+  background-color: #8629ae;
 }
 
 .projects-title {
-    font: 'Rubik Mono One';
-    color: antiquewhite;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 400;
-    display:flex;
-    width: -webkit-fill-content;
+  font: "Rubik Mono One";
+  color: antiquewhite;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  width: -webkit-fill-content;
+  z-index: 1;
 }
 
 .project-card-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-cards-container {
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.card-background div{
+    width: 369px;
+    height: 369px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    position:relative;
+    top:0;
+    overflow: hidden;
 }
