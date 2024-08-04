@@ -17,7 +17,7 @@
 
 .exp-title {
     margin: 30px;
-    font: 'Rubik Mono One';
+    font-family: 'Rubik Mono One';
     color: rgb(43, 43, 40);
     justify-content: center;
     align-items: center;
@@ -256,7 +256,7 @@ body {
 }
 
 .projects-title {
-  font: "Rubik Mono One";
+  font-family: "Rubik Mono One";
   color: antiquewhite;
   justify-content: center;
   align-items: center;
@@ -278,7 +278,8 @@ body {
   width: -webkit-fill-available;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .card-background div{
@@ -292,6 +293,14 @@ body {
     position:relative;
     top:0;
     overflow: hidden;
+}
+
+.project-card-title {
+  position:absolute;
+  color:rgb(255, 202, 202);
+  font-family: 'Rubik One';
+  font-size: larger;
+  text-shadow: 2px 2px #5E32B2;
 }
 
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -350,7 +359,7 @@ body {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Contact.css ***!
   \****************************************************************************************************************************************************************************************************************************************************************************/
 .contact-container {
-    background: url(/_next/static/media/Contact.53af0cec.png);
+    background: url(/_next/static/media/Contact.600f1964.png);
     background-size:cover;
     background-repeat: no-repeat;
     height: 700px;
@@ -365,4 +374,15 @@ body {
     width: 85%;
     border-radius: 10%;
     background-color: #eccee4;
+    box-shadow: 5px 5px 5px 5px #998794;
+    display: flex;
+    justify-content: center;
 }
+
+.contact-title {
+    margin-top: 15px;
+    font-family: 'Rubik Mono One';
+    font-size: xx-large;
+}
+
+

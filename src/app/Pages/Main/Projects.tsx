@@ -6,33 +6,34 @@ import { url } from "inspector";
 import Image from "next/image";
 import inject from './../../data/injecto.png';
 import fresh from './../../data/freshsave.png';
+import grfn from './../../data/grfn.jpeg';
 
 const projects = [
   {
     id: 1,
-    title: "Freshsave",
+    title: "Fresh Save",
     background: fresh,
   },
   {
     id: 2,
-    title: "Book app",
-    background: pic,
+    title: "Good Reads For Nerds",
+    background: grfn,
   },
   {
     id: 3,
-    title: "Injection Simulator",
+    title: "Med-i Injection Simulator",
     background: inject,
   },
-  {
-    id: 4,
-    title: "This website (meta!)",
-    background: pic,
-  },
-  {
-    id: 5,
-    title: "ASL Translator",
-    background: pic,
-  }
+  // {
+  //   id: 4,
+  //   title: "This website (meta!)",
+  //   background: pic,
+  // },
+  // {
+  //   id: 5,
+  //   title: "ASL Translator",
+  //   background: pic,
+  // }
 ];
 export default function Projects() {
   // change the project cards to a map with a list of objects as each card

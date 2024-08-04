@@ -5,7 +5,7 @@
 }
 
 .projects-title {
-  font: "Rubik Mono One";
+  font-family: "Rubik Mono One";
   color: antiquewhite;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,8 @@
   width: -webkit-fill-available;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .card-background div{
@@ -41,4 +42,12 @@
     position:relative;
     top:0;
     overflow: hidden;
+}
+
+.project-card-title {
+  position:absolute;
+  color:rgb(255, 202, 202);
+  font-family: 'Rubik One';
+  font-size: larger;
+  text-shadow: 2px 2px #5E32B2;
 }
