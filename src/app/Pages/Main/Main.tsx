@@ -3,6 +3,7 @@ import HeroTimeline from './HeroTimeline';
 import Projects from './Projects';
 import ResumeButton from '@/app/components/ResumeButton';
 import Experience from './Experience';
+import Contact from './Contact';
 
 export default function Main() {
 
@@ -27,6 +28,7 @@ export default function Main() {
         <HeroTimeline/>
         <Projects />
         <Experience />
+        <Contact />
       </>
     );
 }

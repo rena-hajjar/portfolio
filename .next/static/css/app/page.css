@@ -1,3 +1,35 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Experience.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #E4E0F7;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.exp-title {
+    margin: 30px;
+    font: 'Rubik Mono One';
+    color: rgb(43, 43, 40);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    display:flex;
+    width: -webkit-fill-content;
+}
+
+.exp-card {
+    
+}
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/NavBar.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************/
@@ -126,7 +158,7 @@ body {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/HeroTimeline.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
 .main {
-    background: linear-gradient(#E4E0F7 70%, #8629AE 30%);
+    background: linear-gradient(#E4E0F7 70%, #5E32B2 30%);
     width: 100vw;
     height: 1700px;
 }
@@ -220,7 +252,7 @@ body {
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #8629ae;
+  background-color: #5E32B2;
 }
 
 .projects-title {
@@ -250,8 +282,8 @@ body {
 }
 
 .card-background div{
-    width: 369px;
-    height: 369px;
+    width: 320px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,33 +324,6 @@ body {
     font-weight: 400;
     line-height: normal;
 }
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Experience.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-.exp-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #E4E0F7;
-    justify-content: center;
-    align-items: center;
-    height: max-content;
-}
-
-.exp-title {
-    margin: 30px;
-    font: 'Rubik Mono One';
-    color: rgb(43, 43, 40);
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 400;
-    display:flex;
-    width: -webkit-fill-content;
-}
-
-.exp-card {
-    
-}
 /*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ExperienceCard.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************/
@@ -341,3 +346,23 @@ body {
   margin-top: 10px;
 }
 
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Contact.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.contact-container {
+    background: url(/_next/static/media/Contact.53af0cec.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+}
+
+.contact-overlay {
+    height: 80%;
+    width: 85%;
+    border-radius: 10%;
+    background-color: #eccee4;
+}

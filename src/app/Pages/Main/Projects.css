@@ -1,7 +1,7 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #8629ae;
+  background-color: #5E32B2;
 }
 
 .projects-title {
@@ -31,8 +31,8 @@
 }
 
 .card-background div{
-    width: 369px;
-    height: 369px;
+    width: 320px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
