@@ -1,7 +1,7 @@
 "use client";
-import Main from "../components/Main";
+import Main from "./Main";
 import React from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 
 const HomePage = () => {
   return (
