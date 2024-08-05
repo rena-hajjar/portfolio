@@ -1,0 +1,65 @@
+.main {
+    background: linear-gradient(#E4E0F7 70%, #5E32B2 30%);
+    width: 100vw;
+    height: 1700px;
+}
+
+.hero-container {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.hero-wave {
+    width: 50px;
+    height: 58px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.hero-image{
+    background-image: url(./../data/mereal.png);
+    height: 540px;
+    width:540px;
+    margin-top: 103px;
+    margin-right: 141px;
+    margin-left: 68px;
+    z-index: 2;
+    overflow: visible;
+}
+
+.hero-blurb {
+    margin-left: 148px;
+    width: 535px;
+    height: 117px;
+    color: #000;
+    font-family: Rubik;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hero-welcome {
+    margin-top: 140px;
+    display: inline-flex;
+    width: 539px;
+    align-items: center;
+}
+
+.welcome-title {
+    color: #000;
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.timeline-container {
+    position: absolute;
+    width: 764px;
+    height: max-content;
+    right: 40px;
+    top: 1150px;
+    background: #ECCEE5;
+}

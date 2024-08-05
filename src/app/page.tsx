@@ -1,11 +1,11 @@
-import Home from "./Pages/Main/HomeScreen";
+import HomePage from "./pages";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './globals.css'
 
 export default function Main() {
   return (
     <div className='main-page'>
-      <Home/>
+      <HomePage/>
     </div>
   );
 }

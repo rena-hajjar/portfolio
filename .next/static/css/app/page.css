@@ -1,5 +1,5 @@
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Experience.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Experience.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
@@ -87,8 +87,13 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Main.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Main.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
 .main-container {
     width:100vw;
@@ -155,7 +160,37 @@ body {
     transform: scaleX(-1);
 }
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/HeroTimeline.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ResumeButton.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+
+.resume-button a{
+    width: 210px;
+    height: 61px;
+    border-radius: 10px;
+    background: #7840E5;
+    border:none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display:flex;
+    align-items: center;
+    
+    :visited {
+        color: inherit;
+    }
+}
+
+.resume-text{
+    color: #F5F5F5;
+    margin-right: 8px;
+    margin-left: 13px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Rubik One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/HeroTimeline.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
 .main {
     background: linear-gradient(#E4E0F7 70%, #5E32B2 30%);
@@ -246,8 +281,39 @@ body {
 }
 
 
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Contact.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.contact-container {
+    background: url(/_next/static/media/Contact.600f1964.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+}
+
+.contact-overlay {
+    height: 80%;
+    width: 85%;
+    border-radius: 10%;
+    background-color: #eccee4;
+    box-shadow: 5px 5px 5px 5px #998794;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title {
+    margin-top: 15px;
+    font-family: 'Rubik Mono One';
+    font-size: xx-large;
+}
+
+
 /*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Projects.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Projects.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************/
 .projects-container {
   display: flex;
@@ -303,36 +369,6 @@ body {
   text-shadow: 2px 2px #5E32B2;
 }
 
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ResumeButton.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
-
-.resume-button a{
-    width: 210px;
-    height: 61px;
-    border-radius: 10px;
-    background: #7840E5;
-    border:none;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display:flex;
-    align-items: center;
-    
-    :visited {
-        color: inherit;
-    }
-}
-
-.resume-text{
-    color: #F5F5F5;
-    margin-right: 8px;
-    margin-left: 13px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: "Rubik One";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 /*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ExperienceCard.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************/
@@ -354,35 +390,4 @@ body {
   margin-left: 30px;
   margin-top: 10px;
 }
-
-/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/Pages/Main/Contact.css ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************/
-.contact-container {
-    background: url(/_next/static/media/Contact.600f1964.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0px;
-}
-
-.contact-overlay {
-    height: 80%;
-    width: 85%;
-    border-radius: 10%;
-    background-color: #eccee4;
-    box-shadow: 5px 5px 5px 5px #998794;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-title {
-    margin-top: 15px;
-    font-family: 'Rubik Mono One';
-    font-size: xx-large;
-}
-
 

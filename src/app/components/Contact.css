@@ -1,0 +1,27 @@
+.contact-container {
+    background: url('./../data/Contact.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+}
+
+.contact-overlay {
+    height: 80%;
+    width: 85%;
+    border-radius: 10%;
+    background-color: #eccee4;
+    box-shadow: 5px 5px 5px 5px #998794;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title {
+    margin-top: 15px;
+    font-family: 'Rubik Mono One';
+    font-size: xx-large;
+}
+
