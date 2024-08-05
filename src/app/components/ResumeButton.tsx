@@ -9,9 +9,11 @@ export default function ResumeButton() {
       <>
         <div className="resume-button">
           <motion.a
+            href={"./../data/resume.pdf"}
+            rel="noopener noreferrer"
+            target="_blank"
             whileHover={{ scale: 1.1 }}
-            href="RénaHajjar_CV_2024.pdf"
-            target="_blank">
+          >
             <div className="resume-text">Resume</div>
             <Download />
           </motion.a>
