@@ -417,6 +417,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5vh;
 
   @media (max-width: 600px) {
     flex-direction: column;
