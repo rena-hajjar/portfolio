@@ -408,6 +408,7 @@ html {
 .exp-card-container {
   width: 70vw;
   height: fit-content;
+  min-height: 30vh;
   border-radius: 5px;
   background: #eccee5;
   box-shadow: #a692a1 5px 5px 5px;
@@ -442,13 +443,14 @@ html {
 }
 
 .tech-stack-container {
-  width: 18vw;
+  width: 15vw;
   right: 10%;
   background-color: #5e32b2;
   opacity: 0.85;
   border-radius: 1px;
 
-  min-height: 20vh;
+  height: fit-content;
+  min-height: 25vh;
   @media (max-width: 600px) {
     width: 50vw;
     margin-top: 3vh;
