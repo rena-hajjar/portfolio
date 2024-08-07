@@ -409,6 +409,10 @@ html {
   border-radius: 5px;
   background: #eccee5;
   margin: 25px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .exp-card-title {
@@ -420,5 +424,14 @@ html {
   line-height: normal;
   margin-left: 30px;
   margin-top: 10px;
+}
+
+.tech-stack-container {
+  height: 85%;
+  width: 25%;
+  right: 10%;
+  background-color: #5e32b2;
+  opacity: 0.75;
+  border-radius: 1px;
 }
 
