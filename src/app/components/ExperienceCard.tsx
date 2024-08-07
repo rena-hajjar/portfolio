@@ -6,9 +6,11 @@ import readwise from './../data/readwise.png';
 export default function ExperienceCard({
   title,
   stack,
+  image,
 }: {
   title: string;
   stack: string;
+  image: string
 }) {
   return (
     <>
@@ -25,9 +27,11 @@ export default function ExperienceCard({
             </div>
             <div className="company">
               <Image
-                style={{ height: 120, width: 120, margin:"2vw" }}
-                src={readwise}
-                alt="readwise logo"
+                className="tech-image"
+                src={image}
+                width={50}
+                alt="company logo"
+                height={50}
               />
             </div>
           </div>
