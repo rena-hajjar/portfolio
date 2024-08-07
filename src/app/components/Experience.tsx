@@ -10,7 +10,6 @@ export default function Experience() {
             <div className="exp-title">Work Experience</div>
             <ExperienceCard title="Readwise SWE" stack='React, Python, Docker, ExpressJS, HTML, CSS, Typescript'/>
             <ExperienceCard title="Backend Engineer with OPS" stack="Springboot, Postman, Angular, Azure Data Factory, Azure DevOps"/>       
-            <Image style={{ height:100, width:100 }} src={readwise} alt="readwise logo"/>
         </div>
         </>
     )

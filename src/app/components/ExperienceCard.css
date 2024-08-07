@@ -1,13 +1,18 @@
 .exp-card-container {
-  width: 925px;
-  height: 296px;
+  width: 70vw;
+  height: fit-content;
   border-radius: 5px;
   background: #eccee5;
+  box-shadow: #a692a1 5px 5px 5px;
   margin: 25px;
   display:flex;
   flex-wrap:wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.exp-card-blurbs {
+  width: 35vw;
 }
 
 .exp-card-title {
@@ -22,10 +27,20 @@
 }
 
 .tech-stack-container {
-  height: 85%;
-  width: 25%;
+  width: 18vw;
   right: 10%;
   background-color: #5e32b2;
-  opacity: 0.75;
+  opacity: 0.85;
   border-radius: 1px;
+}
+
+.tech-stack-title {
+  font-family:'Rubik Mono One';
+  font-size: larger;
+}
+
+.tech {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
 }
