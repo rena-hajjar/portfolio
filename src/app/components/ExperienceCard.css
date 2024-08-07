@@ -28,8 +28,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 2vw;
+  margin-top: 1vh;
 
   @media (max-width: 600px) {
     margin-left: 0;
@@ -55,6 +55,7 @@
 .tech-stack-title {
   font-family: "Rubik Mono One";
   font-size: larger;
+  margin-bottom: 1vh;
 }
 
 .tech {
@@ -77,4 +78,8 @@
   @media (max-width: 600px) {
     margin-bottom: 3vh;
   }
+}
+
+.exp-card-about {
+  margin-left: 2vw;
 }

@@ -1,7 +1,7 @@
 .main {
     background: linear-gradient(#E4E0F7 70%, #5E32B2 30%);
     width: 100vw;
-    height: 1700px;
+    height: 2300px;
 }
 
 .hero-container {
@@ -57,9 +57,15 @@
 
 .timeline-container {
     position: absolute;
-    width: 764px;
+    width: 55vw;
     height: max-content;
     right: 40px;
     top: 1150px;
     background: #ECCEE5;
+
+    @media(max-width: 600px) {
+        width: 100vw;
+        right: 0px;
+        
+    }
 }

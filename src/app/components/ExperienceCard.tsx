@@ -2,6 +2,7 @@ import { List } from "postcss/lib/list";
 import "./ExperienceCard.css";
 import Image from "next/image";
 import readwise from './../data/readwise.png';
+import { motion } from "framer-motion";
 
 export default function ExperienceCard({
   title,
@@ -14,10 +15,15 @@ export default function ExperienceCard({
 }) {
   return (
     <>
-      <div className="experience">
+      <motion.div className="experience" 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}>
         <div className="exp-card-container">
           <div className="exp-card-blurbs">
             <div className="exp-card-title">{title}</div>
+            <div className="exp-card-about">This role consisted of...</div>
+            <div className="exp-card-title">Lessons Learned</div>
+            <div className="exp-card-about">Lesson 1:</div>
           </div>
 
           <div className="tech">
@@ -36,7 +42,7 @@ export default function ExperienceCard({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -198,7 +198,7 @@ html {
 .main {
     background: linear-gradient(#E4E0F7 70%, #5E32B2 30%);
     width: 100vw;
-    height: 1700px;
+    height: 2300px;
 }
 
 .hero-container {
@@ -254,11 +254,17 @@ html {
 
 .timeline-container {
     position: absolute;
-    width: 764px;
+    width: 55vw;
     height: max-content;
     right: 40px;
     top: 1150px;
     background: #ECCEE5;
+
+    @media(max-width: 600px) {
+        width: 100vw;
+        right: 0px;
+        
+    }
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/react-vertical-timeline-component/style.min.css ***!
@@ -268,12 +274,19 @@ html {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Timeline.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************/
 .main-timeline {
-    margin-top: 245px;
-    right: 350px;
-    width: 95%;
-    max-width: 1170px;
+    margin-top: 20vh;
+    right: 22vw;
+    max-width: 70vw;
     position: relative;
-    padding: 2em 0
+    padding: 2em 0;
+    height: max-content;
+
+    @media(max-width: 600px) {
+        right: 1vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        width: 90vw;
+    }
 }
 
 .timeline-image {
@@ -283,6 +296,11 @@ html {
     left: 460px;
 }
 
+.vertical-timeline-element-title {
+    font-family: 'Rubik One';
+    font-size: x-large;
+    margin-bottom: 1vh;
+}
 
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Contact.css ***!
@@ -435,8 +453,8 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 2vw;
+  margin-top: 1vh;
 
   @media (max-width: 600px) {
     margin-left: 0;
@@ -462,6 +480,7 @@ html {
 .tech-stack-title {
   font-family: "Rubik Mono One";
   font-size: larger;
+  margin-bottom: 1vh;
 }
 
 .tech {
@@ -484,5 +503,9 @@ html {
   @media (max-width: 600px) {
     margin-bottom: 3vh;
   }
+}
+
+.exp-card-about {
+  margin-left: 2vw;
 }
 

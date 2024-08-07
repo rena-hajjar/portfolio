@@ -1,10 +1,17 @@
 .main-timeline {
-    margin-top: 245px;
-    right: 350px;
-    width: 95%;
-    max-width: 1170px;
+    margin-top: 20vh;
+    right: 22vw;
+    max-width: 70vw;
     position: relative;
-    padding: 2em 0
+    padding: 2em 0;
+    height: max-content;
+
+    @media(max-width: 600px) {
+        right: 1vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        width: 90vw;
+    }
 }
 
 .timeline-image {
@@ -14,3 +21,8 @@
     left: 460px;
 }
 
+.vertical-timeline-element-title {
+    font-family: 'Rubik One';
+    font-size: x-large;
+    margin-bottom: 1vh;
+}
