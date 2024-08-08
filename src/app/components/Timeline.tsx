@@ -25,7 +25,7 @@ export default function Timeline() {
                 date="May 2024"
               >
                 <div className="vertical-timeline-element-title">
-                  Backend Developer Intern - Ontario Public Service, MPBSDP
+                  Backend Developer Intern - MPBSDP
                 </div>
                 <div className="timeline-element-about">
                   - Building API endpoints in a Spring Boot application and

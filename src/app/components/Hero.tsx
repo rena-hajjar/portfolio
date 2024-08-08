@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
-      <div className="main">
+      <div className="main-hero">
         <div className="hero-container">
           <div className="hero-blurb">
             <div className="hero-welcome">
