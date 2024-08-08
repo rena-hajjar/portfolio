@@ -14,7 +14,6 @@ export default function Timeline() {
       <>
         <div>
           <VerticalTimeline
-            animate={true}
             layout="1-column-right"
             className="main-timeline"
             lineColor="white"
@@ -50,8 +49,7 @@ export default function Timeline() {
               date="October 2023"
             >
               <div className="vertical-timeline-element-title">
-                Undergraduate ML Research Student - Queen's Lab for Percutaneous
-                Surgery
+                Undergraduate ML Research Student - Queen's Perk Lab
               </div>
               <div className="timeline-element-about">
                 - Automate data transfer to match requirements for 3D Slicer

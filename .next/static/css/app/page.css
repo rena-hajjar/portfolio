@@ -30,6 +30,13 @@
 .exp-card {
     
 }
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/pages/NavBar.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 
 .navbar-container {
     height: 67px;
@@ -191,49 +198,78 @@ html {
 .main {
     background: linear-gradient(#E4E0F7 70%, #5E32B2 30%);
     width: 100vw;
-    height: 1700px;
+    height: 2300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-container {
     display: inline-flex;
     flex-direction: row;
+    margin-top: 15vh;
+
+    
+
+    @media(max-width: 800px) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
 .hero-wave {
-    width: 50px;
-    height: 58px;
-    margin-right: 40px;
-    margin-bottom: 30px;
+    width: 5vw;
+    height: 6vh;
+    margin-right: 3vw;
+    margin-bottom: 5vh;
+
+    @media(max-width: 800px) {
+        margin-right: 10vw;
+    }
 }
 
 .hero-image{
     background-image: url(/_next/static/media/mereal.6fae8550.png);
-    height: 540px;
-    width:540px;
-    margin-top: 103px;
-    margin-right: 141px;
-    margin-left: 68px;
+    height: 35vw;
+    width:35vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    background-repeat: no-repeat;
+    background-size: contain;
     z-index: 2;
     overflow: visible;
+
+    @media(max-width: 1000px) {
+        min-width: 350px;
+        min-height: 350px;
+    }
 }
 
 .hero-blurb {
-    margin-left: 148px;
-    width: 535px;
-    height: 117px;
+    margin-left: 15vw;
+    width: 35vw;
+    height: 20vh;
     color: #000;
     font-family: Rubik;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media(max-width: 800px) {
+        width: 80vw;
+        height: fit-content;
+    }
 }
 
 .hero-welcome {
-    margin-top: 140px;
+    margin-top: 10vh;
     display: inline-flex;
-    width: 539px;
+    width: 35vw;
     align-items: center;
+
+    @media (max-width: 800px) {
+        width: 80vw;
+        margin-bottom: 0px;
+    }
 }
 
 .welcome-title {
@@ -247,11 +283,17 @@ html {
 
 .timeline-container {
     position: absolute;
-    width: 764px;
+    width: 55vw;
     height: max-content;
     right: 40px;
     top: 1150px;
     background: #ECCEE5;
+
+    @media(max-width: 600px) {
+        width: 100vw;
+        right: 0px;
+
+    }
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/react-vertical-timeline-component/style.min.css ***!
@@ -261,12 +303,19 @@ html {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Timeline.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************/
 .main-timeline {
-    margin-top: 245px;
-    right: 350px;
-    width: 95%;
-    max-width: 1170px;
+    margin-top: 20vh;
+    right: 22vw;
+    max-width: 70vw;
     position: relative;
-    padding: 2em 0
+    padding: 2em 0;
+    height: max-content;
+
+    @media(max-width: 600px) {
+        right: 1vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        width: 90vw;
+    }
 }
 
 .timeline-image {
@@ -276,6 +325,11 @@ html {
     left: 460px;
 }
 
+.vertical-timeline-element-title {
+    font-family: 'Rubik One';
+    font-size: x-large;
+    margin-bottom: 1vh;
+}
 
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/Contact.css ***!
@@ -298,7 +352,9 @@ html {
     background-color: #eccee4;
     box-shadow: 5px 5px 5px 5px #998794;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
 
 .contact-title {
@@ -314,7 +370,7 @@ html {
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #5E32B2;
+  background-color: #5e32b2;
 }
 
 .projects-title {
@@ -344,36 +400,79 @@ html {
   margin-bottom: 20px;
 }
 
-.card-background div{
-    width: 320px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    position:relative;
-    top:0;
-    overflow: hidden;
+.card-background div {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  position: relative;
+  top: 0;
+  overflow: hidden;
 }
 
 .project-card-title {
-  position:absolute;
-  color:rgb(255, 202, 202);
-  font-family: 'Rubik One';
+  position: absolute;
+  color: rgb(255, 202, 202);
+  font-family: "Rubik One";
   font-size: larger;
-  text-shadow: 2px 2px #5E32B2;
+  text-shadow: 2px 2px #5e32b2;
+}
+
+.project-more {
+  position: absolute;
+  bottom: 2%;
+  color: transparent;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.motion-card {
+  background: "pink";
+  background-size: "cover";
+}
+
+.motion-card:hover .project-more {
+  color: #db3069;
+  border-color: #db3069;
+  background-color: #e5e1f8;
+  box-shadow: #5332b2 1px 1px;
+  border:#5e32b2 2px 2px;
+}
+
+
+.project-more:hover {
+  border:#5e32b2 2px 2px;
+  box-shadow: 3px 3px;
 }
 
 /*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ExperienceCard.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************/
 .exp-card-container {
-  width: 925px;
-  height: 296px;
+  width: 70vw;
+  height: fit-content;
+  min-height: 30vh;
   border-radius: 5px;
   background: #eccee5;
+  box-shadow: #a692a1 5px 5px 5px;
   margin: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5vh;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.exp-card-blurbs {
+  width: 35vw;
 }
 
 .exp-card-title {
@@ -383,7 +482,60 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 2vw;
+  margin-top: 1vh;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+  }
+}
+
+.tech-stack-container {
+  width: 15vw;
+  margin: 1vw;
+  right: 10%;
+  background-color: #5e32b2;
+  opacity: 0.85;
+  border-radius: 1px;
+
+  /* height: fit-content; */
+  min-height: 25vh;
+  @media (max-width: 600px) {
+    width: 50vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+}
+
+.tech-stack-title {
+  font-family: "Rubik Mono One";
+  font-size: larger;
+  margin-bottom: 1vh;
+}
+
+.tech {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.tech-image {
+  margin: 3vw;
+  height: 20vh;
+  width: 20vh;
+  @media (max-width: 600px) {
+    margin-bottom: 3vh;
+  }
+}
+
+.exp-card-about {
+  margin-left: 2vw;
 }
 
