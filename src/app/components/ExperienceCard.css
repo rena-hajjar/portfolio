@@ -14,11 +14,16 @@
 
   @media (max-width: 600px) {
     flex-direction: column;
+
   }
 }
 
 .exp-card-blurbs {
   width: 35vw;
+
+  @media (max-width: 600px) {
+    width: 65vw;
+  }
 }
 
 .exp-card-title {

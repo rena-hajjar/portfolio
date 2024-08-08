@@ -1,17 +1,14 @@
 import "./Main.css";
 import ResumeButton from "@/app/components/ResumeButton";
 import { useEffect } from "react";
-import HeroTimeline from "../components/HeroTimeline";
+import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 import Experience from "../components/Experience";
 import React from "react";
+import Timeline from "../components/Timeline";
 
 export default function Main() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   return (
     <>
       <div id="#main">
@@ -31,7 +28,8 @@ export default function Main() {
             <ResumeButton />
           </div>
         </div>
-        <HeroTimeline />
+        <Hero />
+        <Timeline />
       </div>
       <div id="projects">
         <Projects />
