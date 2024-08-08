@@ -1,4 +1,4 @@
-.main-hero {
+.main {
   background: #e4e0f7;
   width: 100vw;
   height: max-content;
@@ -11,7 +11,7 @@
   flex-direction: row;
   margin-top: 15vh;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     flex-direction: column-reverse;
     align-items: center;
     margin-bottom: 8vh;
@@ -25,7 +25,7 @@
   margin-right: 3vw;
   margin-bottom: 5vh;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     margin-right: 10vw;
   }
 }
@@ -74,7 +74,7 @@
   font-weight: 400;
   line-height: normal;
   z-index: 2;
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     width: 80vw;
     height: fit-content;
     font-size: 5vw;
@@ -88,7 +88,7 @@
   width: 35vw;
   align-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     width: 80vw;
     margin-bottom: 0px;
   }
