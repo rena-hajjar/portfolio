@@ -1,4 +1,4 @@
-.main {
+.main-hero {
   background: #e4e0f7;
   width: 100vw;
   height: max-content;
@@ -29,17 +29,6 @@
     margin-right: 10vw;
   }
 }
-
-/* .hero-image-container {
-    display: flex;
-}
-
-.hero-image-background {
-  background-color: #eccee5;
-  width: 50vw;
-  margin-right: 4vw;
-  height: 50%;
-} */
 
 .hero-image {
   background-image: url(./../data/mereal.png);
