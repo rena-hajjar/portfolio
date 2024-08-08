@@ -3,6 +3,7 @@ import "./ExperienceCard.css";
 import Image from "next/image";
 import readwise from './../data/readwise.png';
 import { motion } from "framer-motion";
+import { duration } from "@mui/material";
 
 export default function ExperienceCard({
   title,
@@ -34,7 +35,7 @@ export default function ExperienceCard({
             <div className="company">
               <Image
                 className="tech-image"
-                src={image}
+                src={readwise}
                 width={50}
                 alt="company logo"
                 height={50}
