@@ -98,9 +98,10 @@
 }
 
 .computer {
-    background: url('./../data/comp-2.png');
+    background: url('./../data/c.png');
     background-size:contain;
     background-repeat: no-repeat;
+    transform: scaleX(-1);
 
     width: 40vw;
     height: 50vw;
