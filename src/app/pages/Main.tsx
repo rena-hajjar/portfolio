@@ -1,6 +1,5 @@
 import "./Main.css";
 import ResumeButton from "@/app/components/ResumeButton";
-import { useEffect } from "react";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
