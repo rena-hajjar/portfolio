@@ -16,9 +16,17 @@ export default function ExperienceCard({
 }) {
   return (
     <>
-      <motion.div className="experience" 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0"
+        ></meta>
+      </head>
+      <motion.div
+        className="experience"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+      >
         <div className="exp-card-container">
           <div className="exp-card-blurbs">
             <div className="exp-card-title">{title}</div>

@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0"
+        ></meta>
+      </head>
+
       <div className="main-hero">
         <div className="hero-container">
           <div className="hero-blurb">

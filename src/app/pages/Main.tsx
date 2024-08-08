@@ -10,6 +10,13 @@ import Timeline from "../components/Timeline";
 export default function Main() {
   return (
     <>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0"
+        ></meta>
+      </head>
+
       <div id="#main">
         <div className="main">
           <div className="main-container">
