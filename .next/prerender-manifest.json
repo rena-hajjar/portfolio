@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":4,"routes":{"/":{"experimentalBypassFor":[{"type":"header","key":"Next-Action"},{"type":"header","key":"content-type","value":"multipart/form-data;.*"}],"initialRevalidateSeconds":false,"srcRoute":"/","dataRoute":"/index.rsc"}},"dynamicRoutes":{},"notFoundRoutes":[],"preview":{"previewModeId":"a3e2e62c7fe96d0b636c921897824a3b","previewModeSigningKey":"d3f933e54925a003dad082a265efd83841608b1413a3c0f247c43bfa1e8a8338","previewModeEncryptionKey":"f847c8f1808483927772a5d285833ece00f2a38df5f45edbfd66b7b4b37eadc7"}}
+=======
+{"version":4,"routes":{"/":{"experimentalBypassFor":[{"type":"header","key":"Next-Action"},{"type":"header","key":"content-type","value":"multipart/form-data;.*"}],"initialRevalidateSeconds":false,"srcRoute":"/","dataRoute":"/index.rsc"}},"dynamicRoutes":{},"notFoundRoutes":[],"preview":{"previewModeId":"ee2adcd4717fe6a71cd3a5af63ffd440","previewModeSigningKey":"77cd89be52b58f1af362f34ad6f7cff0442bd8a0ac6d3ecd941ccd61c8339137","previewModeEncryptionKey":"a7d2db061d2debba30587cb22b046b678663ae3c07a5ce15947e40592d9279f5"}}
+>>>>>>> main
