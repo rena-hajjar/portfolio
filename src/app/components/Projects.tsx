@@ -85,7 +85,7 @@ export default function Projects() {
 
               <Dialog className="project-dialog" open={isDialogOpen} onClose={handleClose}>
                 <DialogTitle>{project.title}</DialogTitle>
-                About me
+                {project.about}
                 <Button>GitHub logo</Button>
               </Dialog>
             </>

@@ -79,3 +79,8 @@
   border:#5e32b2 2px 2px;
   box-shadow: 3px 3px;
 }
+
+.project-dialog {
+  size: fit-content;
+  
+}
