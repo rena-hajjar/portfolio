@@ -1,11 +1,10 @@
 import './ResumeButton.css'
 import Download from './Download';
 import { motion } from 'framer-motion'
-import pdf from './../../files/resume.pdf';
 
 export default function ResumeButton() {
     const handleClick = () => {
-      window.open('/resume.pdf', '_blank');
+      window.open('/RénaHajjar-Resume.pdf', '_blank');
     };
 
     return (
