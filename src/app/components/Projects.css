@@ -64,6 +64,7 @@
 .motion-card {
   background: "pink";
   background-size: "cover";
+  cursor: pointer;
 }
 
 .motion-card:hover .project-more {

@@ -1,7 +1,7 @@
 .main-hero {
   background: #e4e0f7;
   width: 100vw;
-  height: max-content;
+  height: 90vh;
   display: flex;
   flex-direction: column;
 }
