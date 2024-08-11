@@ -1,8 +1,7 @@
 import './Experience.css';
 import ExperienceCard from '@/app/components/ExperienceCard';
 import readwise from './../data/readwise.png';
-import Image from 'next/image';
-import ontario from './../data/ontario.png';
+import ontario from './../data/ontario.jpeg';
 
 export default function Experience() {
     return (
