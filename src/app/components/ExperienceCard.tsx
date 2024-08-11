@@ -1,9 +1,6 @@
-import { List } from "postcss/lib/list";
 import "./ExperienceCard.css";
-import Image from "next/image";
-import readwise from './../data/readwise.png';
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { duration } from "@mui/material";
 
 export default function ExperienceCard({
   title,
@@ -12,7 +9,7 @@ export default function ExperienceCard({
 }: {
   title: string;
   stack: string;
-  image: string
+  image: StaticImageData;
 }) {
   return (
     <>
@@ -37,7 +34,7 @@ export default function ExperienceCard({
             <div className="company">
               <Image
                 className="tech-image"
-                src={readwise}
+                src={image}
                 width={50}
                 alt="company logo"
                 height={50}
