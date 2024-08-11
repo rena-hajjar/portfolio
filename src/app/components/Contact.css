@@ -94,7 +94,7 @@
     height: 20vh;
 }
 
-.contact-resume-text{
+.contact-resume-text, .contact-resume-blurb{
     color: #E5E1F8;
     margin-right: 8px;
     margin-left: 13px;
