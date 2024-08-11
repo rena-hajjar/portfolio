@@ -70,6 +70,7 @@
 .social-option {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 30vw;
     margin: 5vh;
 
