@@ -59,28 +59,6 @@
     margin: 5vh;
 }
 
-@media (max-width: 800px) {
-    .contact-overlay {
-        flex-direction: column;
-        height: 60vh;
-    }
-
-    .contact-title-container {
-        width: 70vw;
-        height: 30vh;
-    }
-
-    .socials-container {
-        flex-direction: column;
-        width: 70vw;
-        align-items:stretch;
-    }
-
-    .social-option {
-        width: 70vw;
-    }
-}
-
 .social-title {
     font-family: 'Rubik Mono One';
     font-size: 3vh;
@@ -116,7 +94,6 @@
     height: 20vh;
 }
 
-
 .contact-resume-text{
     color: #E5E1F8;
     margin-right: 8px;
@@ -144,5 +121,52 @@
     
     :visited {
         color: inherit;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .contact-overlay {
+        flex-direction: column;
+        height: 60vh;
+    }
+
+    .contact-title-container {
+        width: 70vw;
+        height: 40vh;
+        background: none;
+    }
+
+    .contact-title {
+        font-size: 4vh;
+        margin: 0;
+        margin-top: 5vh;
+    }
+
+    .socials-container {
+        flex-direction: column;
+        width: 70vw;
+        align-items:stretch;
+    }
+
+    .contact-resume-button {
+        height: fit-content;
+    }
+
+    .resume-social-container {
+        width: 70vw;
+        height: max-content;
+        display: flex;
+        margin-bottom: 5vh;
+
+    }
+
+    .contact-resume-blurb {
+        display: none;
+    }
+
+    .social-option {
+        width: 70vw;
+        margin-left: 0vw;
     }
 }

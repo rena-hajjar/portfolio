@@ -90,7 +90,7 @@
   }
 
   .intro-text-container {
-    margin-top: 1vh;
+    margin-top: 5vh;
     width: 90vw;
     margin-bottom: 5vh;
   }
@@ -109,13 +109,17 @@
   }
 
   .computer-container {
-    height: fit-content;
     min-height: 0;
     width: 60vw;
+    height: 45vh;
   }
 
   .computer {
     width: 60vw;
     height: 50vh;
+  }
+  
+  .resume-button-container {
+    margin-bottom: 1vh;
   }
 }

@@ -55,7 +55,7 @@ export default function Contact() {
               </a>
             </div>
             <div
-              className="resume-text"
+              className="contact-resume-blurb"
               style={{ marginLeft: "4vw", color: "black" }}
             >
               Download my Resume here.
