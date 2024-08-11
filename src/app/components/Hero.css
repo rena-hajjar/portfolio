@@ -11,13 +11,6 @@
   display: inline-flex;
   flex-direction: row;
   margin-top: 15vh;
-
-  @media (max-width: 800px) or (orientation: portait) {
-    flex-direction: column-reverse;
-    align-items: center;
-    margin-bottom: 8vh;
-    margin-top: 8vh;
-  }
 }
 
 .hero-wave {
@@ -26,9 +19,6 @@
   margin-right: 3vw;
   margin-bottom: 5vh;
 
-  @media (max-width: 800px) or (orientation: portait) {
-    margin-right: 10vw;
-  }
 }
 
 .hero-image {
@@ -41,16 +31,6 @@
   background-size: contain;
   z-index: 2;
   overflow: visible;
-
-  @media (max-width: 1000px) or (orientation: portait)  {
-    min-width: 350px;
-    min-height: 350px;
-  }
-
-  @media (max-width: 800px) or (orientation: portait) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
 
 .hero-blurb {
@@ -64,12 +44,6 @@
   font-weight: 400;
   line-height: normal;
   z-index: 2;
-  @media (max-width: 800px) or (orientation: portait)  {
-    width: 80vw;
-    height: fit-content;
-    font-size: 5vw;
-    margin: 0px;
-  }
 }
 
 .hero-welcome {
@@ -77,11 +51,6 @@
   display: inline-flex;
   width: 35vw;
   align-items: center;
-
-  @media (max-width: 800px) or (orientation: portait) {
-    width: 80vw;
-    margin-bottom: 0px;
-  }
 }
 
 .welcome-title {
@@ -91,4 +60,41 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+
+@media(max-width: 1000px) {
+  .hero-image {
+    min-width: 350px;
+    min-height: 350px;
+  }
+}
+@media (max-width: 800px) {
+  .hero-container{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 8vh;
+    margin-top: 8vh;
+  }
+
+  .hero-wave {
+    margin-right: 10vw;
+  }
+
+  .hero-image {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .hero-blurb {
+    width: 80vw;
+    height: fit-content;
+    font-size: 5vw;
+    margin: 0px;
+  }
+
+  .hero-welcome {
+    width: 80vw;
+    margin-bottom: 0px;
+  }
 }

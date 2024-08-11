@@ -12,14 +12,6 @@
   margin-right: 4vw;
   margin-bottom: 8vh;
   background: #eccee5;
-
-  @media (max-width: 800px) or (orientation: portait)  {
-    width: 100vw;
-    margin-right: 0px;
-    display:flex;
-    justify-content: space-around;
-  }
-
 }
 
 .main-timeline {
@@ -29,13 +21,6 @@
     padding: 2em 0;
     height: max-content;
     margin-right: 0;
-
-    @media(max-width: 800px) or (orientation: portait)  {
-        right: 1vw;
-        margin-right: 1vw;
-        margin-left: 1vw;
-        width: 90vw;
-    }
 }
 
 .timeline-image {
@@ -49,4 +34,20 @@
     font-family: 'Rubik One';
     font-size: x-large;
     margin-bottom: 1vh;
+}
+
+@media (max-width: 800px) {
+  .timeline-background {
+    width: 100vw;
+    margin-right: 0px;
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .main-timeline {
+    right: 1vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        width: 90vw;
+  }
 }
