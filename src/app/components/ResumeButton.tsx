@@ -15,7 +15,7 @@ export default function ResumeButton() {
             whileHover={{ scale: 1.1 }}
           >
             <div className="resume-text">Resume</div>
-            <Download />
+            <Download color='white'/>
           </motion.button>
         </div>
       </>

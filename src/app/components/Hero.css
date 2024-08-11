@@ -1,9 +1,10 @@
 .main-hero {
   background: #e4e0f7;
   width: 100vw;
-  height: 90vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero-container {
