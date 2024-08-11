@@ -2,28 +2,142 @@
     background: url('./../data/Contact.png');
     background-size:cover;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 75vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     top: 0px;
 }
 
 .contact-overlay {
-    height: 80%;
-    width: 85%;
-    border-radius: 10%;
+    height: 70vh;
+    width: 85vw;
+    border-radius: 40px 40px;
     background-color: #eccee4;
     box-shadow: 5px 5px 5px 5px #998794;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        height: 60vh;
+    }
+}
+
+.contact-title-container {
+    width: 40vw;
+    height: 60vh; 
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border-radius: 50px;
+    background-image: url('./../data/mesh-470.png');
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+        width: 70vw;
+        height: 30vh;
+    }
 }
 
 .contact-title {
     margin-top: 15px;
+    margin-left: 15px;
     font-family: 'Rubik Mono One';
     font-size: xx-large;
+    text-shadow: white 2px 2px 6px;
 }
 
+.socials-container {
+    width: 40vw;
+    height: 60vh;
+    display:flex;
+    flex-direction: column;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        width: 70vw;
+        align-items:stretch;
+    }
+}
+
+.social-option {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    margin: 5vh;
+
+    @media (max-width: 800px) {
+        width: 70vw;
+    }
+}
+
+.social-title {
+    font-family: 'Rubik Mono One';
+    font-size: 3vh;
+    color: black;
+    text-shadow: white 2px 2px;
+
+}
+
+.social-user {
+    font-family: 'Rubik Mono';
+    font-size:larger;
+    color: black;
+}
+
+.social-image {
+    width:30px;
+    height:30px;
+    margin-right: 1vw;
+}
+
+.resume-social-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: fit-content;
+}
+
+.contact-resume-button {
+    margin-bottom: 15vh;
+    margin-top: 5vh;
+}
+
+
+.contact-resume-text{
+    color: #E5E1F8;
+    margin-right: 8px;
+    margin-left: 13px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Rubik One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.contact-resume-button button{
+    width: 210px;
+    height: 61px;
+    border-radius: 10px;
+    background: #7840E5;
+    border:none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+    :visited {
+        color: inherit;
+    }
+}
