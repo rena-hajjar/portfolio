@@ -111,7 +111,7 @@
   .computer-container {
     min-height: 0;
     width: 60vw;
-    height: 45vh;
+    height: 32vh;
   }
 
   .computer {
@@ -121,5 +121,6 @@
   
   .resume-button-container {
     margin-bottom: 1vh;
+    margin-top:0;
   }
 }
