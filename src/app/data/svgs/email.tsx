@@ -1,4 +1,4 @@
-export default function email({ className }: { className?: string }) {
+export default function Email({ className }: { className?: string }) {
   return (
     <svg
       className={className}
