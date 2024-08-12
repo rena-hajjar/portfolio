@@ -54,7 +54,7 @@ export default function Projects() {
   return (
     <>
       <div className="projects-container">
-        <span className="projects-title">Projects</span>
+        <span className="projects-title">Projects.</span>
         <div className="project-cards-container">
           {projects.map((project) => (
             <>

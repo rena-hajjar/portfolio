@@ -11,9 +11,10 @@
     margin: 30px;
     font-family: 'Rubik Mono One';
     color: rgb(43, 43, 40);
+    text-shadow: #eccee5 4px 3px;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 6vh;
     font-weight: 400;
     display:flex;
     width: -webkit-fill-content;
