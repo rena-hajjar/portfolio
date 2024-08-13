@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import perk from './../data/perk-demo.jpeg';
 import qwic from './../data/qwic.png';
 import qcc from './../data/qcc.png';
-import sbt from './../data/SBT.png';
+import SBT from './../data/SBT.png';
 import React from "react";
 import './ExtraCurriculars.css';
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ const ExtraCs = [
         id: 1,
         title: "Smith Business and Tech",
         role: "Logistics Director",
-        image: sbt,
+        image: SBT,
     },
     {
         id: 2,
