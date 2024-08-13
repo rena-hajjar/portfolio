@@ -7,7 +7,7 @@ import Download from "./Download";
 
 export default function Contact() {
   const handleClick = () => {
-    window.open("/RSH-CV2024_Unedited.pdf", "_blank");
+    window.open("/RSH_CV_2024.pdf", "_blank");
   };
 
   return (
