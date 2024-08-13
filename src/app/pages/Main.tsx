@@ -6,6 +6,7 @@ import Projects from "../components/Projects";
 import Experience from "../components/Experience";
 import React from "react";
 import Timeline from "../components/Timeline";
+import ExtraCurriculars from "../components/ExtraCurriculars";
 
 export default function Main() {
   return (
@@ -39,6 +40,9 @@ export default function Main() {
       </div>
       <div id="experience">
         <Experience />
+      </div>
+      <div id="extracurriculars">
+        <ExtraCurriculars />
       </div>
       <div id="contact">
         <Contact />

@@ -1,0 +1,84 @@
+.ec-container {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    background-color: #E4E0F7;
+}
+
+.ec-section-title {
+    margin-top: 10vh;
+    font-family: "Rubik Mono One";
+    color: black;
+    text-shadow: #E0F5F7 4px 3px;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vh;
+    font-weight: 400;
+    display: flex;
+    width: -webkit-fill-content;
+    z-index: 1;
+  }
+
+.ec-title {
+    text-align: center;
+    margin-top: 1vh;
+    align-self: center;
+    font-family: 'Rubik Mono One';
+    color: black;
+    font-size: 4vh;
+    text-shadow: pink 2px 2px;
+}
+  
+.ec-role {
+    text-align: center;
+    margin-top: 1vh;
+    font-family: 'Rubik';
+    color: black;
+    font-size: 3vh;
+    font-weight: 200;
+    align-self:center;
+    margin-bottom: 2vh;
+}
+
+.ec {
+    width: --webkit-fill-available;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.ec-card-container {
+    height: 60vh;
+    width: 56vh;
+    margin: 1vw;
+    background-color: #E0F5F7;
+    box-shadow: #8d9b9c 3px 3px 6px;
+    border-radius: 10px 10px;
+    display:flex;
+    justify-content: center;
+}
+.ec-card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ec-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.ec-image {
+    margin-top: 3vh;
+    width:50vh;
+    height:50vh;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px 10px;
+}

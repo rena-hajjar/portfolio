@@ -1,5 +1,5 @@
 .resume-button {
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
     margin-top: 5vh;
 }
 
@@ -35,6 +35,7 @@
 
 @media (max-width: 800px) {
     .resume-button {
+        margin-top: 1vh;
         margin-bottom: 5vh;
     }
 }
