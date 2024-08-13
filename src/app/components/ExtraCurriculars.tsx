@@ -1,5 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import perk from './../data/perk-demo.jpeg';
+import qwic from './../data/qwic.png';
+import qcc from './../data/qcc.png';
+import sbt from './../data/SBT.png';
 import React from "react";
 import './ExtraCurriculars.css';
 import { motion } from "framer-motion";
@@ -9,19 +12,19 @@ const ExtraCs = [
         id: 1,
         title: "Smith Business and Tech",
         role: "Logistics Director",
-        image: perk,
+        image: sbt,
     },
     {
         id: 2,
         title: "Queen's Women in Tech",
         role: "HackHer Coordinator",
-        image: perk,
+        image: qwic,
     },
     {
         id: 3,
         title: "Queen's Climbing Club",
         role: "General Climber",
-        image: perk,
+        image: qcc,
     },
     {
         id: 4,
@@ -29,12 +32,12 @@ const ExtraCs = [
         role: "Undergraduate Researcher & Volunteer",
         image: perk,
     },
-    {
-        id: 5,
-        title: "Queen's Music Club",
-        role: "General Member",
-        image: perk,
-    },
+    // {
+    //     id: 5,
+    //     title: "Queen's Music Club",
+    //     role: "General Member",
+    //     image: perk,
+    // },
 ]
 
 

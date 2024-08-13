@@ -79,5 +79,6 @@
     width:50vh;
     height:50vh;
     object-fit: cover;
+    overflow: hidden;
     border-radius: 10px 10px;
 }

@@ -30,6 +30,7 @@
 .intro-text {
   width: 40vw;
   color: #000;
+  text-shadow: gray 3px 4px;
   font-family: "Rubik One";
   font-size: 3vw;
   font-style: normal;
@@ -40,6 +41,7 @@
 
 .name-text {
   color: #000;
+  text-shadow: gray 4px 5px;
   font-family: "Rubik One";
   font-size: 5vw;
   font-style: normal;
