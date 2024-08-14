@@ -1,7 +1,7 @@
 .exp-container {
     display: flex;
     flex-direction: column;
-    background-color: #E4E0F7;
+    /* background-color: #E4E0F7; */
     border: #ACB1EC 3px 3px;
     justify-content: center;
     align-items: center;
