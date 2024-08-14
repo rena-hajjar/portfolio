@@ -1,7 +1,7 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #B7BCF3;
+  background-color: #b7bcf3;
 }
 
 .projects-title {
@@ -17,7 +17,6 @@
   z-index: 1;
 }
 
-
 .project-cards-container {
   width: -webkit-fill-available;
   display: flex;
@@ -29,6 +28,7 @@
 .card-background div {
   width: 320px;
   height: 320px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,16 +67,14 @@
   border-color: #db3069;
   background-color: #e5e1f8;
   box-shadow: #5332b2 1px 1px;
-  border:#5e32b2 2px 2px;
+  border: #5e32b2 2px 2px;
 }
 
-
 .project-more:hover {
-  border:#5e32b2 2px 2px;
+  border: #5e32b2 2px 2px;
   box-shadow: 3px 3px;
 }
 
 .project-dialog {
   size: fit-content;
-  
 }

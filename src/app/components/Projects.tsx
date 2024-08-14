@@ -6,7 +6,7 @@ import Image from "next/image";
 import inject from "./../data/injecto.png";
 import fresh from "./../data/freshsave.png";
 import grfn from "./../data/grfn.jpeg";
-// import arduino from "./../data/arduino.png";
+import arduino from "./../data/arduino.png";
 import { Button, Dialog, DialogTitle } from "@mui/material";
 
 const projects = [
@@ -37,6 +37,13 @@ const projects = [
   //   about: "This is an exploration into the world of hardware for me, a mostly software-oriented person.",
   //   ghlink: "",
   //   background: arduino,
+  // },
+  // {
+  //   id: 5,
+  //   title: "ASL Translator",
+  //   about: "Blahhhh",
+  //   ghlink: "",
+  //   background: inject,
   // }
 ];
 

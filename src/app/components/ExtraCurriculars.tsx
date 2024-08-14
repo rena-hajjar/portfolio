@@ -3,42 +3,43 @@ import perk from './../data/perk-demo.jpeg';
 import qwic from './../data/qwic.png';
 import qcc from './../data/qcc.png';
 import SBT from './../data/SBT.png';
+import bloorview from './../data/bloorview.jpg';
 import React from "react";
 import './ExtraCurriculars.css';
 import { motion } from "framer-motion";
 
 const ExtraCs = [
-    {
-        id: 1,
-        title: "Smith Business and Tech",
-        role: "Logistics Director",
-        image: SBT,
-    },
-    {
-        id: 2,
-        title: "Queen's Women in Tech",
-        role: "HackHer Coordinator",
-        image: qwic,
-    },
-    {
-        id: 3,
-        title: "Queen's Climbing Club",
-        role: "General Climber",
-        image: qcc,
-    },
-    {
-        id: 4,
-        title: "The Perk Lab",
-        role: "Undergraduate Researcher & Volunteer",
-        image: perk,
-    },
-    // {
-    //     id: 5,
-    //     title: "Queen's Music Club",
-    //     role: "General Member",
-    //     image: perk,
-    // },
-]
+  {
+    id: 1,
+    title: "Smith Business and Tech",
+    role: "Logistics Director",
+    image: SBT,
+  },
+  {
+    id: 2,
+    title: "Queen's Women in Tech",
+    role: "HackHer Coordinator",
+    image: qwic,
+  },
+  {
+    id: 3,
+    title: "Queen's Climbing Club",
+    role: "General Climber",
+    image: qcc,
+  },
+  {
+    id: 4,
+    title: "The Perk Lab",
+    role: "Undergraduate Researcher & Volunteer",
+    image: perk,
+  },
+  {
+    id: 5,
+    title: "Holland Bloorview",
+    role: "Rehabilitation Centre Volunteer",
+    image: bloorview,
+  },
+];
 
 
 function ExtraCurricularCard({title, role, image} : Readonly<{title: string; role: string; image: StaticImageData}>) {
