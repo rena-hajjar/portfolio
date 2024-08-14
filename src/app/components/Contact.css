@@ -14,7 +14,7 @@
     height: 70vh;
     width: 85vw;
     border-radius: 40px 40px;
-    background-color: #eccee4;
+    background-color: #C1BDF9;
     box-shadow: 5px 5px 5px 5px #998794;
     display: flex;
     align-items: center;
@@ -28,7 +28,8 @@
     margin-left: 2vw;
     margin-right: 2vw;
     border-radius: 50px;
-    background-image: url('./../data/mesh-470.png');
+    background-image: url('./../data/mesh-138.png');
+    background-size:cover;
     background-repeat: no-repeat;
     display:flex;
     align-items: center;

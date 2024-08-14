@@ -26,6 +26,7 @@
   flex-direction: row;
   width: 45vw;
   height: 35vw;
+  background-color: linear-gradient(#B7BCF3 50%, rgb(174, 243, 201) 50%,);
 }
 
 .hero-image {

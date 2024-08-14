@@ -7,7 +7,7 @@
 .projects-title {
   font-family: "Rubik Mono One";
   color: rgb(0, 0, 0);
-  text-shadow: pink 3px 3px;
+  text-shadow: rgb(192, 255, 208) 3px 3px;
   justify-content: center;
   align-items: center;
   font-size: 6vh;
@@ -41,7 +41,7 @@
 
 .project-card-title {
   position: absolute;
-  color: rgb(255, 202, 202);
+  color: rgb(192, 255, 208);
   font-family: "Rubik One";
   font-size: larger;
   text-shadow: 2px 2px #5e32b2;
@@ -78,9 +78,5 @@
 
 .project-dialog {
   size: fit-content;
-  
-}
-
-@media (max-width: 800px) {
   
 }
