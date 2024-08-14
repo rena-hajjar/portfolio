@@ -2,10 +2,10 @@
   width: 70vw;
   height: fit-content;
   min-height: 30vh;
-  border-radius: 5px;
-  background: #eccee5;
+  border-radius: 10px;
+  background: #ccf3f7;
   border: E0F5F7 2px 2px;
-  box-shadow: #a692a1 5px 5px 5px;
+  box-shadow: #ABA6EC 5px 5px 3px;
   margin: 25px;
   display: flex;
   flex-wrap: wrap;
@@ -34,9 +34,9 @@
   width: 15vw;
   margin: 1vw;
   right: 10%;
-  background-color: #5e32b2;
+  background-color: #aba3e994;
   opacity: 0.85;
-  border-radius: 1px;
+  border-radius: 10px;
   min-height: 25vh;
 }
 
