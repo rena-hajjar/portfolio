@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
-import { url } from "inspector";
 import Image from "next/image";
 import inject from "./../data/injecto.png";
 import fresh from "./../data/freshsave.png";
 import grfn from "./../data/grfn.jpeg";
-import arduino from "./../data/arduino.png";
-import { Button, Dialog, DialogTitle } from "@mui/material";
+import Github from "../data/svgs/github";
+// import arduino from "./../data/arduino.png";
+import { Button, ButtonBase, createTheme, Dialog, DialogTitle } from "@mui/material";
+import Modal from "react-bootstrap/esm/Modal";
 
 const projects = [
   {
     id: 1,
     title: "Fresh Save",
     about: "This is my project",
-    ghlink: "github.com/rena-hajjar/portfolio",
+    ghlink: "https://github.com/rena-hajjar/portfolio",
     background: fresh,
   },
   {
@@ -80,21 +81,13 @@ export default function Projects() {
                     style={{ height: 400, width: 400 }}
                   ></Image>
                   <p className="project-card-title">{project.title}</p>
-                  <Button
-                    className="project-more"
-                    onClick={handleClick}
-                    variant="contained"
-                  >
-                    See More
+                  <Button className="project-more">
+                    <a style={{ textDecoration:"none", color:"transparent"}} href="https://github.com/rena-hajjar/portfolio" target="_blank">
+                      See More
+                    </a>
                   </Button>
                 </motion.div>
               </div>
-
-              <Dialog className="project-dialog" open={isDialogOpen} onClose={handleClose}>
-                <DialogTitle>{project.title}</DialogTitle>
-                {project.about}
-                <Button>GitHub logo</Button>
-              </Dialog>
             </>
           ))}
         </div>
