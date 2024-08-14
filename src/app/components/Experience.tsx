@@ -8,8 +8,8 @@ export default function Experience() {
         <>
         <div className="exp-container">
             <div className="exp-title">Work Experience.</div>
-            <ExperienceCard title="Readwise SWE" stack='React, Python, Docker, ExpressJS, HTML, CSS, Typescript' image={readwise}/>
-            <ExperienceCard title="Backend Engineer with OPS" stack="Springboot, Postman, Angular, Azure Data Factory, Azure DevOps" image={ontario}/>       
+            <ExperienceCard title="Readwise SWE" techstack={['React', 'Python', 'Docker', 'ExpressJS', 'HTML', 'CSS', 'Typescript']} image={readwise}/>
+            <ExperienceCard title="Backend Engineer with OPS" techstack={['Spring Boot', 'Angular', 'Java', 'Javascript', 'Postman', 'Azure Data Factory', 'Databricks']} image={ontario}/>       
         </div>
         </>
     )

@@ -1,14 +1,15 @@
 import "./ExperienceCard.css";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
+import { List } from "postcss/lib/list";
 
 export default function ExperienceCard({
   title,
-  stack,
+  techstack,
   image,
 }: {
   title: string;
-  stack: string;
+  techstack: Array<String>;
   image: StaticImageData;
 }) {
   return (
@@ -29,7 +30,13 @@ export default function ExperienceCard({
           <div className="tech">
             <div className="tech-stack-container">
               <div className="tech-stack-title">Tech Stack</div>
-              <div className="techstack">{stack}</div>
+              <div className="techstack">
+                <ul>
+                  {techstack.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="company">
               <Image
