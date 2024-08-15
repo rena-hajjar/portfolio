@@ -1,25 +1,31 @@
 .exp-card-container {
-  width: 70vw;
+  width: 80vw;
   height: fit-content;
   min-height: 30vh;
   border-radius: 10px;
   background: #ccf3f7;
   border: E0F5F7 2px 2px;
-  box-shadow: #ABA6EC 5px 5px 3px;
+  box-shadow: #aba6ec 5px 5px 3px;
   margin: 25px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 5vh;
 }
 
-
-.exp-card-blurbs {
-  width: 35vw;
+.exp-card-intro {
+  display: flex;
+  flex-direction: column;
 }
 
-.exp-card-title {
+.exp-card-blurb {
+  display: flex;
+  flex-direction: row;
+  font-family: Rubik;
+}
+
+.exp-card-title, .lessons-title {
   color: #000;
   font-family: Rubik;
   font-size: 32px;
@@ -28,6 +34,7 @@
   line-height: normal;
   margin-left: 2vw;
   margin-top: 1vh;
+  margin-bottom: 0;
 }
 
 .tech-stack-container {
@@ -44,12 +51,22 @@
   font-family: "Rubik Mono One";
   font-size: larger;
   margin: 1vh;
+  margin-bottom: 0;
+}
+
+.techstack ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .tech {
   width: 35vw;
+  margin-top: 1vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-left: 1vw;
 }
 
 .tech-image {
@@ -60,6 +77,33 @@
 
 .exp-card-about {
   margin-left: 2vw;
+  width: 40vw;
+}
+
+.exp-card-lessons {
+  width: 75vw;
+}
+
+.exp-card-lessons ol {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.exp-card-lessons li {
+  margin-left: 1.5vw;
+}
+
+@media (max-width: 1000px) {
+  .tech {
+    flex-direction: column;
+  }
+
+  .tech-stack-container {
+    width: 35vw;
+    flex-direction: auto;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 800px) {
@@ -67,23 +111,23 @@
     flex-direction: column;
   }
 
-  .exp-card-blurbs {
+  .exp-card-blurb {
     width: 65vw;
   }
 
   .exp-card-title {
-    margin-left: 0;
+    margin-left: 2vw;
   }
 
-  .tech-stack-container{
-    width: 50vw;
+  .tech-stack-container {
+    width: 32vw;
     margin-top: 3vh;
     margin-bottom: 3vh;
   }
 
   .tech {
     flex-direction: column;
-    width: 50vw;
+    width: 35vw;
     justify-content: center;
     align-items: center;
   }
@@ -91,4 +135,35 @@
   .tech-image {
     margin-bottom: 3vh;
   }
+
+  .exp-card-lessons ol {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .exp-card-blurb {
+    flex-direction: column;
+    width: 70vw;
+  }
+
+  .exp-card-about {
+    width: 68vw;
+  }
+
+  .tech {
+    width: 80vw;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .lessons-title {
+    display: none;
+  }
+
+  .exp-card-lessons {
+    display: none;
+  }
+
+
 }

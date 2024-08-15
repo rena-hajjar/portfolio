@@ -1,6 +1,6 @@
 .main {
-  background: rgb(171,166,236);
-  background: linear-gradient(90deg, rgba(171,166,236,1) 0%, rgba(167,239,246,1) 44%, rgba(229,237,231,1) 86%);
+  /* background: rgb(171,166,236); */
+  background: linear-gradient(rgba(171,166,236,1) 0%, rgb(163, 246, 216) 46%, rgba(229,237,231,1) 86%);
   width: 100vw;
   height: fit-content;
   margin-top: 10vh;

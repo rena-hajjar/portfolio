@@ -1,5 +1,5 @@
 .main-hero {
-  background: #E9E6F8;
+  background: linear-gradient(rgba(229,237,231,1) 10%, #E9E6F8 90%);
   width: 100vw;
   height: fit-content;
   display: flex;
