@@ -136,14 +136,24 @@
 
   @media (max-width: 650px) {
     .hero-image {
-      width:60vw;
+      width: 60vw;
+      height: 60vh;
+    }
+
+    .hero-image-container {
+      height: 60vh;
     }
   }
 
-  @media (max-width:450px) {
+  @media (max-width: 450px) {
+    .hero-image-container {
+      width: 60vw;
+      height:40vh;
+    }
+
     .hero-image {
       width: 65vw;
-      height: 35vh;
+      height: 40vh;
     }
   }
 }

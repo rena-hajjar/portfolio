@@ -17,13 +17,13 @@ const ExtraCs = [
   },
   {
     id: 2,
-    title: "Queen's Women in Tech",
+    title: "QU Women in Tech",
     role: "HackHer Coordinator",
     image: qwic,
   },
   {
     id: 3,
-    title: "Queen's Climbing Club",
+    title: "QU Climbing Club",
     role: "General Climber",
     image: qcc,
   },

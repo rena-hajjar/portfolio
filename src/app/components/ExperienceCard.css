@@ -142,6 +142,7 @@
 }
 
 @media (max-width: 650px) {
+
   .exp-card-blurb {
     flex-direction: column;
     width: 70vw;

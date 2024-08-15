@@ -1,7 +1,7 @@
 .exp-container {
     display: flex;
+    background-color: #e9e6f8;
     flex-direction: column;
-    /* border: #ACB1EC 3px 3px; */
     justify-content: center;
     align-items: center;
     height: max-content;
@@ -20,6 +20,9 @@
     width: -webkit-fill-content;
 }
 
-.exp-card {
-    
+@media (max-width: 650px) {
+    .exp-title {
+        font-size: xx-large;
+        text-align: center;
+    }
 }
