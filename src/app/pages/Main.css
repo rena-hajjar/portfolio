@@ -1,9 +1,12 @@
 .main {
-  background-image: url("./../data/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background: rgb(171,166,236); */
+  background: linear-gradient(
+    rgba(171, 166, 236, 1) 0%,
+    rgb(163, 246, 216) 46%,
+    rgba(229, 237, 231, 1) 86%
+  );
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
@@ -30,18 +33,17 @@
 .intro-text {
   width: 40vw;
   color: #000;
-  text-shadow: gray 3px 4px;
+  text-shadow: #aba6ec 3px 4px 10px;
   font-family: "Rubik One";
   font-size: 3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  mix-blend-mode: color-burn;
 }
 
 .name-text {
   color: #000;
-  text-shadow: gray 4px 5px;
+  text-shadow: #aba6ec 4px 5px;
   font-family: "Rubik One";
   font-size: 5vw;
   font-style: normal;
@@ -120,12 +122,37 @@
   .computer {
     height: 35vw;
     margin-top: 5vh;
-    width:33vw;
-  }
-  
-  .resume-button-container {
-    margin-bottom: 1vh;
-    margin-top:0;
+    width: 33vw;
   }
 
+  .resume-button-container {
+    margin-bottom: 1vh;
+    margin-top: 0;
+  }
+
+  @media (max-width: 550px) {
+    .intro-text-container {
+      margin-top: 1vh;
+      width: 90vw;
+      margin-bottom: 1vh;
+    }
+
+    .intro-text {
+      font-size: 7vw;
+      width: 90vw;
+    }
+
+    .name-text {
+      font-size: 11vw;
+    }
+
+    .about-text {
+      font-size: 6vw;
+    }
+
+    .computer {
+      width: 50vw;
+      height: 50vw;
+    }
+  }
 }

@@ -4,7 +4,7 @@
   position: fixed;
   top: 0px;
   border: 1px solid rgba(0, 0, 0, 0.33);
-  background: #eccee5;
+  background: #ABA6EC;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -15,6 +15,7 @@
   margin-left: 10px;
   color: #000;
   font-family: "Rubik Mono One";
+  text-shadow: #7e77e3 2px 2px;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;

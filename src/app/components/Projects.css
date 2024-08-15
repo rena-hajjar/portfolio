@@ -1,13 +1,13 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #5e32b2;
+  background-color: #b7bcf3;
 }
 
 .projects-title {
   font-family: "Rubik Mono One";
   color: rgb(0, 0, 0);
-  text-shadow: pink 3px 3px;
+  text-shadow: rgb(192, 255, 208) 3px 3px;
   justify-content: center;
   align-items: center;
   font-size: 6vh;
@@ -16,7 +16,6 @@
   width: -webkit-fill-content;
   z-index: 1;
 }
-
 
 .project-cards-container {
   width: -webkit-fill-available;
@@ -29,6 +28,7 @@
 .card-background div {
   width: 320px;
   height: 320px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@
 
 .project-card-title {
   position: absolute;
-  color: rgb(255, 202, 202);
+  color: rgb(192, 255, 208);
   font-family: "Rubik One";
   font-size: larger;
   text-shadow: 2px 2px #5e32b2;
@@ -67,20 +67,14 @@
   border-color: #db3069;
   background-color: #e5e1f8;
   box-shadow: #5332b2 1px 1px;
-  border:#5e32b2 2px 2px;
+  border: #5e32b2 2px 2px;
 }
 
-
 .project-more:hover {
-  border:#5e32b2 2px 2px;
+  border: #5e32b2 2px 2px;
   box-shadow: 3px 3px;
 }
 
 .project-dialog {
   size: fit-content;
-  
-}
-
-@media (max-width: 800px) {
-  
 }

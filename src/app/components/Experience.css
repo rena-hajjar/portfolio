@@ -1,7 +1,7 @@
 .exp-container {
     display: flex;
+    background-color: #e9e6f8;
     flex-direction: column;
-    background-color: #E4E0F7;
     justify-content: center;
     align-items: center;
     height: max-content;
@@ -11,7 +11,7 @@
     margin: 30px;
     font-family: 'Rubik Mono One';
     color: rgb(43, 43, 40);
-    text-shadow: #eccee5 4px 3px;
+    text-shadow: #CCEAF7 4px 3px;
     justify-content: center;
     align-items: center;
     font-size: 6vh;
@@ -20,6 +20,9 @@
     width: -webkit-fill-content;
 }
 
-.exp-card {
-    
+@media (max-width: 650px) {
+    .exp-title {
+        font-size: xx-large;
+        text-align: center;
+    }
 }

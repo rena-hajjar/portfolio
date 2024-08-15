@@ -14,7 +14,7 @@
     height: 70vh;
     width: 85vw;
     border-radius: 40px 40px;
-    background-color: #eccee4;
+    background-color: #C1BDF9;
     box-shadow: 5px 5px 5px 5px #998794;
     display: flex;
     align-items: center;
@@ -28,7 +28,8 @@
     margin-left: 2vw;
     margin-right: 2vw;
     border-radius: 50px;
-    background-image: url('./../data/mesh-470.png');
+    background-image: url('./../data/mesh-138.png');
+    background-size:cover;
     background-repeat: no-repeat;
     display:flex;
     align-items: center;
@@ -106,6 +107,7 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
+    text-align: center;
 }
 
 .contact-resume-button button{
@@ -168,5 +170,31 @@
     .social-option {
         width: 70vw;
         margin-left: 0vw;
+        flex-wrap: wrap;
     }
+
+    .social-title {
+        font-size: 2vh;
+    }
+
+    @media (max-width: 650px) {
+        .contact-title-container{
+            height:fit-content;
+        }
+
+        .contact-title{
+            text-align: center;
+            margin-bottom:2vh;
+        }
+
+        .social-option {
+            margin-top:0;
+            margin-bottom:1vh;
+        }
+
+        .socials-container {
+            justify-content: space-around;
+        }
+    }
+
 }
