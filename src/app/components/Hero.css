@@ -23,16 +23,16 @@
 .hero-image-container {
   display: flex;
   flex-direction: row;
-  width: 45vw;
-  height: 35vw;
+  width: 100vw;
+  height: fit-content;
   background-color: linear-gradient(#b7bcf3 50%, rgb(174, 243, 201) 50%);
+  justify-content: center;
 }
 
 .hero-image {
   background-image: url(./../data/mereal.png);
-  height: 35vw;
-  width: 35vw;
-  margin-left: 5vw;
+  height: 60vh;
+  width: 60vh;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 2;
@@ -90,8 +90,8 @@
   .hero-container {
     flex-direction: column-reverse;
     align-items: center;
-    margin-bottom: 8vh;
-    margin-top: 8vh;
+    margin-bottom: 4vh;
+    margin-top: 12vh;
   }
 
   .hero-wave {
@@ -99,10 +99,9 @@
   }
 
   .hero-image-container {
-    width: 80vw;
-    height: 60vh;
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
   }
 
   .hero-links {
@@ -111,8 +110,8 @@
   }
 
   .hero-image {
-    width: 50vw;
-    height: 52vh;
+    width: 55vh;
+    height: 55vh;
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -136,24 +135,12 @@
 
   @media (max-width: 650px) {
     .hero-image {
-      width: 60vw;
-      height: 60vh;
+      width: 45vh;
+      height: 45vh;
     }
 
-    .hero-image-container {
-      height: 60vh;
-    }
-  }
-
-  @media (max-width: 450px) {
-    .hero-image-container {
-      width: 60vw;
-      height:40vh;
-    }
-
-    .hero-image {
-      width: 65vw;
-      height: 40vh;
+    .hero-container {
+      margin-top: 0;
     }
   }
 }
