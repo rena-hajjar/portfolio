@@ -175,4 +175,25 @@
     .social-title {
         font-size: 2vh;
     }
+
+    @media (max-width: 650px) {
+        .contact-title-container{
+            height:fit-content;
+        }
+
+        .contact-title{
+            text-align: center;
+            margin-bottom:2vh;
+        }
+
+        .social-option {
+            margin-top:0;
+            margin-bottom:1vh;
+        }
+
+        .socials-container {
+            justify-content: space-around;
+        }
+    }
+
 }
