@@ -15,6 +15,12 @@
   display: flex;
   width: -webkit-fill-content;
   z-index: 1;
+  display:flex;
+  flex-direction: row;
+}
+
+.project-title a {
+  
 }
 
 .project-cards-container {
@@ -54,8 +60,8 @@
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
+  font-family: Rubik;
 }
-
 
 .motion-card {
   background: "pink";
@@ -64,26 +70,37 @@
 }
 
 .motion-card:hover .project-more {
-  color: #db3069;
-  border-color: #db3069;
-  background-color: #e5e1f8;
-  box-shadow: #5332b2 1px 1px;
-  border: #5e32b2 2px 2px;
+  color: #201f34;
+  border-color: #87f4bd;
+  background-color: #e5ede7;
+  box-shadow: #87f4bd 1px 1px;
+  border: #87f4bd 2px 2px;
 }
 
 .project-more:hover {
-  border: #5e32b2 2px 2px;
+  background-color: #201f34;
+  border: #2e2d31 2px 2px;
   box-shadow: 3px 3px;
 }
 
-.project-dialog {
-  height: 60vh;
-  width: 60vw;
+.dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #D8ECDB;
   
-  .MuiDialog-container {
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
 }
+
+.project-title {
+  font-size: x-large;
+  font-family: "Rubik Mono One";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0;
+  background: #D8ECDB
+}
+
+.project-title a{
+  padding-left: 16px;
 }
