@@ -8,14 +8,21 @@ import grfn from "./../data/grfn.jpeg";
 import Github from "../data/svgs/github";
 import { Carousel } from "react-bootstrap";
 // import arduino from "./../data/arduino.png";
-import { Button, createTheme, Dialog, DialogTitle, DialogContent } from "@mui/material";
+import {
+  Button,
+  createTheme,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+} from "@mui/material";
 import Modal from "react-bootstrap/esm/Modal";
 
 const projects = [
   {
     id: 1,
     title: "Fresh Save",
-    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    about:
+      "This project was built to tackle food waste in Kingston during a 48-hour sprint. It included setting up a MongoDB backend to manage inventory efficiently and integrating OpenAI's API with Python to create meal kits using food close to expiry. On the frontend, a user-friendly interface was designed with React, making it easy for nonprofits to arrange same-day pickups. The project's goals and impact were presented at the final conference, highlighting expertise in backend development, frontend design, and API integration.",
     images: [fresh, grfn, inject],
     ghlink: "https://github.com/SaulWolkove/QHACKS24",
     background: fresh,
@@ -23,7 +30,8 @@ const projects = [
   {
     id: 2,
     title: "Good Reads For Nerds",
-    about: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    about:
+      "This project involved developing a dynamic web application with a React frontend and Spring Boot backend, integrated with MongoDB. Features were implemented to allow users to comment on and annotate individual book chapters, enhancing reading comprehension and providing a platform for sharing thoughts. The project is currently being expanded to include user accounts, authentication, and comprehensive unit testing. Future enhancements are planned to create user-driven 'book clubs' for collaborative discussions and idea sharing, imitating common social media functions.",
     images: [grfn],
     ghlink: "https://github.com/rena-hajjar/GoodReadsForNerds",
     background: grfn,
@@ -31,7 +39,8 @@ const projects = [
   {
     id: 3,
     title: "Med-i Injection Simulator",
-    about: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    about:
+      "This project improved healthcare training methods by developing a metric-based evaluation system for lifelike clinical simulations. Optical tracking and open-source software were used to create a visual guidance tool for injections, offering real-time feedback. An OptiTrack camera and 3D-printed sensors on the needle allowed metrics to be transferred via Plus to 3D Slicer, visualizing movement on a phantom model. This enabled students to visualize the needle's movement using Slicer transforms and analyze the angle and depth of their injection practice, enhancing their accuracy and technique.",
     images: [inject],
     ghlink: "https://github.com/rena-hajjar",
     background: inject,
@@ -154,15 +163,22 @@ export default function Projects() {
                   </a>
                 </div>
               </Carousel> */}
-              <Image
-                src={
+              <div className="project-images">
+                <Image
+                  src={
+                    projects.find((project) => project.id === currentProject)
+                      ?.images[0] || fresh
+                  }
+                  alt="Project gallery"
+                  style={{ width: "40vh", height: "40vh" }}
+                ></Image>
+              </div>
+              <div className="project-summary">
+                {
                   projects.find((project) => project.id === currentProject)
-                    ?.images[0] || fresh
+                    ?.about
                 }
-                alt="Project gallery"
-                style={{ width: "26vw", height: "26vw" }}
-              ></Image>
-              {projects.find((project) => project.id === currentProject)?.about}
+              </div>
             </div>
           </DialogContent>
         </Dialog>
