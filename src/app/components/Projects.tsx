@@ -125,7 +125,9 @@ export default function Projects() {
               </div>
             </a>
           </DialogTitle>
-          <DialogContent style={{ background: "#D8ECDB" }}>
+          <DialogContent
+            style={{ background: "linear-gradient(#D8ECDB 0%, #E5EDE7 50%)" }}
+          >
             <div className="dialog">
               {/* <Carousel>
                 <div className="carousel-slide" data-ride="carousel">
