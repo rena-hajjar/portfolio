@@ -150,6 +150,11 @@
 
   .exp-card-about {
     width: 68vw;
+    margin-left: 5vw;
+  }
+
+  .exp-card-title {
+    margin: 5vw;
   }
 
   .tech {
