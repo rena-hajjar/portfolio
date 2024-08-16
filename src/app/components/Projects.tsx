@@ -157,7 +157,7 @@ export default function Projects() {
               <Image
                 src={
                   projects.find((project) => project.id === currentProject)
-                    ?.images[0]
+                    ?.images[0] || fresh
                 }
                 alt="Project gallery"
                 style={{ width: "26vw", height: "26vw" }}
