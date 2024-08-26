@@ -1,0 +1,158 @@
+.main {
+  /* background: rgb(171,166,236); */
+  background: linear-gradient(
+    rgba(171, 166, 236, 1) 0%,
+    rgb(163, 246, 216) 46%,
+    rgba(229, 237, 231, 1) 86%
+  );
+  width: 100vw;
+  height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-container {
+  display: flex;
+  height: fit-content;
+  flex-direction: row-reverse;
+}
+
+.intro-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10vh;
+  width: 50vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+
+.intro-text {
+  width: 40vw;
+  color: #000;
+  text-shadow: #aba6ec 3px 4px 10px;
+  font-family: "Rubik One";
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.name-text {
+  color: #000;
+  text-shadow: #aba6ec 4px 5px;
+  font-family: "Rubik One";
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about-text {
+  color: #000;
+  font-family: Rubik;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.computer-container {
+  width: 40vw;
+  height: fit-content;
+  max-height: 80vh;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.computer {
+  background: url("./../data/c.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+
+  width: 40vw;
+  height: 65vh;
+  margin-top: 10vh;
+  margin-left: 5vw;
+}
+
+.resume-button {
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 800px) {
+  .main-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .intro-text-container {
+    margin-top: 1vh;
+    width: 90vw;
+    margin-bottom: 1vh;
+  }
+
+  .intro-text {
+    font-size: 5vw;
+    width: 70vw;
+  }
+
+  .name-text {
+    font-size: 7vw;
+  }
+
+  .about-text {
+    font-size: 4vw;
+  }
+
+  .computer-container {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  .computer {
+    height: 35vw;
+    margin-top: 5vh;
+    width: 33vw;
+  }
+
+  .resume-button-container {
+    margin-bottom: 1vh;
+    margin-top: 0;
+  }
+
+  @media (max-width: 550px) {
+    .intro-text-container {
+      margin-top: 1vh;
+      width: 90vw;
+      margin-bottom: 1vh;
+    }
+
+    .intro-text {
+      font-size: 7vw;
+      width: 90vw;
+    }
+
+    .name-text {
+      font-size: 11vw;
+    }
+
+    .about-text {
+      font-size: 6vw;
+    }
+
+    .computer {
+      width: 50vw;
+      height: 50vw;
+    }
+  }
+}

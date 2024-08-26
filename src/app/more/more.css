@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.more-main {
+    background: hsla(204, 33%, 85%, 1);
+    height: 100vh;
+    background: linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CDDCE6", endColorstr="#6873E6", GradientType=1 );
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+}
+
+body {
+  margin: 0px;
+  background-color: rgba(171,166,236,1);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
