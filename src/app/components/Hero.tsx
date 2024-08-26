@@ -20,7 +20,7 @@ export default function Hero() {
               </div>
               <div className="welcome-title">Welcome!</div>
             </div>
-            This website as close as we can connect by static media. I’ll try my
+            This website is as close as we can connect by static media. I’ll try my
             best to give you a full impression of who I am.
           </div>
           <div className="hero-image-container">
