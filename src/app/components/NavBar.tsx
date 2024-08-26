@@ -7,17 +7,17 @@ export default function NavBar() {
       <nav>
         <div className="navbar-container">
           <nav>
-            <Link className="navbar-logo" href="#main">
+            <Link className="navbar-logo" href="/">
               RH
             </Link>
             <div className="navbar-option-container">
-              <Link className="navbar-option" href="#projects">
-                Projects
-              </Link>
-              <Link className="navbar-option" href="#experience">
+              <Link className="navbar-option" href="/#experience">
                 Experience
               </Link>
-              <Link className="navbar-option" href="#contact">
+              <Link className="navbar-option" href="/#projects">
+                Projects
+              </Link>
+              <Link className="navbar-option" href="/#contact">
                 Contact
               </Link>
               <Link className="navbar-option" href="/more">
