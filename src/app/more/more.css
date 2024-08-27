@@ -1,30 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-.navbar-container{
-    background: #6570e6;
+body {
+  background: #6570e6;
+}
+.navbar-container {
+  background: #6570e6;
 }
 
 .more-main {
-    background: hsla(204, 33%, 85%, 1);
-    height: 100vh;
-    background: linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CDDCE6", endColorstr="#6873E6", GradientType=1 );
-    margin-top: 10vh;
+  background: hsla(204, 33%, 85%, 1);
+  height: fit-content;
+  background: linear-gradient(
+    90deg,
+    hsla(204, 33%, 85%, 1) 0%,
+    hsla(235, 72%, 65%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(204, 33%, 85%, 1) 0%,
+    hsla(235, 72%, 65%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(204, 33%, 85%, 1) 0%,
+    hsla(235, 72%, 65%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CDDCE6", endColorstr="#6873E6", GradientType=1 );
+  display: flex;
+  flex-direction:column;
 }
 
 body {
   margin: 0px;
-  background-color: rgba(171,166,236,1);
+  background-color: rgba(171, 166, 236, 1);
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.more-title {
+  width: 100vw;
+  margin-top: 12vh;
+  font-family: "Rubik Mono One";
+  font-size: 80px;
+  text-align: center;
+  text-shadow: hsla(204, 33%, 85%, 1) 4px 4px 2px;
+}
+
+.more-cards-container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.more-card {
+  margin: 5vw;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 16px;
+  background: #cceaf7;
+  box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.26);
 }

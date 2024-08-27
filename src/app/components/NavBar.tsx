@@ -1,11 +1,11 @@
 import Link from "next/link";
 import "./NavBar.css";
 
-export default function NavBar() {
+export default function NavBar({color} : {color?: string}) {
   return (
     <>
       <nav>
-        <div className="navbar-container">
+        <div className="navbar-container" style={{ background:color}}>
           <nav>
             <Link className="navbar-logo" href="/">
               RH
