@@ -1,7 +1,7 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #5E32B2;
+  background-color: #5e32b2;
 }
 
 .projects-title {
@@ -31,23 +31,61 @@
   margin-bottom: 20px;
 }
 
-.card-background div{
-    width: 320px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    position:relative;
-    top:0;
-    overflow: hidden;
+.card-background div {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  position: relative;
+  top: 0;
+  overflow: hidden;
 }
 
 .project-card-title {
-  position:absolute;
-  color:rgb(255, 202, 202);
-  font-family: 'Rubik One';
+  position: absolute;
+  color: rgb(255, 202, 202);
+  font-family: "Rubik One";
   font-size: larger;
-  text-shadow: 2px 2px #5E32B2;
+  text-shadow: 2px 2px #5e32b2;
+}
+
+.project-more {
+  position: absolute;
+  bottom: 2%;
+  color: transparent;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.motion-card {
+  background: "pink";
+  background-size: "cover";
+  cursor: pointer;
+}
+
+.motion-card:hover .project-more {
+  color: #db3069;
+  border-color: #db3069;
+  background-color: #e5e1f8;
+  box-shadow: #5332b2 1px 1px;
+  border:#5e32b2 2px 2px;
+}
+
+
+.project-more:hover {
+  border:#5e32b2 2px 2px;
+  box-shadow: 3px 3px;
+}
+
+.project-dialog {
+  size: fit-content;
+  
+}
+
+@media (max-width: 800px) {
+  
 }

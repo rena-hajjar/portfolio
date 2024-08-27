@@ -1,5 +1,9 @@
+.resume-button {
+    margin-bottom: 15vh;
+    margin-top: 5vh;
+}
 
-.resume-button a{
+.resume-button button{
     width: 210px;
     height: 61px;
     border-radius: 10px;
@@ -8,6 +12,8 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display:flex;
     align-items: center;
+    text-decoration: none;
+    cursor: pointer;
     
     :visited {
         color: inherit;
@@ -25,4 +31,10 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .resume-button {
+        margin-bottom: 5vh;
+    }
 }
