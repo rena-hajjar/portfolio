@@ -1,3 +1,4 @@
+
 import Image, { StaticImageData } from "next/image";
 import perk from './../data/perk-demo.jpeg';
 import qwic from './../data/qwic.png';

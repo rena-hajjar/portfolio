@@ -6,7 +6,6 @@ import inject from "./../data/injecto.png";
 import fresh from "./../data/freshsave.png";
 import grfn from "./../data/grfn.jpeg";
 import Github from "../data/svgs/github";
-// import arduino from "./../data/arduino.png";
 import {
   Button,
   createTheme,

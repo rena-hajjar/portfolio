@@ -32,8 +32,8 @@ export default function Main() {
             <ResumeButton />
           </div>
         </div>
-        <Hero />
         <div id="experience">
+          <Hero />
           <Timeline />
         </div>
       </div>
