@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 .navbar-container{
-    background: hsla(235, 72%, 65%, 1);
+    background: #6570e6;
 }
 
 .more-main {
@@ -13,9 +13,7 @@
     background: -moz-linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
     background: -webkit-linear-gradient(90deg, hsla(204, 33%, 85%, 1) 0%, hsla(235, 72%, 65%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CDDCE6", endColorstr="#6873E6", GradientType=1 );
-    position: absolute;
-    top: 10vh;
-    width: 100vw;
+    margin-top: 10vh;
 }
 
 body {

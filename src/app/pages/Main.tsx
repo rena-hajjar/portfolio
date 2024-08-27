@@ -11,7 +11,7 @@ import ExtraCurriculars from "../components/ExtraCurriculars";
 export default function Main() {
   return (
     <>
-      <div id="#main">
+      <div id="main">
         <div className="main">
           <div className="main-container">
             <div className="intro-text-container">

@@ -6,7 +6,6 @@ import inject from "./../data/injecto.png";
 import fresh from "./../data/freshsave.png";
 import grfn from "./../data/grfn.jpeg";
 import Github from "../data/svgs/github";
-import { Carousel } from "react-bootstrap";
 // import arduino from "./../data/arduino.png";
 import {
   Button,
@@ -15,7 +14,6 @@ import {
   DialogTitle,
   DialogContent,
 } from "@mui/material";
-import Modal from "react-bootstrap/esm/Modal";
 
 const projects = [
   {
