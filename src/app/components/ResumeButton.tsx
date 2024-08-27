@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function ResumeButton() {
     const handleClick = () => {
-      window.open('/RénaHajjar-Resume.pdf', '_blank');
+      window.open('/RSH_CV_2024.pdf', '_blank');
     };
 
     return (

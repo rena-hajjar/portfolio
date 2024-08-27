@@ -1,7 +1,7 @@
 .timeline-container {
   display: flex;
   justify-content: end;
-  background: linear-gradient(#e4e0f7 60%, #5e32b2 40%);
+  background: linear-gradient(#E9E6F8 60%, #B7BCF3 40%);
   height: fit-content;
   width: 100vw;
 }
@@ -9,9 +9,13 @@
 .timeline-background {
   width: 50vw;
   height: max-content;
-  margin-right: 4vw;
+  margin-right: 5vw;
   margin-bottom: 8vh;
-  background: #eccee5;
+  background-image: url('./../data/timeline-wave.png');
+  background-color: rgb(174, 243, 201);
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 5px;
 }
 
 .main-timeline {

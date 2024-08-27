@@ -2,14 +2,12 @@ import "./Contact.css";
 import Github from "./../data/svgs/github";
 import Linkedin from "../data/svgs/linkedin";
 import Email from "../data/svgs/email";
-import { SvgIcon } from "@mui/material";
-import ResumeButton from "./ResumeButton";
 import { motion } from "framer-motion";
 import Download from "./Download";
 
 export default function Contact() {
   const handleClick = () => {
-    window.open("/RénaHajjar-Resume.pdf", "_blank");
+    window.open("/RSH_CV_2024.pdf", "_blank");
   };
 
   return (
@@ -56,7 +54,7 @@ export default function Contact() {
             </div>
             <div
               className="contact-resume-blurb"
-              style={{ marginLeft: "4vw", color: "black" }}
+              style={{ alignSelf: "center", color: "black" }}
             >
               Download my Resume here.
             </div>

@@ -1,26 +1,22 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  background-color: #5e32b2;
+  background-color: #b7bcf3;
 }
 
 .projects-title {
   font-family: "Rubik Mono One";
-  color: antiquewhite;
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(192, 255, 208) 3px 3px;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 6vh;
   font-weight: 400;
   display: flex;
   width: -webkit-fill-content;
   z-index: 1;
-}
-
-.project-card-row {
-  display: flex;
+  display:flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .project-cards-container {
@@ -34,6 +30,7 @@
 .card-background div {
   width: 320px;
   height: 320px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +43,7 @@
 
 .project-card-title {
   position: absolute;
-  color: rgb(255, 202, 202);
+  color: rgb(192, 255, 208);
   font-family: "Rubik One";
   font-size: larger;
   text-shadow: 2px 2px #5e32b2;
@@ -59,6 +56,7 @@
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
+  font-family: Rubik;
 }
 
 .motion-card {
@@ -68,24 +66,67 @@
 }
 
 .motion-card:hover .project-more {
-  color: #db3069;
-  border-color: #db3069;
-  background-color: #e5e1f8;
-  box-shadow: #5332b2 1px 1px;
-  border:#5e32b2 2px 2px;
+  color: #201f34;
+  border-color: #87f4bd;
+  background-color: #e5ede7;
+  box-shadow: #87f4bd 1px 1px;
+  border: #87f4bd 2px 2px;
 }
 
-
 .project-more:hover {
-  border:#5e32b2 2px 2px;
+  background-color: #201f34;
+  border: #2e2d31 2px 2px;
   box-shadow: 3px 3px;
 }
 
-.project-dialog {
-  size: fit-content;
+.dialog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: linear-gradient(#D8ECDB 0%, #E5EDE7 60%);
   
 }
 
-@media (max-width: 800px) {
-  
+.project-title {
+  font-size: x-large;
+  font-family: "Rubik Mono One";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0;
+  background: #D8ECDB
+}
+
+.project-title a{
+  padding-left: 16px;
+}
+
+.project-images {
+  display:flex;
+  justify-content: center;
+}
+
+.project-summary {
+  font-family: 'Rubik';
+  margin: 5px;
+  margin-left: 10px;
+  max-height: 40vh;
+  width: fit-content;
+  min-width: 40vh;
+}
+
+@media(max-width: 800px) {
+  .dialog {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (hover: none) {
+  .project-more {
+  color: #201f34;
+  border-color: #87f4bd;
+  background-color: #e5ede7;
+  box-shadow: #87f4bd 1px 1px;
+  border: #87f4bd 2px 2px;
+}
 }

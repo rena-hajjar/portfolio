@@ -4,6 +4,7 @@
 
 body {
   margin: 0px;
+  background-color: rgba(171,166,236,1);
 }
 
 ::-webkit-scrollbar {
