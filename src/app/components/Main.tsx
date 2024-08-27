@@ -26,7 +26,7 @@ export default function Main() {
                 transition={{ ease: "easeOut", delay: 0.5, duration: 2 }}
                 // className="about-text"
               >
-                I'm a third-year Computing student at Queen’s University and a
+                I'm a third-year BLAJHHHHH student at Queen’s University and a
                 Fullstack Software Engineer
               </motion.div>
             </div>
