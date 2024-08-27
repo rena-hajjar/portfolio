@@ -11,11 +11,11 @@ export default function NavBar() {
               RH
             </Link>
             <div className="navbar-option-container">
+            <Link className="navbar-option" href="#experience">
+                Experience
+              </Link>
               <Link className="navbar-option" href="#projects">
                 Projects
-              </Link>
-              <Link className="navbar-option" href="#experience">
-                Experience
               </Link>
               <Link className="navbar-option" href="#contact">
                 Contact

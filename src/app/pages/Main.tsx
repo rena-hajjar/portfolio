@@ -32,15 +32,17 @@ export default function Main() {
             <ResumeButton />
           </div>
         </div>
-        <Hero />
-        <Timeline />
+        <div id="experience">
+          <Hero />
+          <Timeline />
+        </div>
       </div>
       <div id="projects">
         <Projects />
       </div>
-      <div id="experience">
+      {/* <div id="experience">
         <Experience />
-      </div>
+      </div> */}
       <div id="extracurriculars">
         <ExtraCurriculars />
       </div>
