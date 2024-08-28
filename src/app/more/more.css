@@ -10,18 +10,7 @@ body {
 }
 
 .more-main {
-  background: hsla(204, 33%, 85%, 1);
   height: fit-content;
-  background: linear-gradient(
-    90deg,
-    hsla(204, 33%, 85%, 1) 0%,
-    hsla(235, 72%, 65%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(204, 33%, 85%, 1) 0%,
-    hsla(235, 72%, 65%, 1) 100%
-  );
   background: -webkit-linear-gradient(
     90deg,
     hsla(204, 33%, 85%, 1) 0%,
@@ -30,6 +19,7 @@ body {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CDDCE6", endColorstr="#6873E6", GradientType=1 );
   display: flex;
   flex-direction:column;
+  align-items: center;
 }
 
 body {
@@ -47,23 +37,31 @@ html {
 
 .more-title {
   width: 100vw;
-  margin-top: 12vh;
+  margin-top: 15vh;
   font-family: "Rubik Mono One";
   font-size: 80px;
   text-align: center;
   text-shadow: hsla(204, 33%, 85%, 1) 4px 4px 2px;
 }
 
+.more-explained {
+  width: 60vw;
+  margin: 2vw;
+  text-align: left;
+  font-family: Rubik
+}
+
 .more-cards-container {
-  display:flex;
-  flex-wrap:wrap;
+  width: -webkit-fill-available;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .more-card {
   margin: 2vw;
-  width: 35vw;
-  height: 35vw;
+  width: 450px;
+  height: 450px;
   border-radius: 16px;
   background: #cceaf7;
   box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.26);
