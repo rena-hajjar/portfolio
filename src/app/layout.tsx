@@ -6,7 +6,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Réna Sophia Hajjar",
   description: "Portfolio and About",
-  //icon here
 };
 
 export const viewport: Viewport = {

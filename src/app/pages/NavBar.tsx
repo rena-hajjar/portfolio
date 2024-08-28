@@ -20,6 +20,7 @@ export default function NavBar() {
               <Link className="navbar-option" href="#contact">
                 Contact
               </Link>
+              {/* <Link className="navbar-option" href="/more">More</Link> */}
             </div>
           </nav>
         </div>
