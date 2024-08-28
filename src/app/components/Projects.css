@@ -106,18 +106,27 @@
   justify-content: center;
 }
 
+.dialog {
+  max-width: fit-content;
+}
 .project-summary {
   font-family: 'Rubik';
   margin: 5px;
-  margin-left: 10px;
+  margin-left: 20px;
   max-height: 40vh;
   width: fit-content;
-  min-width: 40vh;
+  max-width: 30vw;
+  display:flex;
+  align-items: center;
 }
 
 @media(max-width: 800px) {
   .dialog {
     flex-direction: column-reverse;
+  }
+
+  .project-summary {
+    max-width: none;
   }
 }
 

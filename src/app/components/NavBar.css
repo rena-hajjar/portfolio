@@ -1,0 +1,42 @@
+.navbar-container {
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  background: #ABA6EC;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  margin-left: 10px;
+  color: #000;
+  font-family: "Rubik Mono One";
+  text-shadow: #7e77e3 2px 2px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.navbar-option-container {
+  display: inline-flex;
+  right: 10px;
+  position: fixed;
+  margin-top: 10px;
+}
+
+.navbar-option {
+  color: #000;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 2.5vw;
+  text-decoration: none;
+}

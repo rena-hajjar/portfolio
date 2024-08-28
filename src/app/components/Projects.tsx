@@ -12,8 +12,8 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
+  Paper,
 } from "@mui/material";
-
 
 const projects = [
   {
@@ -108,79 +108,47 @@ export default function Projects() {
           ))}
         </div>
 
-        <Dialog open={isDialogOpen} onClose={handleClose}>
-          <DialogTitle className="project-title">
-            {projects.find((project) => project.id === currentProject)?.title}
-            <a
-              href={
-                projects.find((project) => project.id === currentProject)
-                  ?.ghlink
-              }
-              target="_blank"
-            >
-              <div style={{ width: "48px", height: "48px" }}>
-                <Github></Github>
-              </div>
-            </a>
-          </DialogTitle>
-          <DialogContent
-            style={{ background: "linear-gradient(#D8ECDB 0%, #E5EDE7 50%)" }}
-          >
-            <div className="dialog">
-              {/* <Carousel>
-                <div className="carousel-slide" data-ride="carousel">
-                  {projects
-                    .find((project) => project.id === currentProject)
-                    ?.images.map((image) => (
-                      <div className="carousel-item">
-                        <Image src={image} alt="Project image"></Image>
-                      </div>
-                    ))}
-
-                  <a
-                    className="carousel-control-prev"
-                    href="#carouselExampleControls"
-                    role="button"
-                    data-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="sr-only">Previous</span>
-                  </a>
-                  <a
-                    className="carousel-control-next"
-                    href="#carouselExampleControls"
-                    role="button"
-                    data-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="sr-only">Next</span>
-                  </a>
-                </div>
-              </Carousel> */}
-              <div className="project-images">
-                <Image
-                  src={
-                    projects.find((project) => project.id === currentProject)
-                      ?.images[0] || fresh
-                  }
-                  alt="Project gallery"
-                  style={{ width: "40vh", height: "40vh" }}
-                ></Image>
-              </div>
-              <div className="project-summary">
-                {
+        <Dialog open={isDialogOpen} onClose={handleClose} maxWidth={'md'}>
+            <DialogTitle className="project-title">
+              {projects.find((project) => project.id === currentProject)?.title}
+              <a
+                href={
                   projects.find((project) => project.id === currentProject)
-                    ?.about
+                    ?.ghlink
                 }
+                target="_blank"
+              >
+                <div style={{ width: "48px", height: "48px" }}>
+                  <Github></Github>
+                </div>
+              </a>
+            </DialogTitle>
+            <DialogContent
+              style={{
+                background: "linear-gradient(#D8ECDB 0%, #E5EDE7 50%)",
+                justifyContent:"center",
+                alignItems:"center"
+              }}
+            >
+              <div className="dialog">
+                <div className="project-images">
+                  <Image
+                    src={
+                      projects.find((project) => project.id === currentProject)
+                        ?.images[0] || fresh
+                    }
+                    alt="Project gallery"
+                    style={{ width: "40vh", height: "40vh" }}
+                  ></Image>
+                </div>
+                <div className="project-summary">
+                  {
+                    projects.find((project) => project.id === currentProject)
+                      ?.about
+                  }
+                </div>
               </div>
-            </div>
-          </DialogContent>
+            </DialogContent>
         </Dialog>
       </div>
     </>
