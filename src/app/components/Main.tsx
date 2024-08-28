@@ -39,7 +39,8 @@ export default function Main() {
               ></motion.div>
             </div>
           </div>
-          <div className="resume-button-container">
+          <div 
+          className="resume-button-container">
             <ResumeButton />
           </div>
         </div>
