@@ -47,7 +47,7 @@ function ExtraCurricularCard({title, role, image} : Readonly<{title: string; rol
     //should i open a dialog? what are other ways i could display this info
     return (
         <>
-        <motion.div className="ec-card-container" whileHover={{ scale: 1.25 }}>
+        <motion.div className="ec-card-container" whileHover={{ scale: 1.08 }}>
             <div className="ec-card">
                 <Image 
                 src={image} 
