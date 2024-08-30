@@ -1,10 +1,10 @@
 
 import Image, { StaticImageData } from "next/image";
-import perk from './../data/perk-demo.jpeg';
-import qwic from './../data/qwic.png';
-import qcc from './../data/qcc.png';
-import SBT from './../data/SBT.png';
-import bloorview from './../data/bloorview.jpg';
+import perk from './../data/extracs/perk-demo.jpeg';
+import qwic from './../data/extracs/qwic.png';
+import qcc from './../data/extracs/qcc.png';
+import SBT from './../data/extracs/SBT.png';
+import bloorview from './../data/extracs/bloorview.jpg';
 import React from "react";
 import './ExtraCurriculars.css';
 import { motion } from "framer-motion";

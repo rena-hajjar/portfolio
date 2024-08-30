@@ -11,7 +11,7 @@
   height: max-content;
   margin-right: 5vw;
   margin-bottom: 8vh;
-  background-image: url('./../data/timeline-wave.png');
+  background-image: url('./../data/timeline/timeline-wave.png');
   background-color: rgb(174, 243, 201);
   background-repeat: no-repeat;
   background-size:cover;

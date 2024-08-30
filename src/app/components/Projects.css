@@ -83,7 +83,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: linear-gradient(#D8ECDB 0%, #E5EDE7 60%);
+  background: #E5EDE7;
   
 }
 
@@ -94,7 +94,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0;
-  background: #D8ECDB
+  background: #E5EDE7;
 }
 
 .project-title a{
@@ -104,29 +104,79 @@
 .project-images {
   display:flex;
   justify-content: center;
+  align-items: center;
 }
 
 .dialog {
   max-width: fit-content;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+.project-about {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .project-summary {
   font-family: 'Rubik';
   margin: 5px;
   margin-left: 20px;
   max-height: 40vh;
   width: fit-content;
-  max-width: 30vw;
+  max-width: 500px;
+  width: fit-content;
   display:flex;
   align-items: center;
 }
 
+.tech-stack-container {
+  background: #bdc1f2;
+  border-radius: 15px;
+  max-width: 500px;
+  width: fit-content;
+  height: 18vh;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  box-shadow: #663eaf 2px 2px 2px;
+}
+
+.tech-stack-title {
+  font-family: 'Rubik One';
+  font-size:larger;
+  margin: 5px;
+}
+
+.tech-stack {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.tech-element {
+  margin: 3px;
+  width: 70px;
+
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+}
 @media(max-width: 800px) {
   .dialog {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .project-summary {
-    max-width: none;
+    max-width: 70vw;
+  }
+
+  .tech-stack-container {
+    max-width: 80vw;
   }
 }
 

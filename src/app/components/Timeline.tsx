@@ -6,10 +6,10 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 import Image from "next/image";
-import ontario from "./../data/ontario.jpeg";
-import readwise from "./../data/readwise-color.png";
-import queens from "./../data/queens-color.png";
-import perk from "./../data/perk.png";
+import ontario from "./../data/timeline/ontario.jpeg";
+import readwise from "./../data/timeline/readwise-color.png";
+import queens from "./../data/timeline/queens-color.png";
+import perk from "./../data/timeline/perk.png";
 
 const timeline = [
   {
@@ -17,39 +17,43 @@ const timeline = [
     title: "Backend Software & Data Engineer Intern - OPS",
     points: [
       "Built API endpoints with Java in a Spring Boot application",
-      "Tested API with Postman for user email alerts on database changes",
-      "Interacted with above API in an Angular framework to optimize user experience and modernize 20 year old website",
-      "Created 10 automations for reservation booking with Microsoft Power Automate",
+      "Tested API with Postman to automate email alerts on database changes",
+      "Consumed above API in an Angular framework to optimize user experience and modernize 20 year old website",
+      "Created automations for reservation booking with Microsoft Power Automate",
       "Modernized data flow for clients with data transfer through Azure Data Factory ETL pipelines",
-      "Excelled product management skills through Project Management Institue senior meetings",
-      "Worked first hand in an Agile development environment for efficient client satisfaction",
+      "Developed product management skills through Project Management Institue senior meetings and workshops",
+      "Worked first hand in an Agile development environment for efficient production",
+      "Led architecture technical documentation of project to provide seniors with clear outlines of data models, user flows, and security within the project",
     ],
     logo: ontario,
     alt: "Ontario Logo",
-    date: "May 2024 - September 2024"
+    date: "May 2024 - September 2024",
   },
   {
     id: 2,
     title: "Undergraduate ML Research Student - Queen's Perk Lab",
     points: [
-      "Automated data transfer to match requirements for 3D Slicer modules",
-      "Annotated and prepare surgical video data for Tensorflow training",
-      "Became familiarized with biomedical research process and feed my curiosity"
+      "Automated data transfer to match requirements for 3D Slicer modules using Pandas",
+      "Annotated and prepared surgical video data for Tensorflow training",
+      "Became familiarized with biomedical research process and fed my curiosity",
+      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds"
     ],
     logo: perk,
     alt: "Percutaneous Surgery Lab Logo",
-    date: "October 2023 - Present"
+    date: "October 2023 - Present",
   },
   {
     id: 3,
     title: "Software Engineer Intern - Readwise",
     points: [
       "Worked with React in a beautiful small startup environment",
-      "Learned git version control, Docker and React best principles"
+      "Learned git version control, Docker and React best principles",
+      "Co-authored the new Notebook feature in Readwise Reader, as well as eliminated bugs in previously written features with code-reviews from senior developers",
+      "Contributed to the global team effort to drive user growth by 8,000 customers during time spent at Readwise, with over 25 personal pull requests merged"
     ],
     logo: readwise,
     alt: "Readwise Logo",
-    date: "May 2023 - September 2023"
+    date: "May 2023 - September 2023",
   },
   {
     id: 4,
@@ -57,8 +61,8 @@ const timeline = [
     points: [],
     logo: queens,
     alt: "Queen's University Crest",
-    date: "September 2022 - April 2026"
-  }
+    date: "September 2022 - April 2026",
+  },
 ];
 
 export default function Timeline() {
