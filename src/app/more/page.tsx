@@ -10,22 +10,26 @@ import { TransitionProps } from "@mui/material/transitions";
 import ArrowLeft from "../data/svgs/arrowLeft";
 import ArrowRight from "../data/svgs/arrowRight";
 import SBT from './../data/extracs/perk-demo.jpeg';
+import Image from "next/image";
 
 const imageList = [
   {
     id: 1,
     title: "Art",
-    img: SBT
+    img: SBT,
+    width: 300,
   },
   {
     id: 2,
     title: "Music",
-    img: SBT
+    img: SBT,
+    width: 250,
   },
   {
     id: 3,
     title: "Coursework",
-    img: SBT
+    img: SBT,
+    width: 500
   },
 ];
 
@@ -146,18 +150,23 @@ export default function More() {
               <div className="gallery">
                 <ImageList
                   sx={{ width: 500, height: 450 }}
-                  variant="woven"
+                  variant="masonry"
                   cols={3}
                   gap={8}
                 >
                   {imageList.map((image) => (
                     <ImageListItem key={image.id}>
-                      <img
+                      <Image
+                      width={image.width}
+                        src={image.img}
+                        alt={image.title}
+                      ></Image>
+                      {/* <img
                         srcSet={`${image.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
                         src={`${image.img}?w=161&fit=crop&auto=format`}
                         alt={image.title}
                         loading="lazy"
-                      />
+                      /> */}
                     </ImageListItem>
                   ))}
                 </ImageList>
