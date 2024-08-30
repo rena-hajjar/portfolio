@@ -665,7 +665,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: linear-gradient(#D8ECDB 0%, #E5EDE7 60%);
+  background: #E5EDE7
   
 }
 
@@ -690,6 +690,14 @@ html {
 
 .dialog {
   max-width: fit-content;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dialog-above {
+  display:flex;
+  flex-direction: row;
 }
 .project-summary {
   font-family: 'Rubik';
@@ -700,6 +708,13 @@ html {
   max-width: 30vw;
   display:flex;
   align-items: center;
+}
+
+.tech-stack-container {
+  background: #87f4bda5;
+  border-radius: 15px;
+  width: 50vw;
+  height: 18vh;
 }
 
 @media(max-width: 800px) {

@@ -6,6 +6,14 @@ import inject from "./../data/projects/injecto.png";
 import fresh from "./../data/projects/freshsave.png";
 import grfn from "./../data/projects/grfn.jpeg";
 import Github from "../data/svgs/github";
+import MongoDB from "../data/svgs/mongodb";
+import ReactSVG from "../data/svgs/reactjs";
+import OpenAI from "../data/svgs/openai";
+import CSS from "../data/svgs/css";
+import SpringBoot from "../data/svgs/springboot";
+import Java from "../data/svgs/java";
+import Typescript from "../data/svgs/typescript";
+
 import {
   Button,
   createTheme,
@@ -22,6 +30,7 @@ const projects = [
     about:
       "This project was built to tackle food waste in Kingston during a 48-hour sprint. It included setting up a MongoDB backend to manage inventory efficiently and integrating OpenAI's API with Python to create meal kits using food close to expiry. On the frontend, a user-friendly interface was designed with React, making it easy for nonprofits to arrange same-day pickups. The project's goals and impact were presented at the final conference, highlighting expertise in backend development, frontend design, and API integration.",
     images: [fresh, grfn, inject],
+    tech: [ReactSVG, MongoDB, Typescript, CSS, OpenAI],
     ghlink: "https://github.com/SaulWolkove/QHACKS24",
     background: fresh,
   },
@@ -31,6 +40,7 @@ const projects = [
     about:
       "This project involved developing a dynamic web application with a React frontend and Spring Boot backend, integrated with MongoDB. Features were implemented to allow users to comment on and annotate individual book chapters, enhancing reading comprehension and providing a platform for sharing thoughts. The project is currently being expanded to include user accounts, authentication, and comprehensive unit testing. Future enhancements are planned to create user-driven 'book clubs' for collaborative discussions and idea sharing, imitating common social media functions.",
     images: [grfn],
+    tech: [MongoDB, SpringBoot, Java, ReactSVG],
     ghlink: "https://github.com/rena-hajjar/GoodReadsForNerds",
     background: grfn,
   },
@@ -40,6 +50,8 @@ const projects = [
     about:
       "This project improved healthcare training methods by developing a metric-based evaluation system for lifelike clinical simulations. Optical tracking and open-source software were used to create a visual guidance tool for injections, offering real-time feedback. An OptiTrack camera and 3D-printed sensors on the needle allowed metrics to be transferred via Plus to 3D Slicer, visualizing movement on a phantom model. This enabled students to visualize the needle's movement using Slicer transforms and analyze the angle and depth of their injection practice, enhancing their accuracy and technique.",
     images: [inject],
+    tech: [],
+    // tech: ["3D Slicer", "Plus", "Optitrack"],
     ghlink: "https://github.com/rena-hajjar",
     background: inject,
   },
@@ -108,29 +120,30 @@ export default function Projects() {
           ))}
         </div>
 
-        <Dialog open={isDialogOpen} onClose={handleClose} maxWidth={'md'}>
-            <DialogTitle className="project-title">
-              {projects.find((project) => project.id === currentProject)?.title}
-              <a
-                href={
-                  projects.find((project) => project.id === currentProject)
-                    ?.ghlink
-                }
-                target="_blank"
-              >
-                <div style={{ width: "48px", height: "48px" }}>
-                  <Github></Github>
-                </div>
-              </a>
-            </DialogTitle>
-            <DialogContent
-              style={{
-                background: "linear-gradient(#D8ECDB 0%, #E5EDE7 50%)",
-                justifyContent:"center",
-                alignItems:"center"
-              }}
+        <Dialog open={isDialogOpen} onClose={handleClose} maxWidth={"md"}>
+          <DialogTitle className="project-title">
+            {projects.find((project) => project.id === currentProject)?.title}
+            <a
+              href={
+                projects.find((project) => project.id === currentProject)
+                  ?.ghlink
+              }
+              target="_blank"
             >
-              <div className="dialog">
+              <div style={{ width: "48px", height: "48px" }}>
+                <Github></Github>
+              </div>
+            </a>
+          </DialogTitle>
+          <DialogContent
+            style={{
+              background: "linear-gradient(#D8ECDB 0%, #E5EDE7 50%)",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className="dialog">
+              <div className="dialog-above">
                 <div className="project-images">
                   <Image
                     src={
@@ -148,7 +161,22 @@ export default function Projects() {
                   }
                 </div>
               </div>
-            </DialogContent>
+              <div className="dialog-below">
+                <div className="tech-stack-container">
+                  <div className="tech-stack-title">Tech Stack</div>
+                  <div className="tech-stack">
+                    {projects
+                      .find((project) => project.id === currentProject)
+                      ?.tech.map((item) => (
+                        <>
+                          <div className="tech-element">{item}</div>
+                        </>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </DialogContent>
         </Dialog>
       </div>
     </>
