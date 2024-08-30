@@ -707,7 +707,7 @@ html {
   margin: 5px;
   margin-left: 20px;
   max-height: 40vh;
-  max-width: 600px;
+  max-width: 500px;
   width: fit-content;
   display:flex;
   align-items: center;
@@ -716,7 +716,7 @@ html {
 .tech-stack-container {
   background: #bdc1f2;
   border-radius: 15px;
-  max-width: 600px;
+  max-width: 500px;
   width: fit-content;
   height: 18vh;
   margin-top: 2vw;
@@ -753,7 +753,7 @@ html {
   }
 
   .project-summary {
-    max-width: none;
+    max-width: 70vw;
   }
 
   .tech-stack-container {
