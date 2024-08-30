@@ -1,7 +1,7 @@
 import './Experience.css';
 import ExperienceCard from '@/app/components/ExperienceCard';
-import readwise from './../data/readwise.png';
-import ontario from './../data/ontario.jpeg';
+import readwise from './../data/timeline/readwise.png';
+import ontario from './../data/timeline/ontario.jpeg';
 
 export default function Experience() {
     const readwiselessons = [

@@ -957,7 +957,7 @@ html {
   display: flex;
   align-items: center;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 5;
 }
 
 .navbar-logo {

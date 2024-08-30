@@ -6,10 +6,10 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 import Image from "next/image";
-import ontario from "./../data/ontario.jpeg";
-import readwise from "./../data/readwise-color.png";
-import queens from "./../data/queens-color.png";
-import perk from "./../data/perk.png";
+import ontario from "./../data/timeline/ontario.jpeg";
+import readwise from "./../data/timeline/readwise-color.png";
+import queens from "./../data/timeline/queens-color.png";
+import perk from "./../data/timeline/perk.png";
 
 const timeline = [
   {

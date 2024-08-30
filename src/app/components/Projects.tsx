@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import inject from "./../data/injecto.png";
-import fresh from "./../data/freshsave.png";
-import grfn from "./../data/grfn.jpeg";
+import inject from "./../data/projects/injecto.png";
+import fresh from "./../data/projects/freshsave.png";
+import grfn from "./../data/projects/grfn.jpeg";
 import Github from "../data/svgs/github";
 import {
   Button,
