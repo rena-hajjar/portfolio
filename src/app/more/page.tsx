@@ -6,30 +6,88 @@ import { motion } from "framer-motion";
 import { Dialog, DialogContent, ImageList, ImageListItem, Slide } from "@mui/material";
 import { useState } from "react";
 import React from "react";
-import { TransitionProps } from "@mui/material/transitions";
 import ArrowLeft from "../data/svgs/arrowLeft";
 import ArrowRight from "../data/svgs/arrowRight";
-import SBT from './../data/extracs/perk-demo.jpeg';
+import agua from './../data/art_items/agua/agua.png';
+import chris from './../data/art_items/christie_drums/chris.png';
+import jim from './../data/art_items/jimmy/jim.png';
+import orange from './../data/art_items/orange/orange.jpg';
+import birds from './../data/art_items/birds.jpg';
+import finger from './../data/art_items/finger_painting.jpg';
+import ballet from './../data/art_items/ballet.jpg';
+import flowerhead from './../data/art_items/flower_head.png';
+import frank from './../data/art_items/frankenstein.png';
+import oldbirds from './../data/art_items/old_bird.jpg';
+import artclass from './../data/art_items/art_class.jpg';
+
 import Image from "next/image";
 
 const imageList = [
   {
+    id: 8,
+    title: "Frank",
+    img: frank,
+    width: 350,
+  },
+  {
+    id: 9,
+    title: "Flower Head",
+    img: flowerhead,
+    width: 350,
+  },
+  {
     id: 1,
-    title: "Art",
-    img: SBT,
-    width: 300,
+    title: "Water Swim",
+    img: agua,
+    width: 350,
   },
   {
     id: 2,
-    title: "Music",
-    img: SBT,
-    width: 250,
+    title: "Christie Drums",
+    img: chris,
+    width: 350,
   },
   {
     id: 3,
-    title: "Coursework",
-    img: SBT,
-    width: 500
+    title: "JimmyH",
+    img: jim,
+    width: 350,
+  },
+  {
+    id: 4,
+    title: "Art Class Perspective Paintint",
+    img: artclass,
+    width: 350,
+  },
+  {
+    id: 5,
+    title: "Orange",
+    img: orange,
+    width: 350,
+  },
+  {
+    id: 6,
+    title: "birds",
+    img: birds,
+    width: 350,
+  },
+  {
+    id: 7,
+    title: "finger",
+    img: finger,
+    width: 350,
+  },
+  {
+    id: 10,
+    title: "Ballet",
+    img: ballet,
+    width: 350,
+  },
+  {
+    id: 11,
+    title: "Old Birds",
+    img: oldbirds,
+    width: 350,
   },
 ];
 
@@ -149,7 +207,7 @@ export default function More() {
             <div className="art-modal-body">
               <div className="gallery">
                 <ImageList
-                  sx={{ width: 500, height: 450 }}
+                  sx={{ width: "inherit" }}
                   variant="masonry"
                   cols={3}
                   gap={8}
@@ -161,12 +219,6 @@ export default function More() {
                         src={image.img}
                         alt={image.title}
                       ></Image>
-                      {/* <img
-                        srcSet={`${image.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                        src={`${image.img}?w=161&fit=crop&auto=format`}
-                        alt={image.title}
-                        loading="lazy"
-                      /> */}
                     </ImageListItem>
                   ))}
                 </ImageList>
