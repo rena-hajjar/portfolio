@@ -27,67 +27,56 @@ const imageList = [
     id: 8,
     title: "Frank",
     img: frank,
-    width: 350,
   },
   {
     id: 9,
     title: "Flower Head",
     img: flowerhead,
-    width: 350,
   },
   {
     id: 1,
     title: "Water Swim",
     img: agua,
-    width: 350,
   },
   {
     id: 2,
     title: "Christie Drums",
     img: chris,
-    width: 350,
   },
   {
     id: 3,
     title: "JimmyH",
     img: jim,
-    width: 350,
   },
   {
     id: 4,
     title: "Art Class Perspective Paintint",
     img: artclass,
-    width: 350,
   },
   {
     id: 5,
     title: "Orange",
     img: orange,
-    width: 350,
   },
   {
     id: 6,
     title: "birds",
     img: birds,
-    width: 350,
   },
   {
     id: 7,
     title: "finger",
     img: finger,
-    width: 350,
   },
   {
     id: 10,
     title: "Ballet",
     img: ballet,
-    width: 350,
   },
   {
     id: 11,
     title: "Old Birds",
     img: oldbirds,
-    width: 350,
   },
 ];
 
@@ -200,24 +189,36 @@ export default function More() {
         <Dialog open={isArtOpen} onClose={handleArtClick} maxWidth={"xl"}>
           <DialogContent className="modal">
             <div className="modal-header">
-              <ArrowRight />
+              {/* <ArrowRight /> */}
               <div className="modal-title">My Art.</div>
-              <ArrowLeft />
+              {/* <ArrowLeft /> */}
             </div>
             <div className="art-modal-body">
               <div className="gallery">
                 <ImageList
-                  sx={{ width: "inherit" }}
+                  sx={{
+                    width: "inherit",
+                    columnCount: {
+                      xs: "2 !important",
+                      sm: "2 !important",
+                      md: "3 !important",
+                      lg: "3 !important",
+                      xl: "4 !important",
+                    },
+                  }}
                   variant="masonry"
-                  cols={3}
                   gap={8}
                 >
                   {imageList.map((image) => (
                     <ImageListItem key={image.id}>
                       <Image
-                      width={image.width}
                         src={image.img}
+                        sizes="28vw"
                         alt={image.title}
+                        style={{
+                          width: '100%',
+                          height: 'auto'
+                        }}
                       ></Image>
                     </ImageListItem>
                   ))}
@@ -251,6 +252,9 @@ export default function More() {
                 <div>Computer Architecture</div>
                 <div>Data Structures</div>
                 <div>Analytical Genomics</div>
+                <div>Computer-Integrated Surgery</div>
+                <div>Programming Paradigms</div>
+                <div>Philosophy of Physics</div>
               </div>
             </div>
             <div className="rest-of-modal">
@@ -260,7 +264,7 @@ export default function More() {
                 <ArrowLeft />
               </div>
               <div className="coursework-body">
-                <div className="test-text">Hello!</div>
+                <div className="test-text"></div>
               </div>
             </div>
           </DialogContent>
