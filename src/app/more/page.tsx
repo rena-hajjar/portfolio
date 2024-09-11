@@ -85,7 +85,7 @@ export default function More() {
             <div className="artmus">
               <button
                 onClick={handleArtClick}
-                style={{ background: "transparent", border: "none" }}
+                style={{ background: "transparent", border: "none", cursor:"pointer" }}
               >
                 <motion.div whileHover={{ scale: 1.05 }} className="more-card">
                   <div className="more-thumbnail">
@@ -101,7 +101,7 @@ export default function More() {
                 </motion.div>
               </button>
               <button
-                onClick={handleMusicClick}
+                // onClick={handleMusicClick}
                 style={{ background: "transparent", border: "none" }}
               >
                 <motion.div whileHover={{ scale: 1.05 }} className="more-card">
@@ -125,7 +125,7 @@ export default function More() {
               provide has been much more noticable to me since joining a world
               of technology.
             </div>
-            <button
+            {/* <button
               onClick={handleCourseClick}
               style={{ background: "transparent", border: "none" }}
             >
@@ -140,7 +140,7 @@ export default function More() {
               things outside of school, but the chance to learn in a structured
               fashion from experts in fields I care for is not something I take
               for granted.
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
