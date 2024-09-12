@@ -6,11 +6,11 @@ import jim from "./../../data/art_items/jimmy/jim.png";
 import orange from "./../../data/art_items/orange/orange.jpg";
 import birds from "./../../data/art_items/birds.jpg";
 import finger from "./../../data/art_items/finger_painting.jpg";
-import ballet from "./../../data/art_items/ballet.jpg";
+// import ballet from "./../../data/art_items/ballet.jpg";
 import flowerhead from "./../../data/art_items/flower_head.png";
 import frank from "./../../data/art_items/frankenstein.png";
 import oldbirds from "./../../data/art_items/old_bird.jpg";
-import artclass from "./../../data/art_items/art_class.jpg";
+// import artclass from "./../../data/art_items/art_class.jpg";
 
 const imageList = [
   {
