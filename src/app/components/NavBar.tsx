@@ -20,9 +20,9 @@ export default function NavBar({color} : {color?: string}) {
               <Link className="navbar-option" href="/#contact">
                 Contact
               </Link>
-              {/* <Link className="navbar-option" href="/more">
+              <Link className="navbar-option" href="/more" style={{ color:"white"}}>
                 More
-              </Link> */}
+              </Link>
             </div>
           </nav>
         </div>

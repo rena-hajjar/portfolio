@@ -1,37 +1,24 @@
 "use client";
 
-import NavBar from "@/app/components/NavBar";
+import NavBar from "../pages/NavBar";
 import "./more.css";
 import { motion } from "framer-motion";
-import { Dialog, DialogContent, ImageList, ImageListItem, Slide } from "@mui/material";
+import {
+  Dialog,
+  DialogContent,
+  ImageList,
+  ImageListItem,
+  Slide,
+} from "@mui/material";
 import { useState } from "react";
 import React from "react";
-import { TransitionProps } from "@mui/material/transitions";
-import ArrowLeft from "../data/svgs/arrowLeft";
-import ArrowRight from "../data/svgs/arrowRight";
-import SBT from './../data/extracs/perk-demo.jpeg';
-import Image from "next/image";
+import music from './../data/music_Cover.png';
+import ArtModal from "../components/More/ArtModal";
+import CourseModal from "../components/More/CourseModal";
+import MusicModal from "../components/More/MusicModal";
 
-const imageList = [
-  {
-    id: 1,
-    title: "Art",
-    img: SBT,
-    width: 300,
-  },
-  {
-    id: 2,
-    title: "Music",
-    img: SBT,
-    width: 250,
-  },
-  {
-    id: 3,
-    title: "Coursework",
-    img: SBT,
-    width: 500
-  },
-];
+import Image from "next/image";
+import flowerhead from "./../data/art_items/flower_head.png";
 
 export default function More() {
   const [isArtOpen, setIsArtOpen] = useState(false);
@@ -52,7 +39,7 @@ export default function More() {
     } else {
       setIsCourseOpen(true);
     }
-  }
+  };
 
   const handleMusicClick = () => {
     if (isMusicOpen) {
@@ -98,18 +85,36 @@ export default function More() {
             <div className="artmus">
               <button
                 onClick={handleArtClick}
-                style={{ background: "transparent", border: "none" }}
+                style={{ background: "transparent", border: "none", cursor:"pointer" }}
               >
                 <motion.div whileHover={{ scale: 1.05 }} className="more-card">
-                  Art
+                  <div className="more-thumbnail">
+                    <Image
+                      src={flowerhead}
+                      alt="Painting"
+                      width={400}
+                      height={400}
+                      style={{ objectFit: "cover", borderRadius: "10px" }}
+                    ></Image>
+                  </div>
+                  <div className="caption">My Art</div>
                 </motion.div>
               </button>
               <button
-                onClick={handleMusicClick}
+                // onClick={handleMusicClick}
                 style={{ background: "transparent", border: "none" }}
               >
                 <motion.div whileHover={{ scale: 1.05 }} className="more-card">
-                  Music
+                  <div className="more-thumbnail">
+                    <Image
+                      src={music}
+                      alt="Girl playing guitar"
+                      width={400}
+                      height={400}
+                      style={{ objectFit: "cover", borderRadius: "10px" }}
+                    ></Image>
+                  </div>
+                  <div className="caption">Music</div>
                 </motion.div>
               </button>
             </div>
@@ -120,7 +125,7 @@ export default function More() {
               provide has been much more noticable to me since joining a world
               of technology.
             </div>
-            <button
+            {/* <button
               onClick={handleCourseClick}
               style={{ background: "transparent", border: "none" }}
             >
@@ -135,53 +140,24 @@ export default function More() {
               things outside of school, but the chance to learn in a structured
               fashion from experts in fields I care for is not something I take
               for granted.
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
         <Dialog open={isArtOpen} onClose={handleArtClick} maxWidth={"xl"}>
           <DialogContent className="modal">
-            <div className="modal-header">
-              <ArrowRight />
-              <div className="modal-title">My Art.</div>
-              <ArrowLeft />
-            </div>
-            <div className="art-modal-body">
-              <div className="gallery">
-                <ImageList
-                  sx={{ width: 500, height: 450 }}
-                  variant="masonry"
-                  cols={3}
-                  gap={8}
-                >
-                  {imageList.map((image) => (
-                    <ImageListItem key={image.id}>
-                      <Image
-                      width={image.width}
-                        src={image.img}
-                        alt={image.title}
-                      ></Image>
-                      {/* <img
-                        srcSet={`${image.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                        src={`${image.img}?w=161&fit=crop&auto=format`}
-                        alt={image.title}
-                        loading="lazy"
-                      /> */}
-                    </ImageListItem>
-                  ))}
-                </ImageList>
-              </div>
-            </div>
+            <ArtModal></ArtModal>
           </DialogContent>
         </Dialog>
 
-        <Dialog open={isMusicOpen} onClose={handleMusicClick} maxWidth={"xl"}>
+        <Dialog
+          open={isMusicOpen}
+          onClose={handleMusicClick}
+          maxWidth={"xl"}
+          scroll="paper"
+        >
           <DialogContent className="modal">
-            <div className="modal-header">
-              <ArrowRight />
-              <div className="modal-title">My Music.</div>
-              <ArrowLeft />
-            </div>
+            <MusicModal></MusicModal>
           </DialogContent>
         </Dialog>
 
@@ -192,25 +168,7 @@ export default function More() {
           maxWidth={"xl"}
         >
           <DialogContent className="course-modal">
-            <div className="modal-sidebar">
-              <div className="sidebar-title">Scroll to:</div>
-              <div className="sidebar-text">
-                <div>Linear Data Analysis</div>
-                <div>Computer Architecture</div>
-                <div>Data Structures</div>
-                <div>Analytical Genomics</div>
-              </div>
-            </div>
-            <div className="rest-of-modal">
-              <div className="coursework-header">
-                <ArrowRight />
-                <div className="modal-title">Coursework</div>
-                <ArrowLeft />
-              </div>
-              <div className="coursework-body">
-                <div className="test-text">Hello!</div>
-              </div>
-            </div>
+            <CourseModal></CourseModal>
           </DialogContent>
         </Dialog>
       </div>
