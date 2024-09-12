@@ -202,3 +202,32 @@ html {
   height: 1000vh;
 }
 
+@media (max-width: 900px) {
+  .more-explained {
+    width: 85vw;
+  }
+  .artmus {
+    width: 90vw;
+  }
+
+  .more-about {
+    width: 85vw;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+  }
+
+  .more-card {
+    width: 85vw;
+    height: 85vw;
+  }
+
+  .more-thumbnail img {
+    width: 70vw;
+    height: 70vw;
+
+  }
+
+  .caption {
+    font-size: xx-large;
+  }
+}

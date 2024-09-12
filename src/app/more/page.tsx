@@ -1,6 +1,6 @@
 "use client";
 
-import NavBar from "@/app/components/NavBar";
+import NavBar from "../pages/NavBar";
 import "./more.css";
 import { motion } from "framer-motion";
 import {
