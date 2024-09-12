@@ -38,11 +38,11 @@ const imageList = [
     title: "JimmyH",
     img: jim,
   },
-  {
-    id: 4,
-    title: "Art Class Perspective Paintint",
-    img: artclass,
-  },
+  // {
+  //   id: 4,
+  //   title: "Art Class Perspective Paintint",
+  //   img: artclass,
+  // },
   {
     id: 5,
     title: "Orange",
@@ -58,11 +58,11 @@ const imageList = [
     title: "finger",
     img: finger,
   },
-  {
-    id: 10,
-    title: "Ballet",
-    img: ballet,
-  },
+  // {
+  //   id: 10,
+  //   title: "Ballet",
+  //   img: ballet,
+  // },
   {
     id: 11,
     title: "Old Birds",
