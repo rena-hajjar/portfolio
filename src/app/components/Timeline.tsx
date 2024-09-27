@@ -6,12 +6,24 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 import Image from "next/image";
+import rbc from './../data/timeline/RBC.png';
 import ontario from "./../data/timeline/ontario.jpeg";
 import readwise from "./../data/timeline/readwise-color.png";
 import queens from "./../data/timeline/queens-color.png";
 import perk from "./../data/timeline/perk.png";
 
 const timeline = [
+  {
+    id: 5,
+    title: "Incoming Machine Learning SWE - RBC Borealis AI",
+    points: [
+      "In this role, I'll be working with LLMs to be AWESOMEEEE AND COOOL",
+      "AND LIVE MY LIFE!!!!!!!"
+    ],
+    logo: rbc,
+    alt: "RBC Logo",
+    date: "January 2025 - April 2025",
+  },
   {
     id: 1,
     title: "Backend Software & Data Engineer Intern - OPS",
@@ -36,7 +48,7 @@ const timeline = [
       "Automated data transfer to match requirements for 3D Slicer modules using Pandas",
       "Annotated and prepared surgical video data for Tensorflow training",
       "Became familiarized with biomedical research process and fed my curiosity",
-      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds"
+      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds",
     ],
     logo: perk,
     alt: "Percutaneous Surgery Lab Logo",
@@ -49,7 +61,7 @@ const timeline = [
       "Worked with React in a beautiful small startup environment",
       "Learned git version control, Docker and React best principles",
       "Co-authored the new Notebook feature in Readwise Reader, as well as eliminated bugs in previously written features with code-reviews from senior developers",
-      "Contributed to the global team effort to drive user growth by 8,000 customers during time spent at Readwise, with over 25 personal pull requests merged"
+      "Contributed to the global team effort to drive user growth by 8,000 customers during time spent at Readwise, with over 25 personal pull requests merged",
     ],
     logo: readwise,
     alt: "Readwise Logo",

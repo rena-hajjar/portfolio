@@ -15,8 +15,8 @@
     "/more/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/more/page.css",
-      "static/chunks/app/more/page.js"
+      "static/chunks/app/more/page.js",
+      "static/css/app/more/page.css"
     ]
   }
 }
