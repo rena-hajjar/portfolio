@@ -15,18 +15,15 @@ import perk from "./../data/timeline/perk.png";
 const timeline = [
   {
     id: 5,
-    title: "Incoming Machine Learning SWE - RBC Borealis AI",
-    points: [
-      "In this role, I'll be working with LLMs to be AWESOMEEEE AND COOOL",
-      "AND LIVE MY LIFE!!!!!!!"
-    ],
+    title: "Incoming Machine Learning SWE - Borealis AI @ RBC",
+    points: [],
     logo: rbc,
     alt: "RBC Logo",
     date: "January 2025 - April 2025",
   },
   {
     id: 1,
-    title: "Backend Software & Data Engineer Intern - OPS",
+    title: "Backend Software & Data Engineer Intern - Ontario Public Service",
     points: [
       "Built API endpoints with Java in a Spring Boot application",
       "Tested API with Postman to automate email alerts on database changes",
@@ -47,7 +44,8 @@ const timeline = [
     points: [
       "Automated data transfer to match requirements for 3D Slicer modules using Pandas",
       "Annotated and prepared surgical video data for Tensorflow training",
-      "Became familiarized with biomedical research process and fed my curiosity",
+      "Assisting in training and calibration of algorithms with Tensorflow, Numpy, and OpenCV",
+      "Leveraging tools such as Ultralytics’ YOLOv8 for surgical object recognition with hyper-parameter adjustment, Meta’s Segment Anything Model for mask generation of ultrasounds, and a CNN with a LSTM model for task identification",
       "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds",
     ],
     logo: perk,

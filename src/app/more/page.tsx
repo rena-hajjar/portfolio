@@ -115,6 +115,7 @@ export default function More() {
                     ></Image>
                   </div>
                   <div className="caption">Music</div>
+                  <div style={{fontSize:"large" }}>Coming soon...</div>
                 </motion.div>
               </button>
             </div>
@@ -125,12 +126,13 @@ export default function More() {
               provide has been much more noticable to me since joining a world
               of technology.
             </div>
-            {/* <button
+            <button
               onClick={handleCourseClick}
               style={{ background: "transparent", border: "none" }}
             >
               <motion.div whileHover={{ scale: 1.05 }} className="more-card">
-                Coursework
+                <div className="caption">Coursework</div>
+                <div style={{ fontSize: "large"}}>Coming soon...</div>
               </motion.div>
             </button>
             <div className="more-about">
@@ -140,7 +142,7 @@ export default function More() {
               things outside of school, but the chance to learn in a structured
               fashion from experts in fields I care for is not something I take
               for granted.
-            </div> */}
+            </div>
           </div>
         </motion.div>
 
