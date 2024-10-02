@@ -1,0 +1,15 @@
+.art-text-body {
+    font-family: "Rubik Mono";
+    font-size:x-large;
+    margin: 15px;
+}
+
+.art-text {
+    margin: 5px;
+    height: 250px;
+    border-radius: 5px;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    background-color: #cccae9;
+}

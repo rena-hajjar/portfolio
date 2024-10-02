@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 import Image from "next/image";
+import rbc from './../data/timeline/RBC.png';
 import ontario from "./../data/timeline/ontario.jpeg";
 import readwise from "./../data/timeline/readwise-color.png";
 import queens from "./../data/timeline/queens-color.png";
@@ -13,8 +14,16 @@ import perk from "./../data/timeline/perk.png";
 
 const timeline = [
   {
+    id: 5,
+    title: "Incoming Machine Learning SWE - Borealis AI @ RBC",
+    points: [],
+    logo: rbc,
+    alt: "RBC Logo",
+    date: "January 2025 - April 2025",
+  },
+  {
     id: 1,
-    title: "Backend Software & Data Engineer Intern - OPS",
+    title: "Backend Software & Data Engineer Intern - Ontario Public Service",
     points: [
       "Built API endpoints with Java in a Spring Boot application",
       "Tested API with Postman to automate email alerts on database changes",
@@ -35,8 +44,9 @@ const timeline = [
     points: [
       "Automated data transfer to match requirements for 3D Slicer modules using Pandas",
       "Annotated and prepared surgical video data for Tensorflow training",
-      "Became familiarized with biomedical research process and fed my curiosity",
-      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds"
+      "Assisting in training and calibration of algorithms with Tensorflow, Numpy, and OpenCV",
+      "Leveraging tools such as Ultralytics’ YOLOv8 for surgical object recognition with hyper-parameter adjustment, Meta’s Segment Anything Model for mask generation of ultrasounds, and a CNN with a LSTM model for task identification",
+      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds",
     ],
     logo: perk,
     alt: "Percutaneous Surgery Lab Logo",
@@ -49,7 +59,7 @@ const timeline = [
       "Worked with React in a beautiful small startup environment",
       "Learned git version control, Docker and React best principles",
       "Co-authored the new Notebook feature in Readwise Reader, as well as eliminated bugs in previously written features with code-reviews from senior developers",
-      "Contributed to the global team effort to drive user growth by 8,000 customers during time spent at Readwise, with over 25 personal pull requests merged"
+      "Contributed to the global team effort to drive user growth by 8,000 customers during time spent at Readwise, with over 25 personal pull requests merged",
     ],
     logo: readwise,
     alt: "Readwise Logo",
