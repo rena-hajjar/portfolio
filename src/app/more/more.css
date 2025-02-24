@@ -2,9 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-body {
-  background: #6570e6;
-}
+
 .navbar-container {
   background: #6570e6;
 }
@@ -49,6 +47,7 @@ html {
   margin-bottom: 2vw;
   text-align: left;
   font-family: Rubik;
+  font-size:large;
 }
 
 .more-cards-container {
@@ -100,6 +99,7 @@ html {
   margin-bottom: 2vw;
   text-align: left;
   font-family: Rubik;
+  font-size:large;
 }
 
 .modal {

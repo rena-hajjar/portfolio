@@ -6,11 +6,12 @@ import jim from "./../../data/art_items/jimmy/jim.png";
 import orange from "./../../data/art_items/orange/orange.jpg";
 import birds from "./../../data/art_items/birds.jpg";
 import finger from "./../../data/art_items/finger_painting.jpg";
-// import ballet from "./../../data/art_items/ballet.jpg";
+import ballet from "./../../data/art_items/ballet.jpg";
 import flowerhead from "./../../data/art_items/flower_head.png";
 import frank from "./../../data/art_items/frankenstein.png";
 import oldbirds from "./../../data/art_items/old_bird.jpg";
-// import artclass from "./../../data/art_items/art_class.jpg";
+import artclass from "./../../data/art_items/art_class.jpg";
+import './ArtModal.css';
 
 const imageList = [
   {
@@ -38,11 +39,11 @@ const imageList = [
     title: "JimmyH",
     img: jim,
   },
-  // {
-  //   id: 4,
-  //   title: "Art Class Perspective Paintint",
-  //   img: artclass,
-  // },
+  {
+    id: 4,
+    title: "Art Class Perspective Paintint",
+    img: artclass,
+  },
   {
     id: 5,
     title: "Orange",
@@ -58,11 +59,11 @@ const imageList = [
     title: "finger",
     img: finger,
   },
-  // {
-  //   id: 10,
-  //   title: "Ballet",
-  //   img: ballet,
-  // },
+  {
+    id: 10,
+    title: "Ballet",
+    img: ballet,
+  },
   {
     id: 11,
     title: "Old Birds",
@@ -81,6 +82,12 @@ export default function ArtModal() {
         </div>
         <div className="art-modal-body">
           <div className="gallery">
+            <div className="art-text-body">
+              I’ve painted in acrylic since I was 10, but my age has allowed me
+              to finally delve into oils. As a perfectionist, I struggle with
+              not being good at something from the get go. But this practice
+              allows me to strengthen that.
+            </div>
             <ImageList
               sx={{
                 width: "inherit",
@@ -95,6 +102,14 @@ export default function ArtModal() {
               variant="masonry"
               gap={8}
             >
+              {/* <div className="art-text">
+                <div className="art-text-body">
+                  I’ve painted in acrylic since I was 10, but my age has allowed
+                  me to finally delve into oils. As a perfectionist, I struggle
+                  with not being good at something from the get go. But this
+                  practice allows me to strengthen that.
+                </div>
+              </div> */}
               {imageList.map((image) => (
                 <ImageListItem key={image.id}>
                   <Image

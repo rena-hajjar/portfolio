@@ -40,6 +40,12 @@ const ExtraCs = [
     role: "Rehabilitation Centre Volunteer",
     image: bloorview,
   },
+  // {
+  //   id: 6,
+  //   title: "Queen's Music Club",
+  //   role: "General Member",
+  //   image: bloorview,
+  // },
 ];
 
 
