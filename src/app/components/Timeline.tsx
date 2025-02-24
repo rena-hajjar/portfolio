@@ -38,7 +38,7 @@ const timeline = [
       "Consumed above API in an Angular framework to optimize user experience and modernize 20 year old website",
       "Created automations for reservation booking with Microsoft Power Automate",
       "Modernized data flow for clients with data transfer through Azure Data Factory ETL pipelines",
-      "Developed product management skills through Project Management Institue senior meetings and workshops",
+      "Developed management skills through Project Management Institute senior meetings and workshops",
       "Worked first hand in an Agile development environment for efficient production",
       "Led architecture technical documentation of project to provide seniors with clear outlines of data models, user flows, and security within the project",
     ],
