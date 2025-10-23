@@ -32,8 +32,8 @@ export default function Main() {
                 <div className="name-text">Réna Hajjar</div>
               </div>
               <div className="about-text">
-                I'm a third-year Computing student at Queen's University and a
-                Fullstack Software Engineer
+                I'm a fourth-year Biomedical Computing student at Queen's University and a
+                Data Scientist.
               </div>
             </motion.div>
             <motion.div
