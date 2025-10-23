@@ -6,18 +6,28 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 import Image from "next/image";
-import rbc from './../data/timeline/RBC.png';
-import ontario from "./../data/timeline/ontario.jpeg";
-import readwise from "./../data/timeline/readwise-color.png";
-import queens from "./../data/timeline/queens-color.png";
-import perk from "./../data/timeline/perk.png";
+// Images will be loaded from public directory
 
 const timeline = [
+  {
+    id: 2,
+    title: "Undergraduate ML Research Student - Queen's Perk Lab",
+    points: [
+      "Automated data transfer to match requirements for 3D Slicer modules using Pandas",
+      "Annotated and prepared surgical video data for Tensorflow training",
+      "Assisting in training and calibration of algorithms with Tensorflow, Numpy, and OpenCV",
+      "Leveraging tools such as Ultralytics’ YOLOv8 for surgical object recognition with hyper-parameter adjustment, Meta’s Segment Anything Model for mask generation of ultrasounds, and a CNN with a LSTM model for task identification",
+      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds",
+    ],
+    logo: "/timeline/perk.png",
+    alt: "Percutaneous Surgery Lab Logo",
+    date: "October 2023 - Present",
+  },
   {
     id: 6,
     title: "Data Engineer - RBC Amplify",
     points: [],
-    logo: rbc,
+    logo: "/timeline/RBC.png",
     alt: "RBC Logo",
     date: "May 2025 - August 2025",
   },
@@ -25,7 +35,7 @@ const timeline = [
     id: 5,
     title: "Machine Learning SWE - RBC Borealis",
     points: [],
-    logo: rbc,
+    logo: "/timeline/RBC.png",
     alt: "RBC Logo",
     date: "January 2025 - April 2025",
   },
@@ -42,23 +52,9 @@ const timeline = [
       "Worked first hand in an Agile development environment for efficient production",
       "Led architecture technical documentation of project to provide seniors with clear outlines of data models, user flows, and security within the project",
     ],
-    logo: ontario,
+    logo: "/timeline/ontario.jpeg",
     alt: "Ontario Logo",
     date: "May 2024 - September 2024",
-  },
-  {
-    id: 2,
-    title: "Undergraduate ML Research Student - Queen's Perk Lab",
-    points: [
-      "Automated data transfer to match requirements for 3D Slicer modules using Pandas",
-      "Annotated and prepared surgical video data for Tensorflow training",
-      "Assisting in training and calibration of algorithms with Tensorflow, Numpy, and OpenCV",
-      "Leveraging tools such as Ultralytics’ YOLOv8 for surgical object recognition with hyper-parameter adjustment, Meta’s Segment Anything Model for mask generation of ultrasounds, and a CNN with a LSTM model for task identification",
-      "Upcoming research: Using depth analytics to remove bulky cameras from the visualization process, mapping surgical objects and tasks in 3D space using point clouds",
-    ],
-    logo: perk,
-    alt: "Percutaneous Surgery Lab Logo",
-    date: "October 2023 - Present",
   },
   {
     id: 3,
@@ -69,7 +65,7 @@ const timeline = [
       "Co-authored the new Notebook feature in Readwise Reader, as well as eliminated bugs in previously written features with code-reviews from senior developers",
       "Contributed to the global team effort to drive user growth by 8,000 customers during time spent at Readwise, with over 25 personal pull requests merged",
     ],
-    logo: readwise,
+    logo: "/timeline/readwise-color.png",
     alt: "Readwise Logo",
     date: "May 2023 - September 2023",
   },
@@ -77,7 +73,7 @@ const timeline = [
     id: 4,
     title: "Bachelor of Computing with Honours - Queen's University",
     points: [],
-    logo: queens,
+    logo: "/timeline/queens-color.png",
     alt: "Queen's University Crest",
     date: "September 2022 - April 2026",
   },
@@ -103,6 +99,8 @@ export default function Timeline() {
                     <Image
                       src={card.logo}
                       alt={card.alt}
+                      width={40}
+                      height={40}
                       style={{
                         width: 40,
                         height: 40,

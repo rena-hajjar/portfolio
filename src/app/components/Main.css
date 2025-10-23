@@ -71,7 +71,7 @@
 }
 
 .computer {
-  background: url("./../data/c.png");
+  background: url("/c.png");
   background-size: contain;
   background-repeat: no-repeat;
   transform: scaleX(-1);

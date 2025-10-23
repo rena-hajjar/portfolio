@@ -1,5 +1,5 @@
 import "./ExperienceCard.css";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { List } from "postcss/lib/list";
 
@@ -12,7 +12,7 @@ export default function ExperienceCard({
 }: {
   title: string;
   techstack: Array<String>;
-  image: StaticImageData;
+  image: string;
   about: string;
   lessons: { id: number; title: string; about: string }[];
 }) {

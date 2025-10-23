@@ -1,6 +1,6 @@
 "use client";
 
-import NavBar from "../pages/NavBar";
+import NavBar from "../components/NavBar";
 import "./more.css";
 import { motion } from "framer-motion";
 import {
@@ -12,13 +12,13 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import React from "react";
-import music from './../data/music_Cover.png';
+// Images will be loaded from public directory
 import ArtModal from "../components/More/ArtModal";
 import CourseModal from "../components/More/CourseModal";
 import MusicModal from "../components/More/MusicModal";
 
 import Image from "next/image";
-import flowerhead from "./../data/art_items/flower_head.png";
+// Images will be loaded from public directory
 
 export default function More() {
   const [isArtOpen, setIsArtOpen] = useState(false);
@@ -85,12 +85,16 @@ export default function More() {
             <div className="artmus">
               <button
                 onClick={handleArtClick}
-                style={{ background: "transparent", border: "none", cursor:"pointer" }}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  cursor: "pointer",
+                }}
               >
                 <motion.div whileHover={{ scale: 1.05 }} className="more-card">
                   <div className="more-thumbnail">
                     <Image
-                      src={flowerhead}
+                      src="/art_items/flower_head.png"
                       alt="Painting"
                       width={400}
                       height={400}
@@ -107,7 +111,7 @@ export default function More() {
                 <motion.div whileHover={{ scale: 1.05 }} className="more-card">
                   <div className="more-thumbnail">
                     <Image
-                      src={music}
+                      src="/music_Cover.png"
                       alt="Girl playing guitar"
                       width={400}
                       height={400}
@@ -115,7 +119,7 @@ export default function More() {
                     ></Image>
                   </div>
                   <div className="caption">Music</div>
-                  <div style={{fontSize:"large" }}>Coming soon...</div>
+                  <div style={{ fontSize: "large" }}>Coming soon...</div>
                 </motion.div>
               </button>
             </div>
@@ -132,7 +136,7 @@ export default function More() {
             >
               <motion.div whileHover={{ scale: 1.05 }} className="more-card">
                 <div className="caption">Coursework</div>
-                <div style={{ fontSize: "large"}}>Coming soon...</div>
+                <div style={{ fontSize: "large" }}>Coming soon...</div>
               </motion.div>
             </button>
             <div className="more-about">

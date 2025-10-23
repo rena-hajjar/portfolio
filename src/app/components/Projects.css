@@ -15,7 +15,7 @@
   display: flex;
   width: -webkit-fill-content;
   z-index: 1;
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 
@@ -25,6 +25,14 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+
+.card-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .card-background div {
@@ -51,40 +59,58 @@
 
 .project-more {
   position: absolute;
-  bottom: 2%;
-  color: transparent;
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: none;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #201f34;
+  border-color: #87f4bd;
+  background-color: #e5ede7;
+  box-shadow: #87f4bd 1px 1px;
+  border: #87f4bd 2px solid;
   font-family: Rubik;
+  transition: all 0.2s ease;
+  z-index: 100;
+  pointer-events: auto;
+  opacity: 0.8;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 .motion-card {
   background: "pink";
   background-size: "cover";
   cursor: pointer;
+  overflow: visible;
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
 }
 
 .motion-card:hover .project-more {
   color: #201f34;
   border-color: #87f4bd;
   background-color: #e5ede7;
-  box-shadow: #87f4bd 1px 1px;
-  border: #87f4bd 2px 2px;
+  box-shadow: #87f4bd 2px 2px;
+  border: #87f4bd 2px solid;
+  transform: translateY(-2px);
+  opacity: 1;
 }
 
 .project-more:hover {
   background-color: #201f34;
-  border: #2e2d31 2px 2px;
+  border: #2e2d31 2px solid;
   box-shadow: 3px 3px;
+  color: #e5ede7;
+  transform: translateY(-2px) scale(1.05);
+  opacity: 1;
 }
 
 .dialog {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: #E5EDE7;
-  
+  background: #e5ede7;
 }
 
 .project-title {
@@ -94,41 +120,41 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0;
-  background: #E5EDE7;
+  background: #e5ede7;
 }
 
-.project-title a{
+.project-title a {
   padding-left: 16px;
 }
 
 .project-images {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .dialog {
   max-width: fit-content;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .project-about {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .project-summary {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   margin: 5px;
   margin-left: 20px;
   max-height: 40vh;
   width: fit-content;
   max-width: 500px;
   width: fit-content;
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
@@ -144,13 +170,13 @@
 }
 
 .tech-stack-title {
-  font-family: 'Rubik One';
-  font-size:larger;
+  font-family: "Rubik One";
+  font-size: larger;
   margin: 5px;
 }
 
 .tech-stack {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   margin-left: 2vw;
@@ -166,7 +192,7 @@
     height: 70px;
   }
 }
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   .dialog {
     flex-direction: column;
   }
@@ -182,10 +208,10 @@
 
 @media (hover: none) {
   .project-more {
-  color: #201f34;
-  border-color: #87f4bd;
-  background-color: #e5ede7;
-  box-shadow: #87f4bd 1px 1px;
-  border: #87f4bd 2px 2px;
-}
+    color: #201f34;
+    border-color: #87f4bd;
+    background-color: #e5ede7;
+    box-shadow: #87f4bd 1px 1px;
+    border: #87f4bd 2px 2px;
+  }
 }

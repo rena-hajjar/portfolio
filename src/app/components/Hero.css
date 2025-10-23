@@ -30,7 +30,7 @@
 }
 
 .hero-image {
-  background-image: url(./../data/mereal.png);
+  background-image: url(/mereal.png);
   height: 60vh;
   width: 60vh;
   background-repeat: no-repeat;

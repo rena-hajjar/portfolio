@@ -1,19 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import inject from "./../data/projects/injecto.png";
-import fresh from "./../data/projects/freshsave.png";
-import grfn from "./../data/projects/grfn.jpeg";
-import Github from "../data/svgs/github";
-import ReactSVG from "../data/svgs/reactjs.svg";
-import OpenAI from "../data/svgs/openai.svg";
-import CSS from "../data/svgs/css.svg";
-import Java from "../data/svgs/java.svg";
-import Typescript from "../data/svgs/typescript.svg";
-import Node from '../data/svgs/nodejs.svg';
-import Docker from '../data/svgs/docker.svg';
-import Next from '../data/svgs/next.svg';
+import Github from "./svgs/github";
+import Linkedin from "./svgs/linkedin";
 
 import {
   Button,
@@ -23,7 +14,6 @@ import {
   DialogContent,
   Paper,
 } from "@mui/material";
-import Linkedin from "../data/svgs/linkedin";
 
 const projects = [
   {
@@ -31,7 +21,11 @@ const projects = [
     title: "Fresh Save",
     about:
       "This project was built to tackle food waste in Kingston during a 48-hour sprint. It included setting up a MongoDB backend to manage inventory efficiently and integrating OpenAI's API with Python to create meal kits using food close to expiry. On the frontend, a user-friendly interface was designed with React, making it easy for nonprofits to arrange same-day pickups. The project's goals and impact were presented at the final conference, highlighting expertise in backend development, frontend design, and API integration.",
-    images: [fresh, grfn, inject],
+    images: [
+      "/projects/freshsave.png",
+      "/projects/grfn.jpeg",
+      "/projects/injecto.png",
+    ],
     tech: [
       <svg
         width="101"
@@ -179,14 +173,14 @@ const projects = [
       </svg>,
     ],
     ghlink: "https://github.com/SaulWolkove/QHACKS24",
-    background: fresh,
+    background: "/projects/freshsave.png",
   },
   {
     id: 2,
     title: "Good Reads For Nerds",
     about:
       "This project involved developing a dynamic web application with a React frontend and Spring Boot backend, integrated with MongoDB. Features were implemented to allow users to comment on and annotate individual book chapters, enhancing reading comprehension and providing a platform for sharing thoughts. The project is currently being expanded to include user accounts, authentication, and comprehensive unit testing. Future enhancements are planned to create user-driven 'book clubs' for collaborative discussions and idea sharing, imitating common social media functions.",
-    images: [grfn],
+    images: ["/projects/grfn.jpeg"],
     tech: [
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -281,14 +275,14 @@ const projects = [
       </svg>,
     ],
     ghlink: "https://github.com/rena-hajjar/GoodReadsForNerds",
-    background: grfn,
+    background: "/projects/grfn.jpeg",
   },
   {
     id: 3,
     title: "Med-i Injection Simulator",
     about:
       "This project improved healthcare training methods by developing a metric-based evaluation system for lifelike clinical simulations. Optical tracking and open-source software were used to create a visual guidance tool for injections, offering real-time feedback. An OptiTrack camera and 3D-printed sensors on the needle allowed metrics to be transferred via Plus to 3D Slicer, visualizing movement on a phantom model. This enabled students to visualize the needle's movement using Slicer transforms and analyze the angle and depth of their injection practice, enhancing their accuracy and technique.",
-    images: [inject],
+    images: ["/projects/injecto.png"],
     tech: [
       <svg
         width="513"
@@ -342,7 +336,7 @@ const projects = [
       </svg>,
     ],
     ghlink: "https://github.com/rena-hajjar",
-    background: inject,
+    background: "/projects/injecto.png",
   },
   // {
   //   id: 4,
@@ -380,32 +374,33 @@ export default function Projects() {
         <span className="projects-title">Projects.</span>
         <div className="project-cards-container">
           {projects.map((project) => (
-            <>
-              <div className="card-background">
-                <motion.div
-                  className="motion-card"
-                  whileHover={{ scale: 1.2 }}
-                  style={{
-                    background: "pink",
-                    backgroundSize: "cover",
-                  }}
+            <div key={project.id} className="card-background">
+              <motion.div
+                className="motion-card"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+                style={{
+                  background: "pink",
+                  backgroundSize: "cover",
+                }}
+              >
+                <Image
+                  src={project.background}
+                  alt="project pic"
+                  width={400}
+                  height={400}
+                  style={{ height: 400, width: 400 }}
+                ></Image>
+                <p className="project-card-title">{project.title}</p>
+                <Button
+                  className="project-more"
+                  onClick={() => handleClick(project.id)}
+                  variant="contained"
                 >
-                  <Image
-                    src={project.background}
-                    alt="project pic"
-                    style={{ height: 400, width: 400 }}
-                  ></Image>
-                  <p className="project-card-title">{project.title}</p>
-                  <Button
-                    className="project-more"
-                    onClick={() => handleClick(project.id)}
-                    variant="contained"
-                  >
-                    See More
-                  </Button>
-                </motion.div>
-              </div>
-            </>
+                  See More
+                </Button>
+              </motion.div>
+            </div>
           ))}
         </div>
 
@@ -436,9 +431,11 @@ export default function Projects() {
                 <Image
                   src={
                     projects.find((project) => project.id === currentProject)
-                      ?.images[0] || fresh
+                      ?.images[0] || "/projects/freshsave.png"
                   }
                   alt="Project gallery"
+                  width={400}
+                  height={400}
                   style={{ width: "40vh", height: "40vh" }}
                 ></Image>
               </div>

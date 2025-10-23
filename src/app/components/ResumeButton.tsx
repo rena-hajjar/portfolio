@@ -1,23 +1,21 @@
-import './ResumeButton.css'
-import Download from './Download';
-import { motion } from 'framer-motion'
+"use client";
+import "./ResumeButton.css";
+import Download from "./Download";
+import { motion } from "framer-motion";
 
 export default function ResumeButton() {
-    const handleClick = () => {
-      window.open('/RSH_CV_2024.pdf', '_blank');
-    };
+  const handleClick = () => {
+    window.open("/RSH_CV_2024.pdf", "_blank");
+  };
 
-    return (
-      <>
-        <div className="resume-button">
-          <motion.button
-            onClick={handleClick}
-            whileHover={{ scale: 1.1 }}
-          >
-            <div className="resume-text">Resume</div>
-            <Download color='white'/>
-          </motion.button>
-        </div>
-      </>
-    );
+  return (
+    <>
+      <div className="resume-button">
+        <motion.button onClick={handleClick} whileHover={{ scale: 1.1 }}>
+          <div className="resume-text">Resume</div>
+          <Download color="white" />
+        </motion.button>
+      </div>
+    </>
+  );
 }

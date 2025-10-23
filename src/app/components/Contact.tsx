@@ -1,7 +1,8 @@
+"use client";
 import "./Contact.css";
-import Github from "./../data/svgs/github";
-import Linkedin from "../data/svgs/linkedin";
-import Email from "../data/svgs/email";
+import Github from "./svgs/github";
+import Linkedin from "./svgs/linkedin";
+import Email from "./svgs/email";
 import { motion } from "framer-motion";
 import Download from "./Download";
 
@@ -65,7 +66,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.1 }}
                 >
                   <div className="contact-resume-text">Resume</div>
-                  <Download color="#E5E1F8"/>
+                  <Download color="#E5E1F8" />
                 </motion.button>
               </div>
             </div>

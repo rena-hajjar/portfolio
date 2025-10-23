@@ -1,10 +1,9 @@
 import "./Hero.css";
 import Wave from "@/app/components/Wave";
 import { motion } from "framer-motion";
-import Github from "../data/svgs/github";
-import Linkedin from "../data/svgs/linkedin";
-import Email from "../data/svgs/email";
-
+import Github from "./svgs/github";
+import Linkedin from "./svgs/linkedin";
+import Email from "./svgs/email";
 
 export default function Hero() {
   return (

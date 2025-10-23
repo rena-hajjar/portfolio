@@ -1,5 +1,5 @@
-import ArrowLeft from "@/app/data/svgs/arrowLeft";
-import ArrowRight from "@/app/data/svgs/arrowRight";
+import ArrowLeft from "../svgs/arrowLeft";
+import ArrowRight from "../svgs/arrowRight";
 
 export default function CourseModal() {
   return (
