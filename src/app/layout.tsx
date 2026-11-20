@@ -1,26 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@fontsource-variable/rubik";
+import "@fontsource/rubik-mono-one";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Réna Sophia Hajjar",
-  description: "Portfolio and About",
+  title: "Réna Hajjar",
+  description:
+    "Réna Hajjar — master's student at Queen's University's Perk Lab building surgical navigation tools. Also a painter, guitarist and traveller.",
+  icons: { icon: "/favicon.ico" },
 };
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
+export const viewport: Viewport = { themeColor: "#F4F2FC" };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-        <body className={inter.className}>{children}</body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
