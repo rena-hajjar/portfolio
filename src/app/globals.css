@@ -1,16 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  margin: 0px;
-  background-color: rgba(171,166,236,1);
-}
-
-::-webkit-scrollbar {
-    display: none;
+:root {
+  --paper: #f4f2fc;
+  --ink: #201F34;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* faint dotted-paper texture used across the site */
+.dot-paper {
+  background-image: radial-gradient(rgba(31, 26, 61, 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* strip of washi tape */
+.tape {
+  position: absolute;
+  width: 84px;
+  height: 24px;
+  opacity: 0.85;
+  border-radius: 2px;
+  mix-blend-mode: multiply;
+}
+
+/* squiggle underline for section titles */
+.squiggle {
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 24px 8px;
+  padding-bottom: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ultrasound monitor */
+@keyframes us-sweep {
+  0%, 100% { transform: rotate(-30deg); }
+  50% { transform: rotate(30deg); }
+}
+.us-sweep { animation: us-sweep 4s ease-in-out infinite; }
+@keyframes us-dash { to { stroke-dashoffset: -36; } }
+.us-contour { animation: us-dash 1.6s linear infinite; }
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+.hover-wiggle:hover { animation: wiggle .4s ease-in-out; }

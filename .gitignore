@@ -1,4 +1,8 @@
-node_modules
+node_modules/
 .next/
-.next
-next
+out/
+.DS_Store
+.idea/
+*.tsbuildinfo
+next-env.d.ts
+.vercel
