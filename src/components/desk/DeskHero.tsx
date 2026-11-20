@@ -53,7 +53,7 @@ export default function DeskHero() {
   };
 
   return (
-    <section id="hero" className="relative h-[100svh] w-full overflow-hidden bg-[#CDBDEB]">
+    <section id="hero" className="relative h-[100svh] w-full overflow-hidden bg-lavender">
       {ready && webgl && <DeskScene still={still} onSelect={go} dropKey={dropKey} />}
 
       {ready && !webgl && (
