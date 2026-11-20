@@ -1,14 +1,14 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Html, RoundedBox } from "@react-three/drei";
+import { Html, RoundedBox, useTexture } from "@react-three/drei";
 import {
   CuboidCollider,
   CylinderCollider,
   Physics,
   RigidBody,
 } from "@react-three/rapier";
-import { useMemo, useRef, useState, type ReactNode } from "react";
+import { Suspense, useMemo, useRef, useState, type ReactNode } from "react";
 import * as THREE from "three";
 import * as T from "./textures";
 
@@ -196,8 +196,8 @@ const OBJECTS: ObjectDef[] = [
     target: "about",
     label: "about me",
     color: "#7840E5",
-    spot: [0, -0.05],
-    spotTall: [0, -0.02],
+    spot: [0, 0.5],
+    spotTall: [0, 0.55],
     restY: 0.04,
     yaw: -0.04,
     render: () => <Slab size={[3.8, 0.06, 1.95]} draw={T.nameCard} side="#F4F2FC" px={200} />,
@@ -210,8 +210,8 @@ const OBJECTS: ObjectDef[] = [
     target: "research",
     label: "research",
     color: "#3B7FD9",
-    spot: [-0.62, 0.5],
-    spotTall: [-0.3, 0.42],
+    spot: [-0.5, 0.3],
+    spotTall: [-0.35, 0.05],
     restY: 0.32,
     yaw: 0.5,
     render: () => <UltrasoundProbe />,
@@ -229,8 +229,8 @@ const OBJECTS: ObjectDef[] = [
     target: "music",
     label: "music",
     color: "#F29A3A",
-    spot: [-0.62, -0.42],
-    spotTall: [-0.42, -0.62],
+    spot: [-0.4, -0.45],
+    spotTall: [-0.5, -0.55],
     restY: 0.04,
     yaw: 0.3,
     render: () => <Disc r={1.55} h={0.05} draw={T.record} side="#18161F" />,
@@ -243,8 +243,8 @@ const OBJECTS: ObjectDef[] = [
     target: "art",
     label: "art",
     color: "#16B583",
-    spot: [0.6, -0.42],
-    spotTall: [0.45, -0.4],
+    spot: [0.55, 0.25],
+    spotTall: [0.45, -0.55],
     restY: 0.1,
     yaw: -0.22,
     render: () => <Slab size={[2.8, 0.18, 2.05]} draw={T.sketchbook} side="#FBF6EC" />,
@@ -257,8 +257,8 @@ const OBJECTS: ObjectDef[] = [
     target: "travel",
     label: "travel",
     color: "#2C3A8F",
-    spot: [0.68, 0.45],
-    spotTall: [0.48, 0.68],
+    spot: [0.8, 0.5],
+    spotTall: [0.6, 0.6],
     restY: 0.07,
     yaw: 0.28,
     render: () => <Slab size={[1.45, 0.12, 2.0]} draw={T.passport} side="#1F2A6E" />,
@@ -271,8 +271,8 @@ const OBJECTS: ObjectDef[] = [
     target: "work",
     label: "work",
     color: "#6570E6",
-    spot: [0.05, 0.62],
-    spotTall: [0.52, 0.3],
+    spot: [0.3, -0.3],
+    spotTall: [0.55, 0.05],
     restY: 0.03,
     yaw: -0.35,
     render: () => <Slab size={[1.35, 0.05, 1.85]} draw={T.badge} side="#FFFFFF" />,
@@ -285,8 +285,8 @@ const OBJECTS: ObjectDef[] = [
     target: "writing",
     label: "writing (soon!)",
     color: "#E2557F",
-    spot: [0.08, -0.7],
-    spotTall: [-0.35, 0.7],
+    spot: [-0.02, -0.42],
+    spotTall: [0.1, -0.15],
     restY: 0.03,
     yaw: 0.12,
     render: () => <Slab size={[2.3, 0.04, 1.45]} draw={T.envelope} side="#FBE3EC" />,
@@ -298,8 +298,8 @@ const OBJECTS: ObjectDef[] = [
     drop: 0,
     label: "coffee (essential)",
     color: "#7840E5",
-    spot: [0.8, -0.05],
-    spotTall: [0.55, -0.82],
+    spot: [0.85, -0.2],
+    spotTall: [0.75, -0.85],
     restY: 0.63,
     yaw: 0.9,
     render: () => <Mug />,
@@ -311,8 +311,8 @@ const OBJECTS: ObjectDef[] = [
     drop: 7,
     label: "",
     color: "#F29A3A",
-    spot: [-0.9, 0.0],
-    spotTall: [-0.55, -0.28],
+    spot: [-0.82, -0.05],
+    spotTall: [-0.65, 0.4],
     restY: 0.1,
     yaw: 1.3,
     render: () => <Pencil color="#F5C04A" />,
@@ -324,8 +324,8 @@ const OBJECTS: ObjectDef[] = [
     drop: 8,
     label: "",
     color: "#3B7FD9",
-    spot: [-0.82, 0.06],
-    spotTall: [-0.45, -0.24],
+    spot: [-0.76, 0.02],
+    spotTall: [-0.58, 0.46],
     restY: 0.1,
     yaw: 1.42,
     render: () => <Pencil color="#6570E6" />,
@@ -416,42 +416,176 @@ function DeskObject({
   );
 }
 
-// ── camera that frames the desk for any screen shape ─────────────────────
+// ── desk dimensions + camera framing for any screen shape ────────────────
 function useDeskFrame() {
   const { size } = useThree();
   const aspect = size.width / size.height;
   const tall = aspect < 0.9;
-  // visible desk area (world units) we want to guarantee
-  const viewH = Math.max(12.5, (tall ? 9.2 : 17) / aspect);
-  const viewW = viewH * aspect;
-  return { tall, viewH, viewW };
+  return {
+    tall,
+    aspect,
+    deskW: tall ? 9.5 : 21,
+    deskD: tall ? 9 : 9.5,
+    fov: tall ? 52 : 38,
+    pitch: tall ? 0.85 : 0.56, // camera elevation (radians)
+  };
 }
 
 function Rig() {
   const { camera } = useThree();
-  const { viewH } = useDeskFrame();
+  const { deskW, fov, pitch, aspect } = useDeskFrame();
   useFrame(() => {
-    const fov = ((camera as THREE.PerspectiveCamera).fov * Math.PI) / 180;
-    const dist = viewH / 2 / Math.tan(fov / 2);
-    const tilt = 0.22;
-    camera.position.set(0, dist * Math.cos(tilt), dist * Math.sin(tilt));
-    camera.lookAt(0, 0, 0);
+    const cam = camera as THREE.PerspectiveCamera;
+    if (cam.fov !== fov) {
+      cam.fov = fov;
+      cam.updateProjectionMatrix();
+    }
+    // back off until the whole desk width fits on screen
+    const hHalf = Math.atan(Math.tan(((fov / 2) * Math.PI) / 180) * aspect);
+    const dist = (deskW / 2 + 0.6) / Math.tan(hHalf);
+    camera.position.set(0, dist * Math.sin(pitch), dist * Math.cos(pitch) + 0.6);
+    camera.lookAt(0, 0.4, 0.2);
   });
   return null;
 }
 
-function Desk() {
-  const tex = useMemo(() => {
-    const t = T.canvasTexture(1024, 1024, T.wood);
-    t.wrapS = t.wrapT = THREE.RepeatWrapping;
-    t.repeat.set(3, 3);
-    return t;
-  }, []);
+// ── the room: desk, wall, lamp, plant, framed paintings ─────────────────
+function Frame({ src, w, h, position }: { src: string; w: number; h: number; position: [number, number, number] }) {
+  const tex = useTexture(src);
+  tex.colorSpace = THREE.SRGBColorSpace;
   return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-      <planeGeometry args={[80, 80]} />
-      <meshStandardMaterial map={tex} roughness={0.85} />
-    </mesh>
+    <group position={position}>
+      <mesh castShadow receiveShadow>
+        <boxGeometry args={[w + 0.36, h + 0.36, 0.14]} />
+        <meshStandardMaterial color="#F4F2FC" roughness={0.5} />
+      </mesh>
+      <mesh position={[0, 0, 0.075]}>
+        <planeGeometry args={[w, h]} />
+        <meshStandardMaterial map={tex} roughness={0.8} />
+      </mesh>
+    </group>
+  );
+}
+
+function Lamp({ position }: { position: [number, number, number] }) {
+  const metal = <meshStandardMaterial color="#201F34" roughness={0.35} metalness={0.4} />;
+  return (
+    <group position={position}>
+      <mesh position={[0, 0.12, 0]} castShadow receiveShadow>
+        <cylinderGeometry args={[0.85, 0.95, 0.24, 40]} />
+        {metal}
+      </mesh>
+      <mesh position={[0, 1.9, 0]} castShadow>
+        <cylinderGeometry args={[0.08, 0.08, 3.6, 16]} />
+        {metal}
+      </mesh>
+      <mesh position={[0.75, 3.62, 0.4]} rotation={[0.45, 0, -1.05]} castShadow>
+        <cylinderGeometry args={[0.07, 0.07, 1.9, 16]} />
+        {metal}
+      </mesh>
+      <mesh position={[1.55, 3.85, 0.85]} rotation={[0.25, 0, 0.3]} castShadow>
+        <coneGeometry args={[0.75, 1.1, 40, 1, true]} />
+        <meshStandardMaterial color="#F29A3A" roughness={0.45} side={THREE.DoubleSide} />
+      </mesh>
+      <mesh position={[1.45, 3.35, 0.8]}>
+        <sphereGeometry args={[0.24, 20, 20]} />
+        <meshStandardMaterial color="#FFF3D6" emissive="#FFE2A8" emissiveIntensity={2.2} />
+      </mesh>
+      <pointLight position={[1.5, 3.2, 0.9]} color="#FFD9A0" intensity={40} distance={14} decay={2} />
+    </group>
+  );
+}
+
+function Plant({ position }: { position: [number, number, number] }) {
+  const leaves = useMemo(
+    () =>
+      Array.from({ length: 11 }, (_, i) => {
+        const a = (i / 11) * Math.PI * 2 + (i % 2) * 0.3;
+        const tilt = 0.5 + (i % 3) * 0.22;
+        return { a, tilt, len: 1.3 + ((i * 37) % 5) * 0.15 };
+      }),
+    []
+  );
+  return (
+    <group position={position}>
+      <mesh position={[0, 0.75, 0]} castShadow receiveShadow>
+        <cylinderGeometry args={[0.85, 0.65, 1.5, 32]} />
+        <meshStandardMaterial color="#87F4BD" roughness={0.6} />
+      </mesh>
+      <mesh position={[0, 1.48, 0]}>
+        <cylinderGeometry args={[0.78, 0.78, 0.06, 32]} />
+        <meshStandardMaterial color="#4A2E1E" roughness={1} />
+      </mesh>
+      {leaves.map((l, i) => (
+        <group key={i} position={[0, 1.5, 0]} rotation={[0, l.a, l.tilt]}>
+          <mesh position={[0, l.len / 2, 0]} scale={[0.32, l.len / 2, 0.1]} castShadow>
+            <sphereGeometry args={[1, 16, 12]} />
+            <meshStandardMaterial color={i % 2 ? "#16B583" : "#0F8F67"} roughness={0.55} />
+          </mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
+function Room({ deskW, deskD, tall }: { deskW: number; deskD: number; tall: boolean }) {
+  const wood = useMemo(() => {
+    // one large texture stretched over the top — no visible tiling seams
+    return T.canvasTexture(2048, Math.round((2048 * deskD) / deskW), T.wood);
+  }, [deskW, deskD]);
+  const legH = 11;
+  const legs: [number, number][] = [
+    [-deskW / 2 + 0.6, -deskD / 2 + 0.6],
+    [deskW / 2 - 0.6, -deskD / 2 + 0.6],
+    [-deskW / 2 + 0.6, deskD / 2 - 0.6],
+    [deskW / 2 - 0.6, deskD / 2 - 0.6],
+  ];
+  const wallZ = -deskD / 2 - 0.4;
+  return (
+    <group>
+      {/* desktop */}
+      <mesh position={[0, -0.3, 0]} castShadow receiveShadow>
+        <boxGeometry args={[deskW, 0.6, deskD]} />
+        <meshStandardMaterial map={wood} roughness={0.55} />
+      </mesh>
+      {/* apron with a drawer */}
+      <mesh position={[0, -1.15, deskD / 2 - 0.3]} castShadow receiveShadow>
+        <boxGeometry args={[deskW - 1.2, 1.1, 0.4]} />
+        <meshStandardMaterial color="#B98455" roughness={0.6} />
+      </mesh>
+      <RoundedBox args={[1.4, 0.18, 0.18]} radius={0.08} position={[deskW * 0.22, -1.15, deskD / 2 - 0.05]}>
+        <meshStandardMaterial color="#201F34" metalness={0.4} roughness={0.3} />
+      </RoundedBox>
+      {legs.map(([x, z], i) => (
+        <mesh key={i} position={[x, -0.6 - legH / 2, z]} castShadow receiveShadow>
+          <boxGeometry args={[0.7, legH, 0.7]} />
+          <meshStandardMaterial color="#B98455" roughness={0.6} />
+        </mesh>
+      ))}
+      {/* floor + wall */}
+      <mesh position={[0, -0.6 - legH, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[120, 120]} />
+        <meshStandardMaterial color="#C9C3EE" roughness={1} />
+      </mesh>
+      <mesh position={[0, 6, wallZ]} receiveShadow>
+        <planeGeometry args={[120, 40]} />
+        <meshStandardMaterial color="#ABA6EC" roughness={0.95} />
+      </mesh>
+      {/* skirting line where the desk meets the wall */}
+      <mesh position={[0, 0.06, wallZ + 0.05]}>
+        <boxGeometry args={[120, 0.12, 0.1]} />
+        <meshStandardMaterial color="#9C96E0" />
+      </mesh>
+      {/* paintings on the wall */}
+      {!tall && (
+        <Suspense fallback={null}>
+          <Frame src="/art/flower-head.webp" w={2.3} h={3.2} position={[-2.6, 3.4, wallZ + 0.08]} />
+          <Frame src="/art/water-swim.webp" w={3.4} h={2.65} position={[1.6, 3.1, wallZ + 0.08]} />
+        </Suspense>
+      )}
+      <Lamp position={[-deskW / 2 + 1.6, 0, -deskD / 2 + 1.3]} />
+      <Plant position={[deskW / 2 - 1.4, 0, -deskD / 2 + 1.3]} />
+    </group>
   );
 }
 
@@ -464,19 +598,19 @@ function Scene({
   onSelect: (t: DeskTarget) => void;
   dropKey: number;
 }) {
-  const { tall, viewH, viewW } = useDeskFrame();
-  const halfW = viewW / 2;
-  const halfH = viewH / 2;
-  const mx = halfW - (tall ? 1.2 : 2.2);
-  const mz = halfH - 1.7;
+  const { tall, deskW, deskD } = useDeskFrame();
+  const mx = deskW / 2 - (tall ? 1.3 : 2.0);
+  const mz = deskD / 2 - 1.4;
+  const hx = deskW / 2;
+  const hz = deskD / 2;
 
   return (
     <>
       <Rig />
-      <hemisphereLight args={["#fbf8ff", "#6b5a96", 0.95]} />
+      <hemisphereLight args={["#fbf8ff", "#8a7bb8", 0.9]} />
       <directionalLight
-        position={[-7, 16, 7]}
-        intensity={1.7}
+        position={[-8, 18, 12]}
+        intensity={1.6}
         castShadow
         shadow-mapSize={[2048, 2048]}
         shadow-camera-left={-16}
@@ -484,16 +618,19 @@ function Scene({
         shadow-camera-top={16}
         shadow-camera-bottom={-16}
         shadow-bias={-0.0004}
-        shadow-radius={6}
       />
       <Physics gravity={[0, -28, 0]} key={dropKey + (tall ? "t" : "w")}>
-        {/* desk top + invisible walls at the edge of the view */}
+        {/* desktop + invisible rails along its edges so nothing falls off */}
         <RigidBody type="fixed" colliders={false}>
-          <CuboidCollider args={[60, 0.5, 60]} position={[0, -0.5, 0]} friction={0.9} />
-          <CuboidCollider args={[0.5, 10, 60]} position={[-halfW - 0.5, 10, 0]} />
-          <CuboidCollider args={[0.5, 10, 60]} position={[halfW + 0.5, 10, 0]} />
-          <CuboidCollider args={[60, 10, 0.5]} position={[0, 10, -halfH - 0.5]} />
-          <CuboidCollider args={[60, 10, 0.5]} position={[0, 10, halfH + 0.5]} />
+          <CuboidCollider args={[hx, 0.3, hz]} position={[0, -0.3, 0]} friction={0.9} />
+          <CuboidCollider args={[0.3, 6, hz]} position={[-hx - 0.3, 6, 0]} />
+          <CuboidCollider args={[0.3, 6, hz]} position={[hx + 0.3, 6, 0]} />
+          <CuboidCollider args={[hx, 6, 0.3]} position={[0, 6, -hz - 0.3]} />
+          <CuboidCollider args={[hx, 6, 0.3]} position={[0, 6, hz + 0.3]} />
+          {/* lamp base + pole, plant pot */}
+          <CylinderCollider args={[0.12, 0.95]} position={[-hx + 1.6, 0.12, -hz + 1.3]} />
+          <CylinderCollider args={[1.8, 0.12]} position={[-hx + 1.6, 1.9, -hz + 1.3]} />
+          <CylinderCollider args={[0.75, 0.85]} position={[hx - 1.4, 0.75, -hz + 1.3]} />
         </RigidBody>
         {OBJECTS.map((def) => {
           const s = tall ? def.spotTall : def.spot;
@@ -509,7 +646,7 @@ function Scene({
           );
         })}
       </Physics>
-      <Desk />
+      <Room deskW={deskW} deskD={deskD} tall={tall} />
     </>
   );
 }
@@ -527,12 +664,14 @@ export default function DeskScene({
     <Canvas
       shadows
       dpr={[1, 2]}
-      camera={{ fov: 35, near: 0.1, far: 200, position: [0, 20, 5] }}
+      camera={{ fov: 38, near: 0.1, far: 300, position: [0, 12, 18] }}
       gl={{ antialias: true }}
       onPointerMissed={() => (document.body.style.cursor = "")}
     >
-      <color attach="background" args={["#CDBDEB"]} />
-      <Scene still={still} onSelect={onSelect} dropKey={dropKey} />
+      <color attach="background" args={["#ABA6EC"]} />
+      <Suspense fallback={null}>
+        <Scene still={still} onSelect={onSelect} dropKey={dropKey} />
+      </Suspense>
     </Canvas>
   );
 }

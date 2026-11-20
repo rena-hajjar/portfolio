@@ -30,12 +30,12 @@ function rand(seed: number) {
 }
 
 export const wood: Draw = (x, w, h) => {
-  x.fillStyle = "#CDBDEB";
+  x.fillStyle = "#D6AE80";
   x.fillRect(0, 0, w, h);
   const r = rand(7);
   for (let i = 0; i < 140; i++) {
     const y = r() * h;
-    x.strokeStyle = `rgba(${120 + r() * 30},${95 + r() * 25},${185 + r() * 30},${0.1 + r() * 0.18})`;
+    x.strokeStyle = `rgba(${135 + r() * 40},${85 + r() * 25},${40 + r() * 15},${0.1 + r() * 0.2})`;
     x.lineWidth = 1 + r() * 4;
     x.beginPath();
     x.moveTo(0, y);
@@ -47,7 +47,7 @@ export const wood: Draw = (x, w, h) => {
     const cx = r() * w,
       cy = r() * h;
     for (let k = 0; k < 6; k++) {
-      x.strokeStyle = `rgba(110,90,170,${0.16 - k * 0.022})`;
+      x.strokeStyle = `rgba(120,70,30,${0.16 - k * 0.022})`;
       x.lineWidth = 2;
       x.beginPath();
       x.ellipse(cx, cy, 14 + k * 9, 5 + k * 4, 0, 0, Math.PI * 2);
