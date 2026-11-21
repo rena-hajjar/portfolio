@@ -34,10 +34,10 @@ export const profile = {
   name: "Réna Hajjar",
   tagline: "researcher · musician · artist · traveller",
   intro:
-    "I'm a master's student at Queen's University in the Laboratory for Percutaneous Surgery (Perk Lab), where I build real-time navigation tools for cancer surgery. I come from computer science and data science, and I'm working toward a career that blends research with medicine.",
+    "I'm a master's student at Queen's University in the Laboratory for Percutaneous Surgery (Perk Lab), where I work on image-guided surgery. I come from computer science and data science, and I'm working toward a career that blends research with medicine.",
   more:
     "Outside the lab you'll find me painting (acrylics since I was ten, oils more recently), playing guitar, climbing, and planning the next trip. This site is a peek at all of it.",
-  cv: "/RSH_CV_2024.pdf",
+  cv: "/Rena_Hajjar_CV_2026.pdf",
   email: "21rsh8@queensu.ca",
   github: "https://github.com/rena-hajjar",
   linkedin: "https://www.linkedin.com/in/rena-hajjar",
@@ -46,12 +46,12 @@ export const profile = {
 
 export const research = {
   current: {
-    title: "Real-time navigation for breast-conserving surgery",
-    where: "Master's thesis · Perk Lab, Queen's University",
+    title: "Image-guided surgery",
+    where: "MSc in Computing · Perk Lab, Queen's University",
     supervisor: "Supervised by Dr. Gabor Fichtinger",
     summary:
-      "During breast-conserving surgery, surgeons need to know whether any tumour was left behind. My thesis combines electromagnetically tracked intraoperative ultrasound with deep-learning segmentation (nnU-Net) to reconstruct the surgical cavity in 3D and flag residual tumour while the patient is still on the table.",
-    tags: ["Ultrasound", "nnU-Net", "EM tracking", "3D Slicer", "Point clouds"],
+      "My master's research sits where medical imaging, machine learning and surgery meet: building tools that help clinicians see more during procedures. More to share once it's published!",
+    tags: ["Medical imaging", "Machine learning", "Image-guided surgery"],
   },
   past: [
     {
@@ -59,15 +59,16 @@ export const research = {
       where: "Perk Lab, Queen's University",
       date: "Oct 2023 – Apr 2026",
       points: [
-        "Surgical object recognition with YOLOv8 and ultrasound mask generation with Meta's Segment Anything Model",
-        "CNN + LSTM models for surgical task identification from video",
-        "Data pipelines into 3D Slicer modules; annotation and preparation of surgical video for training",
+        "Trained and calibrated computer vision models (TensorFlow, OpenCV) for surgical video and ultrasound",
+        "Surgical object recognition with YOLOv8, ultrasound mask generation with Meta's Segment Anything Model, and CNN + LSTM task identification",
+        "Automated the data pipeline from annotation to training",
       ],
     },
   ],
   projects: [
     {
-      title: "Med-i Injection Simulator",
+      title: "Injection Administration Tracking",
+      award: "3rd place · NextGen Simulation Hackathon",
       image: "/injection-sim.webp",
       summary:
         "A metric-based training tool for clinical injections. An OptiTrack camera and 3D-printed markers on the needle stream through PLUS into 3D Slicer, so students see the needle's angle and depth on a phantom in real time.",
@@ -78,40 +79,46 @@ export const research = {
 
 export const work = [
   {
-    role: "Data Engineer",
-    org: "RBC Amplify",
+    role: "Data Engineer, Amplify",
+    org: "RBC",
     date: "May – Aug 2025",
-    points: [] as string[],
+    points: [
+      "Built a prototype with a cross-functional team to pitch to RBC stakeholders, using design thinking and agile development",
+      "Applied unsupervised clustering to find trends in client data; designed agentic workflows and a PostgreSQL schema to give an LLM context",
+    ],
   },
   {
     role: "Machine Learning Software Engineer",
     org: "RBC Borealis",
     date: "Jan – Apr 2025",
-    points: [] as string[],
+    points: [
+      "Built and deployed a production analytics dashboard (GitHub Actions, OpenShift) to benchmark RBC Assist, track model cost and analyze feedback sentiment",
+      "Cut RBC Assist latency by load-balancing GPU requests with Redis caching, dynamic routing and agent-based prompt routing",
+      "Worked with Cohere to add persistent chat memory to their North application using MCP tools",
+    ],
   },
   {
-    role: "Backend Software & Data Engineer Intern",
+    role: "Data Engineer Intern",
     org: "Ontario Public Service",
-    date: "May – Sep 2024",
+    date: "May – Aug 2024",
     points: [
-      "Built Spring Boot API endpoints and an Angular front end to modernize a 20-year-old public website",
-      "Moved client data flows onto Azure Data Factory ETL pipelines; Databricks and Power BI for a ServiceOntario call centre",
-      "Led the project's architecture documentation: data models, user flows and security",
+      "Built end-to-end data solutions with Azure Data Factory ETL pipelines and Databricks (PySpark/SQL) transformations",
+      "Modernized enterprise applications by rebuilding the Spring Boot backend and Angular frontend, with automated notifications via REST APIs",
     ],
   },
   {
     role: "Software Engineer Intern",
     org: "Readwise",
-    date: "May – Sep 2023",
+    date: "May – Aug 2023",
     points: [
-      "Co-authored the Notebook feature in Readwise Reader (React, TypeScript)",
-      "25+ pull requests merged during a stretch where the product grew by 8,000 customers",
+      "Co-developed the Notebook feature and improved platform stability: 25+ merged pull requests during a stretch of 8,000+ customer growth",
+      "Full-stack work across a React/Node.js frontend and Python backend, including data migration",
     ],
   },
 ];
 
 export const education = [
-  { degree: "Master's student", org: "Queen's University", date: "2026 – present" },
+  { degree: "MSc, Computing", org: "Queen's University", date: "2026 – 2028" },
   {
     degree: "Bachelor of Computing (Honours)",
     org: "Queen's University",
@@ -119,7 +126,17 @@ export const education = [
   },
 ];
 
-export const projects = [
+export const projects: { title: string; image?: string; summary: string; link?: string }[] = [
+  {
+    title: "Book Brain",
+    summary:
+      "A personal AI-powered reading database: FastAPI + PostgreSQL + Redis, with Cohere embeddings and k-means clustering to build a living mind-map of related books.",
+  },
+  {
+    title: "MarketPulse",
+    summary:
+      "Monitors social media for financial market insights, with NLP sentiment analysis, personal watchlists and tracking of how social chatter correlates with market moves.",
+  },
   {
     title: "Fresh Save",
     image: "/freshsave.webp",

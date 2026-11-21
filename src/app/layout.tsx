@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Réna Hajjar",
   description:
-    "Réna Hajjar — master's student at Queen's University's Perk Lab building surgical navigation tools. Also a painter, guitarist and traveller.",
+    "Réna Hajjar — master's student at Queen's University's Perk Lab, working on image-guided surgery. Also a painter, guitarist and traveller.",
   icons: { icon: "/favicon.ico" },
 };
 

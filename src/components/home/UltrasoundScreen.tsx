@@ -24,7 +24,7 @@ export default function UltrasoundScreen() {
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#7840E5]" /> live
         </span>
       </div>
-      <svg viewBox="0 0 320 250" className="w-full" role="img" aria-label="Stylised ultrasound image with a highlighted region">
+      <svg viewBox="0 0 320 250" className="w-full" role="img" aria-label="Stylised ultrasound image">
         <defs>
           <clipPath id="fan">
             <path d="M160 18 L38 230 A230 230 0 0 0 282 230 Z" />
@@ -65,9 +65,6 @@ export default function UltrasoundScreen() {
         {[60, 100, 140, 180, 220].map((y) => (
           <line key={y} x1="296" x2="304" y1={y} y2={y} stroke="#8FB6E8" strokeOpacity=".6" />
         ))}
-        <text x="216" y="132" fill="#F4A6B8" fontSize="11" fontFamily="Rubik, sans-serif">
-          residual?
-        </text>
       </svg>
     </div>
   );
