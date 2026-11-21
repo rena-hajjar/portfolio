@@ -119,7 +119,7 @@ export function Research() {
         <SectionHeading
           kicker="research"
           title="RESEARCH"
-          note="Helping surgeons see what's left behind — and the reason there's an ultrasound probe on my desk."
+          note="Where medical imaging meets machine learning, and the reason there's an ultrasound probe on my desk."
           color={C.research}
         />
 
@@ -165,6 +165,9 @@ export function Research() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={p.image} alt="" className="h-44 w-full object-cover" />
               <div className="p-7">
+                {p.award && (
+                  <span className="mb-2 inline-block rounded-full bg-mint px-3 py-0.5 text-xs font-semibold text-ink">🏆 {p.award}</span>
+                )}
                 <h3 className="font-display text-base md:text-lg">{p.title}</h3>
                 <p className="mt-2 leading-relaxed">{p.summary}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -218,18 +221,39 @@ export function Work() {
 
         <h3 className="mt-20 font-display text-2xl">PROJECTS<span className="text-work">.</span></h3>
         <div className="mt-6 grid gap-8 md:grid-cols-2">
-          {projects.map((p, i) => (
-            <Reveal key={p.title} rotate={i % 2 ? 1.2 : -1.2}>
-              <a href={p.link} target="_blank" rel="noreferrer" className="group relative flex gap-5 rounded-2xl bg-white p-5 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image} alt="" className="h-24 w-24 shrink-0 rounded-xl object-cover" />
+          {projects.map((p, i) => {
+            const inner = (
+              <>
+                {p.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={p.image} alt="" className="h-24 w-24 shrink-0 rounded-xl object-cover" />
+                ) : (
+                  <div className="grid h-24 w-24 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-lavender to-mint font-display text-2xl text-ink">
+                    {p.title.split(" ").map((w) => w[0]).join("")}
+                  </div>
+                )}
                 <div>
-                  <h4 className="font-display text-sm group-hover:text-work">{p.title} ↗</h4>
+                  <h4 className="font-display text-sm group-hover:text-work">
+                    {p.title}
+                    {p.link ? " ↗" : ""}
+                  </h4>
                   <p className="mt-1 text-sm leading-relaxed text-inksoft">{p.summary}</p>
                 </div>
-              </a>
-            </Reveal>
-          ))}
+              </>
+            );
+            const cls = "group relative flex gap-5 rounded-2xl bg-white p-5 shadow-card transition hover:-translate-y-1 hover:shadow-lift";
+            return (
+              <Reveal key={p.title} rotate={i % 2 ? 1.2 : -1.2}>
+                {p.link ? (
+                  <a href={p.link} target="_blank" rel="noreferrer" className={cls}>
+                    {inner}
+                  </a>
+                ) : (
+                  <div className={cls}>{inner}</div>
+                )}
+              </Reveal>
+            );
+          })}
         </div>
 
         <h3 className="mt-20 font-display text-2xl">CLUBS AND VOLUNTEERING<span className="text-work">.</span></h3>
